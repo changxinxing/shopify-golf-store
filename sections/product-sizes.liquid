@@ -1,0 +1,79 @@
+<div class="sizes-wrap">
+  <div class="image">
+     {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img  
+              class="lazyload"
+              alt="{{ image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>
+  </div>
+  <div class="copy">
+    <div class="copy-wrap">
+    <h2>{{ section.settings.title }}</h2>
+    {% for block in section.blocks %}
+      <div class="size">
+        <p><strong>{{ block.settings.title }}</strong></p>
+        {{ block.settings.features }}
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Product Size Chart",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "image"
+		},
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#FFF"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Heading"
+		}
+	],
+	"blocks": [
+		{
+			"type": "text",
+			"name": "Size",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "html",
+					"id": "features",
+					"label": "Features"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

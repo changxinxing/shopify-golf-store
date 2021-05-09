@@ -1,0 +1,103 @@
+<section class="wrapper">
+
+
+
+    <h3 class="testimonial_head">Testimonials From The Pros</h3>
+    <div class="carousel">
+        <div class="inner">
+            {% for block in section.blocks %}
+            {% capture image_layout %}
+            <div class="feature-row__item">
+              {% if block.settings.image != blank %}
+                {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
+                {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                {% include 'image-style', image: block.settings.image, height: 545, wrapper_id: wrapper_id, img_id: img_id %}
+                <div class="feature-row__image-wrapper js testimonial__image">
+                  <div style="padding-top:{{ 1 | divided_by: block.settings.image.aspect_ratio | times: 100}}%; height:100%;">
+                    <img id="{{ img_id }}"
+                         class="feature-row__image lazyload testimonial__image"
+                         src="{{ block.settings.image | img_url: '200x200' }}"
+                         data-src="{{ img_url }}"
+                         data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                         data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                         data-sizes="auto"
+                         alt="{{ block.settings.image.alt | escape }}">
+                  </div>
+                </div>
+        
+                <noscript>
+                  {{ block.settings.image | img_url: '600x600', scale: 2 | img_tag: block.settings.image.alt, 'feature-row__image' }}
+                </noscript>
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            </div>
+          {% endcapture %}
+            <div class="slide testimonial-wrap">
+                {{ image_layout }}
+                <div class="testimonial_content"> 
+                    <p class="testimonial_description">{{block.settings.description}}</p><br>
+                    <p><span class="testimonial_name">{{block.settings.player_name}},</span>   <span class="testimonial_title">{{block.settings.player_title}}</span></p>    
+                </div>
+            </div>
+            {%endfor%}
+            <div class="arrow arrow-left"></div>
+            <div class="arrow arrow-right"></div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Welcome",
+    "class": "testimonial_section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Testimonials",
+			"default": "Testimonials"
+		}
+	], 
+    "blocks": [
+    {
+        "type": "text",
+		"name": "testimonial",
+        "settings":[
+        {
+            "id": "player_name",
+            "type": "text",
+            "label": "Player Name"
+            },
+            {
+            "id": "player_title",
+            "type": "text",
+            "label": "Player Title"
+            },
+            {
+            "id": "description",
+            "type": "textarea",
+            "label": "Player Testimonial"
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Player Image"
+              }
+        ]
+    }
+        
+    ],
+    "presets": [
+        {
+        "name": "Testimonials",
+        "category": "ADVANCED LAYOUT"
+        }
+    ]
+}
+{% endschema %}
+{% stylesheet %}
+{% endstylesheet %}
+{% javascript %}
+{% endjavascript %}

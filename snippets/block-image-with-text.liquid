@@ -1,0 +1,64 @@
+<section class="image-with-text {{block.settings.background_color}} {{ block.settings.section_padding }}">
+
+  
+
+  
+  
+  
+    <div class="flex grid just-center {{ block.settings.page_container }} {{ block.settings.image_side }} reverse-{{block.settings.mobile_reverse}}">
+      
+      
+   
+    <div class="grid__item {{block.settings.width}} small--one-whole {% if block.settings.image_padding == true %}section-full-pad{% endif %}">
+           
+      
+      
+      {% if block.settings.image != blank %}
+          {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x{height}.' -%}  
+    <div class="image-container {% if block.settings.sticky_image %}sticky-image{% endif %}">
+            <img 
+                 class="lazyload one-whole"
+                 src="{{ block.settings.image | img_url: '200x200' }}"
+                 data-src="{{ img_url }}" 
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-sizes="auto"
+                 data-aspectratio=""
+                 data-parent-fit="cover"
+                 alt="{{ block.settings.image.alt }}">
+    </div>
+               {% if block.settings.image_caption %}
+               <h3 class="image-caption text-center {{block.settings.caption_color}}">{{block.settings.image_caption}}</h3>
+               {% endif %}
+      {% endif %}
+      </div>
+      
+    <div class="grid__item  flex-grow   one-quarter {{block.settings.content_background_color}}">
+           
+      <div class="inner flex-column {{block.settings.text_vert_alignment }} {{block.settings.content_color}} {{block.settings.text_alignment}} {{block.settings.text_color}}">
+		 {% if block.settings.pre_title != blank %} <div class="pre-title">{{ block.settings.pre_title }}</div> {% endif %}
+         {% if block.settings.title != blank %} <h2 class="largest-text">{{ block.settings.title }}</h2>  {% endif %}
+         {% if block.settings.sub_title != blank %} <h3 class="sub-title">{{ block.settings.sub_title }}</h3> {% endif %}
+      		
+    
+      {% if block.settings.text != blank %}
+        <div class="content medium-text">{{ block.settings.text }}</div>
+        {% endif %}
+        
+               {% if block.settings.cta_link != blank %}
+      		 <div class="cta-area">
+           
+               
+                 <a href="{{ block.settings.cta_link }}" class="btn  with-icon {{block.settings.button_style}}">
+                <span>  {{block.settings.cta }} </span> <span class="ico-arrow-right"></span>
+       		  </a>
+               
+      		
+ 			</div>
+            {% endif %}
+     
+               </div>
+    </div>
+      
+ 
+</div>
+</section>

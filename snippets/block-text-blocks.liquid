@@ -1,0 +1,24 @@
+<section class="section-text-blocks {{block.settings.background_color}} {{ block.settings.section_padding }}">
+    <div class="flex just-center {{ block.settings.page_container }}">
+        <div class="{{ block.settings.content_width }} small--one-whole just-center flex  {{ block.settings.text_alignment}} {{ block.settings.text_color }} ">
+         	<div class="header-area one-whole">
+                {% if block.settings.pre_title != blank %} <div class="pre-title">{{ block.settings.pre_title }}</div>
+                {% endif %}
+                {% if block.settings.title != blank %} <h2 class="largest-text">{{ block.settings.title }}</h2>
+                {% endif %}
+               {% if block.settings.sub_title != blank %} <h3 class="sub-title">{{ block.settings.sub_title }}</h3>
+                {% endif %}
+          </div>
+          
+                {% if block.settings.content != blank %} <div class="medium-text one-whole">{{ block.settings.content }}</div>
+                {% endif %} {% if block.settings.cta_link != blank %}
+                <div class="cta-area">
+                    <a href="{{ block.settings.cta_link }}" class="btn  with-icon {{block.settings.button_style}}">
+                        <span> {{block.settings.cta }} </span> <span class="ico-arrow-right"></span>
+                    </a>
+                </div>
+                {% endif %}
+          
+        </div>
+    </div>
+</section>

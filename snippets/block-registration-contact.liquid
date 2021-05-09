@@ -1,0 +1,98 @@
+
+<section id="register" class="section-pad registration-form">
+<div class="page-width flex just-center">
+  <div class="section-header one-whole text-center">
+  {% if block.settings.title != blank %}
+ 
+  <h2>{{ block.settings.title }}</h2> {% endif %}
+   {% if block.settings.content != blank %}
+ 
+  <p>{{ block.settings.content}}</p> {% endif %}
+  </div>
+  
+  <div class="medium-up--one-half flex-column">
+
+    
+{%- assign formId = 'WholesaleRegisterForm' -%}
+        {% form 'contact', id: formId %}
+         {% include 'form-status', form: form, form_id: formId %}
+		<div class="form-row">
+          <label for="{{ formId }}-FirstName" class="visually-hidden">{{ 'customer.register.first_name' | t }}</label>
+          <input  required type="text" placeholder="{{ 'customer.register.first_name' | t }}" name="contact[first_name]" id="{{ formId }}-FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocomplete="given-name">
+    </div>
+    	<div class="form-row">
+          <label for="{{ formId }}-LastName" class="visually-hidden">{{ 'customer.register.last_name' | t }}</label>
+          <input required type="text" placeholder="{{ 'customer.register.last_name' | t }}" name="contact[last_name]" id="{{ formId }}-LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocomplete="family-name">
+    </div>
+    	<div class="form-row">
+          <label for="{{ formId }}-email" class="visually-hidden">{{ 'customer.register.email' | t }}</label>
+          <input
+            type="email"
+            name="contact[email]"
+            id="{{ formId }}-email"
+            placeholder="{{ 'customer.register.email' | t }}"
+            class="{% if form.errors contains 'email' %} input--error{% endif %}"
+            {% if form.email %} value="{{ form.email }}"{% endif %}
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            aria-required="true"
+                 required
+            {%- if form.errors contains 'email' -%}
+              class="input--error"
+              aria-invalid="true"
+              aria-describedby="{{ formId }}-email-error"
+            {%- endif -%}
+          >
+            {%- if form.errors contains 'email' -%}
+            <span id="{{ formId }}-email-error" class="input-error-message">
+              <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+              {% include 'icon-error' %}
+              <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+            </span>
+          {%- endif -%}
+
+    </div>
+     <div class="form-row">
+    <input id="wholesale" type="hidden" name="customer[note][Wholesale]" value="Wholesale Applicant"/>
+    <label for="{{ formId }}-phone" class="visually-hidden">{{ 'contact.form.phone' | t }}</label>
+    <input placeholder="{{ 'contact.form.phone' | t }}" type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+    </div>
+    <div class="form-row">
+    <label for="customerBusiness" class="visually-hidden">Business Name</label>
+    <input id="customerBusiness" type="text" name="contact[Business Name]" placeholder="Business Name" required/>
+    </div>
+    <div class="form-row">
+    <label for="webAddress" class="visually-hidden">Website</label>
+    <input id="webAddress" type="text" name="contact[Website]" placeholder="Website" required/>
+    </div>
+    
+    
+      <div class="form-row">
+    <label for="salesEstimate">Estimated opening order size</label>
+<select id="salesEstimate" name="contact[Sales Estimate]">
+  <option>6 - 12 units</option>
+  <option>13 - 48 units</option>
+  <option>49 - 99 units</option>
+   <option>100+ units</option>
+</select>
+    </div>
+    
+    
+        	<div class="form-row">
+          <label for="{{ formId }}-message" class="visually-hidden">{{ 'contact.form.message' | t }}</label>
+          <textarea placeholder="{{ 'contact.form.message' | t }}" rows="10" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+    </div>
+    	<div class="form-row">
+          <p class="text-center">
+            <input id="registrationSubmit" type="submit" value="Submit Registration" class="btn">
+          </p>
+    </div>
+        {% endform %}
+     <div class="error-box">
+          Please fill out all the highlighted fields.
+        </div>
+  </div>
+  </div>
+</section>

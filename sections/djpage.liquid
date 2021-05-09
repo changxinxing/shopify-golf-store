@@ -1,0 +1,221 @@
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'dj-page-header' %}
+        {% include 'dj-page-header-on-page' %}
+        {% when 'dj-product-row' %}
+        {% include 'dj-product-row-on-page' %}
+    {% endcase %}
+{% endfor %}
+
+<div class="djpage-collection-row">
+  <div class="page-width">
+	<div class="djpage-image-column">
+   	 <img src="https://cdn.shopify.com/s/files/1/2642/5702/files/Bundle_Hero_Final_Box.jpg?v=1616424483" class="dj-collection-render">
+    </div>
+    <div class="djpage-collection-promo-col">
+      <h1 style="font-weight:700">The Dustin Johnson Practice Collection<h1>
+      <div class="djpage-price-row">
+        <h4 class="price-item--regular">$430.00</h2>
+        <h4 class="price-item--sale">$349.99</h2>
+       </div>
+      <h4>
+        <ul>
+          	<li>Use Dustin Johnson’s training aids before and after your rounds to make more putts.</li>
+        	<li>Practice indoors and outdoors.</li>
+			<li>Premium, portable designs allows golfers to practice anytime, anywhere.</li>
+        </ul>
+        </h4>
+      <div class="djpage-button-row">
+      	<div>
+      		<form method="post" action="/cart/add">
+      			<input type="hidden" name="id" value="39269263474757" />
+              	<input type="hidden"  name="quantity" value="1"/>
+      			<input type="submit" value="Add to cart" class="djbutton btn add-to-cart-button" />
+		</form>
+      	</div> 
+    	<div id="section-cta">
+  			<a href="/collections/all/products/dustin-johnson-collection" class="btn djbutton btn--has-icon-after djpage-learnmore-btn">Learn More</a>
+    	</div>
+  	</div>
+    </div>
+  </div>
+  </div>
+{% schema %}
+  {
+"blocks": [
+{
+    "type": "dj-product-row",	
+    "name": "DJ Product Row",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "product-row-title",
+			"label": "Product Row Title",
+			"default": "DJ Collection"
+		},
+		{
+			"type": "text",
+			"id": "product-row-subtitle",
+			"label": "Product Row Subtitle",
+			"default": "At Home"
+		},
+		{
+			"type": "textarea",
+			"id": "product-row-copy",
+			"label": "Product Row Copy",
+			"default": "Product row copy which can be numerous sentences."
+		},
+		{
+			"type": "text",
+			"id": "product-row-quote",
+			"label": "Product Row Quote",
+			"default": "If you can make the putts inside 10 feet, you're gonna play well."
+		},
+        {
+                "type": "text",
+                "id": "quote_background_video_url",
+                "label": "Background Video URL",
+                "default": "https://cdn.shopify.com/s/files/1/2642/5702/files/Laser_BackgroundVideo.mp4?v=1616443771"
+    	},
+		{
+			"type": "text",
+			"id": "quote_author_name",
+			"label": "Quote Author Name",
+			"default": "Dustin Johnson, World #1"
+		},
+   		{
+            "id": "link",
+            "type": "url",
+            "label": "Button link"
+		},
+		{
+            "id": "linktext",
+            "type": "text",
+            "label": "Button text",
+            "default": "Click Here"
+		},
+		{
+			"type": "text",
+			"id": "product_variant_id",
+			"label": "Product Variant ID",
+			"default": "31441773527109"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_video",
+			"label": "Show Video Under",
+			"default": true
+		},
+		{
+			"type": "image_picker",
+			"id": "quote_author_img",
+			"label": "Quote Author Image"
+		},
+		{
+			"type": "image_picker",
+			"id": "feature_icon_1",
+			"label": "Feature Icon 1"
+		},
+		{
+			"type": "text",
+			"id": "feature_text_1",
+			"label": "Feature Text 1",
+			"default": "Auto Ball Return"
+		},
+		{
+			"type": "image_picker",
+			"id": "feature_icon_2",
+			"label": "Feature Icon 2"
+		},
+		{
+			"type": "text",
+			"id": "feature_text_2",
+			"label": "Feature Text 2",
+			"default": "Auto Ball Return"
+		},
+		{
+			"type": "image_picker",
+			"id": "feature_icon_3",
+			"label": "Feature Icon 3"
+		},
+		{
+			"type": "text",
+			"id": "feature_text_3",
+			"label": "Feature Text 3",
+			"default": "Auto Ball Return"
+		}
+	  ]
+	},
+   {
+    "type": "dj-page-header",
+    "name": "DJ Page Header",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Header",
+			"default": "DJ Collection"
+		},
+		{
+			"type": "textarea",
+			"id": "header-copy-1",
+			"label": "Header Copy 1st",
+			"default": "DJ Collection header section 1 copy"
+		},
+		{
+			"type": "textarea",
+			"id": "header-copy-2",
+			"label": "Header Copy 2nd",
+			"default": "DJ Collection header section 2 copy"
+		},
+		{
+			"type": "color",
+			"id": "header_color",
+			"label": "Header Color",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_overlay",
+			"label": "Show Overlay",
+			"default": true
+		},
+		{
+			"type": "range",
+			"id": "overlay_opacity",
+			"label": "Overlay Opacity",
+			"min": 10,
+			"max": 100,
+			"step": 10,
+			"default": 30
+		},
+   		{
+            "id": "link",
+            "type": "url",
+            "label": "Button link"
+		},
+		{
+            "id": "linktext",
+            "type": "text",
+            "label": "Button text",
+            "default": "Click Here"
+		}
+	  ]
+  	}
+   ],
+   "presets":[{
+	   "name": "dj page",
+	   "category": "dj page"
+   }]
+  }
+{% endschema %}

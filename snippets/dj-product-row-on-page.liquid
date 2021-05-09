@@ -1,0 +1,70 @@
+{%- assign img_url_background = block.settings.bg_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+<div class="dj-page-product-row-container">
+  <div class="dj-page-product-img-container">
+    <img src="{{block.settings.bg_image | img_url: '2500x' }}" class="lazyload">  
+  </div>  
+  
+  <div class="djpage-content-container">
+      <h4>
+      {{ block.settings.product-row-subtitle }}
+      </h4>  
+      <h2>
+      {{ block.settings.product-row-title }}
+      </h2>
+      <p class="copy">
+      {{ block.settings.product-row-copy | newline_to_br }}
+      </p>
+    <div class="djpage-product-features-container">
+      <div class="djpage-feature-column">
+        <img src="{{block.settings.feature_icon_1 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ block.settings.feature_text_1 }}</h5>
+      </div>
+      <div class="djpage-feature-column">
+        <img src="{{block.settings.feature_icon_2 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ block.settings.feature_text_2 }}</h5>
+      </div>
+      <div class="djpage-feature-column">
+        <img src="{{block.settings.feature_icon_3 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ block.settings.feature_text_3 }}</h5>
+      </div>
+    </div>
+  	<div class="djpage-button-row">
+      	<div>
+      		{% include 'add-to-cart-button' %}
+      	</div> 
+    	<div id="section-cta">
+  			<a href="{{ block.settings.link }}" class="btn djbutton btn--has-icon-after djpage-learnmore-btn">{{ block.settings.linktext }}</a>
+    	</div>
+  	</div>
+  </div>
+</div>
+
+{% if block.settings.show_video %}
+    <div class="quote-video"> 
+    <video class="desktop" src="{{block.settings.quote_background_video_url}}" poster="//cdn.shopify.com/s/files/1/2642/5702/files/practicexplay-poster_1920x.png?v=1588711511" autoplay="" muted="" loop="" playsinline=""></video>
+  	<div class="video-overlay-dark"></div>
+  	<div class="video-overlay-container">
+    	<h3>
+        {{ block.settings.product-row-quote }}
+    	</h3>
+    	<h4>
+        {{ block.settings.quote_author_name }}
+    	</h4>
+	</div>
+</div>
+
+{% else %}
+    
+<div class="quote-novideo">
+    	<h3>
+        {{ block.settings.product-row-quote }}
+    	</h3>
+		<div class="quote-author-row">
+           <img src="{{block.settings.quote_author_img | img_url: '300x' }}" class="lazyload quote-author-img">  
+  			<h4>
+        	{{ block.settings.quote_author_name }}
+    	</h4>
+  		</div>
+    	
+</div>
+{% endif %}

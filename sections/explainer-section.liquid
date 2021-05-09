@@ -1,0 +1,59 @@
+<div class="section_explainer" data-section-id="{{ section.id }}" data-section-type="hero-section" style="background: {{section.settings.background_color}};">
+    <div class="page-width">
+        <div class="page-width text-center explainer">
+            {%- if section.settings.title != blank -%}
+                <h1 class="explainer_head">{{ section.settings.title | escape }}</h2>
+                <h4 class="explainer_sub">{{ section.settings.answer }}</h5>
+            {%- endif -%}
+          <div class="image-continaer">
+            <img
+                         class="homepage-icon"
+                         src="https://cdn.shopify.com/s/files/1/2642/5702/files/97percent_a0b57ae4-6018-4a29-86bb-02f3119a50f2.png?v=1619799729"
+                         data-src="https://cdn.shopify.com/s/files/1/2642/5702/files/97percent_a0b57ae4-6018-4a29-86bb-02f3119a50f2.png?v=1619799729"
+                         data-widths="[200]"
+                         data-sizes="auto"
+                         alt="Perfect Practice Mats">
+          </div>
+        </div>
+    </div>
+</div>
+  
+  {% schema %}
+    {
+      "name": "Explainer Section",
+      "class": "explainer",
+      "settings": [
+          
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Explainer Heading",
+            "default": "Why Golfers Should Embrace Training Aids"
+        },
+        {
+            "type": "richtext",
+            "id": "answer",
+            "label": "Contents",
+            "default": "<p>Golf is hard. Finding time to practice is even harder. Perfect Practice training ads are thoughtfully designed to inspire golfers to practice more... and practice better. They're guaranteed to help you lower your scores without changing anything else.</p>"
+        },
+        
+        {
+          "type": "color",
+          "id": "background_color",
+          "label": "Background Color",
+          "default": "#ffffff"
+        }
+      ],
+      "presets":[{
+          "name": "Explainer Section",
+          "category": "explainer-section"
+      }]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
+  

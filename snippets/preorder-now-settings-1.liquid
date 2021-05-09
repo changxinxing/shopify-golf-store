@@ -1,0 +1,68 @@
+<script type="text/javascript">
+  {% if cart %}
+    window.pn.cart = {};
+  	window.pn.cart = {{cart | json}}
+    window.pn.cart.items = [];
+
+    {% for item in cart.items %}
+      var cart_item = {{item | json}};
+      cart_item["collection_ids"] = [];
+      {% for c in item.product.collections %}
+        cart_item["collection_ids"].push({{c.id}})
+        {% endfor %}
+      window.pn.cart.items.push(cart_item);
+    {% endfor %}
+
+    if (typeof window.pn.cart.items == "object") {
+      for (var i=0; i<window.pn.cart.items.length; i++) {
+        ["sku", "vendor", "url", "image", "handle", "product_type", "product_description"].map(function(a) {
+          delete window.pn.cart.items[i][a]
+        })
+      }
+    }
+  {% endif %}
+</script>
+
+{% raw %}
+<script>
+if(typeof pn === "undefined"){
+  pn = {};
+}
+if(typeof pn.settings === "undefined"){
+  pn.settings = {};
+}
+pn.settings.defaultSetting={"id":5991737,"a":"Preorder Now","b":true,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP APRIL 2020","h":"below","i":false,"j":"Pre-Order","k":null,"l":null,"m":"default","n":null,"o":true,"handle":null,"p":null,"y":null,"q":false,"r":true,"s":null,"t":null,"u":1,"v":false,"w":"circle","tag":null,"x":null,"z":"no_discount","aa":"0.0","ab":0};
+pn.settings.singleProductSettings=[{"id":8071201,"a":"Preorder Now","b":true,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP EARLY SEPTEMBER","h":"below","i":false,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"16953528057899","o":false,"handle":"path-perfect-swing-trainer","p":"1854710480939","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/DSC_0072_SQ.jpg?v=1594196140","q":false,"r":false,"s":5,"t":null,"u":1,"v":true,"w":"circle","tag":null,"x":"ORDERS SHIP EARLY SEPTEMBER","z":"no_discount","aa":"0.0","ab":0},{"id":8741771,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP MID JUNE 2020","h":"below","i":false,"j":null,"k":null,"l":null,"m":"variant","n":"31441773527109","o":false,"handle":"the-perfect-practice-putting-mat","p":"1824720879659","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/ADIN9845-Edit.jpg?v=1594196137","q":false,"r":false,"s":5141,"t":null,"u":1,"v":true,"w":"ribbon","tag":null,"x":"ORDERS SHIP MID JUNE 2020","z":"no_discount","aa":"0.0","ab":0},{"id":8741773,"a":"Pre-order Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP EARLY AUGUST 2020","h":"below","i":false,"j":null,"k":null,"l":null,"m":"variant","n":"31441952276549","o":false,"handle":"perfect-practice-putting-mat-compact-edition","p":"4352831782981","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/ADIN9842-Edit.jpg?v=1594196144","q":false,"r":false,"s":360,"t":null,"u":1,"v":true,"w":"ribbon","tag":null,"x":"ORDERS SHIP EARLY AUGUST 2020","z":"no_discount","aa":"0.0","ab":0},{"id":8741774,"a":"Pre-order Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP EARLY AUGUST 2020","h":"below","i":false,"j":null,"k":null,"l":null,"m":"variant","n":"31441988321349","o":false,"handle":"the-perfect-practice-putting-mat-xl-edition-15-5-feet-pre-order","p":"4370898944069","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/ADIN9782.jpg?v=1594196147","q":false,"r":false,"s":-94,"t":null,"u":1,"v":true,"w":"ribbon","tag":null,"x":"ORDERS SHIP EARLY AUGUST 2020","z":"no_discount","aa":"0.0","ab":0},{"id":8546679,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP END OF JUNE","h":"below","i":false,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"31150969946181","o":false,"handle":"small-putting-mirror-with-travel-case","p":"4344613339205","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/ADIN0481_1.jpg?v=1596007355","q":false,"r":true,"s":168,"t":null,"u":1,"v":true,"w":"circle","tag":null,"x":"ORDERS SHIP END OF JUNE","z":"no_discount","aa":"0.0","ab":0},{"id":8797624,"a":"Preorder Now","b":false,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP END OF JULY 2020","h":"below","i":false,"j":null,"k":null,"l":null,"m":"variant","n":"31297874460741","o":false,"handle":"luxury-9-putter-stand-preorder-matches-the-perfect-practice-putting-mat","p":"4370695651397","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/DSC_0039_SQ.jpg?v=1594196147","q":false,"r":false,"s":117,"t":null,"u":1,"v":true,"w":"ribbon","tag":null,"x":"ORDERS SHIP END OF JULY 2020","z":"no_discount","aa":"0.0","ab":0},{"id":8607306,"a":"Preorder Now","b":true,"c":null,"d":"Out of stock","e":false,"f":"Only {{qty}} remaining","g":"ORDERS SHIP LATE JUNE 2020","h":"below","i":false,"j":"Pre-Order","k":null,"l":null,"m":"variant","n":"31372006359109","o":false,"handle":"copy-of-putting-alignment-mirror-pre-order","p":"4391397097541","y":"https://cdn.shopify.com/s/files/1/2642/5702/products/perfect-mirrror.png?v=1594196148","q":false,"r":true,"s":-31,"t":null,"u":1,"v":true,"w":"circle","tag":null,"x":"ORDERS SHIP LATE JUNE 2020","z":"no_discount","aa":"0.0","ab":0}];
+pn.settings.tagSettings=[];
+</script>
+<style type="text/css">
+  .pn-original-subtotal{
+    text-decoration: line-through;
+    display:inline-block;
+  }
+  .pn-discounted-subtotal{
+    font-weight:bold;
+    margin-left:20px;
+    display:inline-block;
+    font-size: 1.3em;
+  }
+
+  .pn-line-item-original-price {
+    text-decoration: line-through;
+  }
+
+  .pn-line-item-discounted-price {
+    font-size: 1.2em;
+    margin-left: 8px;
+  }
+</style>
+{% endraw %}
+
+
+<div id="pn-mixed-cart-warning" class="pn-modal">
+  <div id="pn-mixed-cart-warning-content">
+    <span id="pn-modal-close-btn">x</span>
+    <h2 id="pn-mixed-cart-warning-title"></h2>
+    <div id="pn-mixed-cart-warning-text"></div>
+  </div>
+</div>

@@ -1,0 +1,98 @@
+{% if block.settings.m_overlay %}
+{% assign overlay = 'small--overlay' %}
+{% endif %}
+{% if block.settings.overlay %}
+{% assign overlay = 'overlay' %}
+{% endif %}
+<section data-section-id="{{ section.id }}" data-section-type="hero-section" class="hero main-hero {{ block.settings.section_background_color }}
+{% if block.settings.image == blank %} {{block.settings.hero_height}} {% endif %}">
+
+    {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x{height}_crop_center.' -%}
+    {%- assign m_img_url = block.settings.m_image | img_url: '1x1' | replace: '_1x1.', '_{width}x{height}.' -%}
+    <div class="hero-slide one-whole  {{overlay}} {{block.settings.hero_height}}">
+
+
+        {% if block.settings.image %}
+        <div class="hero-image">
+            <img class="lazyload one-whole {% if block.settings.m_image != blank %}small--hide{% endif %}"
+                src="{{ block.settings.image | img_url: '200x200' }}" data-src="{{ img_url }}"
+                data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]" data-sizes="auto"
+                data-aspectratio="2" data-parent-fit="cover" alt="{{ block.settings.image.alt }}">
+
+
+
+            <img class="lazyload one-whole medium-up--hide" src="{{ block.settings.image | img_url: '200x200' }}"
+                data-src="{{ img_url }}" data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                data-sizes="auto" data-aspectratio="2" data-parent-fit="cover" alt="{{ block.settings.image.alt }}">
+           
+
+        </div>
+ {% endif %}
+        <div
+            class="hero-inner page-width 
+                   {% unless block.settings.image %}relative{% endunless %} flex 
+                   {{block.settings.vert_alignment}} {{block.settings.text_color}}
+                   {% if block.settings.mobile_position %}small--relative {% endif %}
+                   small--{{block.settings.m_vert_alignment}}
+                   small--{{ block.settings.mobile_background_color }}">
+
+            <div
+                class="hero-background small--one-whole {% unless block.settings.image %}relative{% endunless %} site-pad {{ block.settings.background_size }}  {{ block.settings.background_color }} {{block.settings.box_vert_alignment}} {{ block.settings.box_alignment}}">
+                <div
+                    class="hero-content {{ block.settings.box_content_width }} small--one-whole {% if block.settings.content_orientation == 'stacked' %}flex-column{% else %} flex grid {% assign gridParent = 'grid' %} {% assign grid = 'grid__item' %}{% endif %} align-center just-center {{ block.settings.text_alignment }}">
+
+                    <div class="{{ block.settings.title_width }} small--one-whole {{grid}}">
+                        {% if block.settings.pre_title != blank %}
+                        <div class="pre-title">{{ block.settings.pre_title }}</div>
+                        {% endif %}
+                        {% if block.settings.title != blank %}
+                        {% if block.settings.title_size == 'hero' %}
+                        <h1 class="largest-text">{{ block.settings.title }}</h1>
+                        {% else %}
+                        <h2 class="largest-text">{{ block.settings.title }}</h2>
+                        {% endif %}
+                        {% endif %}
+                    </div>
+                    <div
+                        class="{{ block.settings.content_width }} small--one-whole flex align-center {{gridParent}} {{grid}}">
+                        <div class="three-fifths flex-grow small--one-whole {{grid}}">
+                            {% if block.settings.text != blank %}
+                            <div class="medium-text">{{ block.settings.text }}</div>
+                            {% endif %}
+                        </div>
+
+                        {% if block.settings.button_link != blank %}
+                        <div class="{{ block.settings.cta_width }} flex-grow small--one-whole {{grid}}">
+                            {% if block.settings.button_link != blank %}
+                            <div class="hero-cta-area">
+                                {% if block.settings.cta != blank %} <div class="cta-text">{{block.settings.cta}} </div>
+                                {% endif %}
+                                <a href="{{ block.settings.button_link }}"
+                                    class="btn with-icon full-size {{block.settings.button_style}}">
+                                    <span>{{block.settings.button_text}}</span> <span class="ico-arrow-right"></span>
+                                </a>
+                            </div>
+                            {% endif %}
+
+                            {% if block.settings.button_link2 != blank %}
+                            <div class="hero-cta-area">
+                                {% if block.settings.cta2 != blank %} <div class="cta-text">{{block.settings.cta2}}
+                                </div> {% endif %}
+                                <a href="{{ block.settings.button_link2 }}"
+                                    class="btn  with-icon full-size {{block.settings.button_style2}}">
+                                    <span> {{block.settings.button_text2}}</span> <span class="ico-arrow-right"></span>
+                                </a>
+                            </div>
+                            {% endif %}
+                        </div>
+                        {% endif %}
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>

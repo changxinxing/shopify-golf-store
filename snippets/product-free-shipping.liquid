@@ -1,0 +1,12 @@
+{% if  settings.ship_message %}
+<div class="shipping-messages">
+  <div class="ship-message-label">{{ settings.ship_title }}
+  
+    <span class="tool-tip">
+      <button class="medium-up--hide icon-btn tool-tip-close">{% include 'icon-close' %}</button>
+      {{settings.ship_reveal }} 
+    </span>
+  </div>
+
+</div>
+{% endif %}

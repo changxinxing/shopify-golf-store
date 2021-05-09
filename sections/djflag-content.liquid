@@ -1,0 +1,51 @@
+<div class="page-width">
+  <div class="grid copy-wrap">
+    <div class="full_size_grid_item">
+      <img src="{{ section.settings.imageOne | img_url: 'large' }}" alt="Flag Photo">
+    </div>
+    <div class="grid__item">
+        {{ page.content }}
+      
+      	<blockquote>
+          {% include 'icon-quote' %}
+          <p>{{ section.settings.quote }}</p>
+          <cite>{{ section.settings.cite }}</cite>
+        </blockquote>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Flag Giveaway - Content",
+    "settings": [
+		{
+                  "id": "imageOne",
+                  "type": "image_picker",
+                  "label": "Image"
+        },
+		{
+			"type": "header",
+			"content": "Quote"
+		},
+		{
+			"type": "text",
+			"id": "quote",
+			"label": "Quote Text",
+			"default": "Some cool quote from DJ"
+		},
+		{
+			"type": "text",
+			"id": "cite",
+			"label": "Quote Author",
+			"default": "Dustin Johnson - World #1"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

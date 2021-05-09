@@ -1,0 +1,159 @@
+<div class="quotes-wrap">
+  <h3>{{ section.settings.title }}</h3>
+  <div class="reviews-slider" id="reviews-slider" data-tns-autoplay="{{ section.settings.autorotate }}" data-tns-autoplay-speed="{{ section.settings.autorotate_speed | times: 1000 }}" data-tns-nav="{{ section.settings.show_arrows }}">
+    {% for block in section.blocks %}
+      {%- assign product = all_products[block.settings.chosen_product] -%}
+    <div class="quote">
+      <blockquote>
+        <div>
+          {% assign stars = block.settings.stars | times: 1.0 | floor %}
+          {% assign half = block.settings.stars | modulo: 1.0 %}
+          {% assign remainder = 5 | minus: block.settings.stars | floor %}
+          <div class="stars">
+			<span class="spr-badge">
+              <span class="spr-starrating spr-badge-starrating">
+                {% for i in (1..stars) %} 
+                <i class="spr-icon spr-icon-star" style="color: #ffde38;"></i>
+                {% endfor %}
+                {% if half == 0.5 %}
+                <i class="spr-icon spr-icon-star-half-alt" style="color: #ffde38;"></i>
+                {% endif %}
+                {% for i in (1..remainder) %}
+                <i class="spr-icon spr-icon-star-empty" style="color: #ffde38;"></i>
+                {% endfor %}
+              </span>          	
+            </span>            
+          </div>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.quote }}</p>
+          <cite>{{ block.settings.author }}<small>{{ block.settings.date }}</small></cite>
+        </div>
+        <div class="quote-product">
+          {%- assign img_url = product.images[1] | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <div class="image-container circle">   
+          <img  
+              class="lazyload"
+              alt="{{ preview_image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ preview_image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>     
+          </div>
+          <p>{{ product.title }}</p>
+        </div>
+      </blockquote>
+    </div>	
+    {% endfor %}
+  </div>
+
+  <div class="slide-controls" id="quoteSlideControl">
+  </div> 
+</div>
+
+{% schema %}
+{
+	"name": "Reviews - Tiny Slider",
+	"class": "section-slider",
+	"settings": [
+        {
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "From the Pros"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_dots",
+			"label": "Show dots",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_arrows",
+			"label": "Show arrows",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "autorotate",
+			"label": "Auto-rotate slides",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "autorotate_speed",
+			"label": "Change slides every",
+			"max": 10,
+			"min": 3,
+			"step": 1,
+			"unit": " s",
+			"default": 4
+		}
+	],
+	"blocks": [{
+		"type": "quote",
+		"name": "Review",
+		"settings": [
+            {
+              "type": "range",
+              "id": "stars",
+              "label": "Number of Stars",
+              "min": 1.0,
+              "max": 5.0,
+              "step": 0.5,
+              "default": 5
+            },
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Review Title",
+				"default": "Review Title"
+			},
+			{
+				"type": "textarea",
+				"id": "quote",
+				"label": "Text",
+				"default": "Add customer reviews and testimonials to showcase your store’s happy customers."
+			},
+			{
+				"type": "text",
+				"id": "date",
+				"label": "Date",
+				"default": "03.25.2020"
+			},
+			{
+				"type": "text",
+				"id": "author",
+				"label": "Author",
+				"default": "Author's Name"
+			},
+			{
+				"type": "product",
+				"id": "chosen_product",
+				"label": "Product"
+			}
+		]
+	}],
+	"presets": [{
+		"name": "Customer Reviews",
+		"category": "text",
+		"blocks": [{
+				"type": "quote"
+			},
+			{
+				"type": "quote"
+			},
+			{
+				"type": "quote"
+			}
+		]
+	}]
+}  
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

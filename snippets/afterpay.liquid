@@ -1,0 +1,92 @@
+<!-- Start of Afterpay assets -->
+<script type="application/javascript" src="https://static-us.afterpay.com/javascript/present-afterpay.js"></script>
+<script>
+  const isGiftCard = (item) => item.product_type === "Gift Card";
+
+  function useLargerLogo() {
+	const afterpayLogo = document.querySelector('.afterpay-logo');
+    
+    if(afterpayLogo) {
+      afterpayLogo.src = 'https://static.afterpay.com/integration/product-page/logo-afterpay-colour@3x.png';      
+     // debugger;
+    }
+  }
+  
+  function giftCardDetected() {
+    const afterpayProduct = {{ product | json }};
+    const afterpayCartItems = {{ cart.items | json }};
+    
+    if(afterpayProduct) {
+	  return (afterpayProduct.type === "Gift Card");
+    }
+
+    if(afterpayCartItems) {
+	  return (afterpayCartItems.some(isGiftCard));
+    } 
+    return false;
+  }
+  let amount = 0, priceSelector = "", locale = 'en_US';
+  let baseObserverConfig = { activated: true, isDecimalPrice: true };
+  let mutationObserver = null;
+  
+	{%case template.name%} 
+      {%when "product"%}
+  		amount = {{product.selected_or_first_available_variant.price | json}}; 
+        priceSelector = ".price__pricing-group";
+// 	    mutationObserver = { 
+//             ...baseObserverConfig, 
+// 			targetPriceSelector: '',
+// 		};
+        
+      {%when "cart"%}     
+        amount = {{cart.total_price | json}}; 
+        priceSelector = ".cart-subtotal";
+		mutationObserver = { 
+                 ...baseObserverConfig,
+                  // observerTarget: '.PageContent',
+	           targetPriceSelector: '',
+		};
+  	  {% when "product" or "cart"%}
+        const apConfig = {
+          afterpayLogoColor: 'color',
+          priceSelector, locale, amount,
+          showUpperLimit: false,
+          mutationObserver,
+          minMaxThreshold: {
+            min: 100,
+            max: 100000
+          },
+          hideAfterpay: giftCardDetected()
+        };
+
+        window.addEventListener("DOMContentLoaded", function() {
+          new presentAfterpay(apConfig).init();
+          useLargerLogo();
+        });
+  {%endcase%}
+</script>
+
+<style type="text/css">
+  .afterpay-logo {
+    width: 5.5em !important;
+    height: auto !important;
+  }
+  .afterpay-paragraph {
+    font-size: 0.9em;
+    margin-bottom: 18px !important;
+  }
+  .afterpay-logo-link {
+   	display: inline-block; 
+  }
+  {%case template.name%} 
+  	{%when "cart"%}
+      .afterpay-paragraph {
+
+      }
+  	{%when "product"%}
+      .afterpay-paragraph {
+        font-size: 0.6em;
+      }
+  {%endcase%}
+</style>
+<!-- End of Afterpay assets -->

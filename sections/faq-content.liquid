@@ -1,0 +1,55 @@
+<div class="full-width accordion-container">
+	<h3 class="faq-head">Frequently Asked Questions</h3>
+  	{% for block in section.blocks %}  
+		<div class="grid copy-wrap set">
+			<a href="#"> <i class="fa fa-plus-circle"></i><p class="question_title">{{ block.settings.title }}</p></a>
+			<div class="content">
+				<p>{{ block.settings.answer }}</p>
+			</div>     
+		</div>
+  	{% endfor %}
+</div>
+{% schema %}
+  {
+    "name": "FAQ - Content",
+	"class": "faq-content-section",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "FAQ",
+			"default": "Frequently Asked Questions"
+		}
+	],
+	"blocks": [
+		{
+			"type": "text",
+			"name": "question",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Question",
+					"default": "Question"
+				},
+				{
+					"type": "richtext",
+					"id": "answer",
+					"label": "Answer",
+					"default": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>"
+				}
+			]
+		}
+	],
+	"presets":[{
+		"name": "FAQ-Content",
+		"category": "faq-content"
+	}]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

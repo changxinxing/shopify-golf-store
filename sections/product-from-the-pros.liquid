@@ -1,0 +1,121 @@
+<div class="quotes-wrap">
+  <h2>{{ section.settings.title }}</h2>
+  <div class="from-pros-slider reviews-slider" id="quotes-slider">
+    {% for block in section.blocks %}
+    <div class="quote">
+      <blockquote>
+        <div>
+          <span class="pro-button">pro</span>
+          <p>{{ block.settings.quote }}</p>
+        </div>
+         <div class="quote-product">
+           {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+    <img  
+              class="lazyload"
+              alt="{{ block.settings.image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>     
+          <cite>{{ block.settings.title }}<small>{{ block.settings.job }}</small></cite>
+        </div>
+      </blockquote>
+    </div>	
+    {% endfor %}
+  </div>
+
+  <div class="slide-controls" id="quoteSlideControl">
+  </div> 
+</div>
+
+{% schema %}
+{
+	"name": "From the Pros",
+	"class": "section-slider",
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "From the Pros"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_dots",
+			"label": "Show dots",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_arrows",
+			"label": "Show arrows",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "autorotate",
+			"label": "Auto-rotate slides",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "autorotate_speed",
+			"label": "Change slides every",
+			"max": 10,
+			"min": 3,
+			"step": 1,
+			"unit": " s",
+			"default": 4
+		}
+	],
+	"blocks": [{
+		"type": "quote",
+		"name": "Review",
+		"settings": [{
+				"type": "textarea",
+				"id": "quote",
+				"label": "Text",
+				"default": "Add customer reviews and testimonials to showcase your store’s happy customers."
+			},
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Author Photo"
+			},
+			{
+				"type": "text",
+				"id": "title",
+				"label": "Author",
+				"default": "Author's Name"
+			},
+			{
+				"type": "text",
+				"id": "job",
+				"label": "Job",
+				"default": "Pro Golfer"
+			}
+		]
+	}],
+	"presets": [{
+		"name": "From the Pros",
+		"category": "text",
+		"blocks": [{
+				"type": "quote"
+			},
+			{
+				"type": "quote"
+			},
+			{
+				"type": "quote"
+			}
+		]
+	}]
+}  
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

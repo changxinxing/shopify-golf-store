@@ -1,0 +1,18 @@
+{% layout none %}
+{% capture results %}
+{% paginate search.results by 10 %}
+  {% for item in search.results %}
+    {% assign product = item %}
+{% if product.vendor != 'Nulls.Net' %}
+    {
+      "text"    : {{ product.title | json }},
+      "thumbnail": {{ product.featured_image.src | product_img_url: 'thumb' | json }},
+"id":{{ product.id | json }}
+    }
+
+    {% unless forloop.last %},{% endunless %}
+{% endif %}
+  {% endfor %}
+{% endpaginate %}
+{% endcapture %}
+kolbek([{{ results }}])

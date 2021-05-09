@@ -1,0 +1,192 @@
+<div id="drop5" class="drop5-content">
+<div class="page-width">
+  <div class="grid copy-wrap">
+    <div class="grid__item">
+      <h3>{{ section.settings.title }}</h3>
+    </div>
+    <div class="grid__item">
+      {{ page.content }}      
+    </div>
+  </div>
+  <div class="videos-wrap">
+  {% for block in section.blocks %}
+    {% if block.type == 'video' %}
+    {% capture odd %}{{ forloop.index | modulo: 2 }}{% endcapture %}    
+    <div class="video-wrapper{% if forloop.last == true and odd == '1' %} {{ odd }} medium-up--push-one-quarter{% endif %}">
+      <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+  
+
+  
+</div>
+
+  
+  <div id="laser" class="lower-section white-back section-pad">
+    <div class="page-width">
+        <div class="grid copy-wrap">
+    <div class="grid__item">
+      <h3>{{ section.settings.titlel }}</h3>
+    </div>
+    <div class="grid__item">
+      {{ section.settings.contentl }}      
+    </div>
+  </div>
+      
+        <div class="videos-wrap flex just-center">
+  {% for block in section.blocks %}
+    {% if block.type == 'video2' %}
+    {% capture odd %}{{ forloop.index | modulo: 2 }}{% endcapture %}    
+    <div class="video-wrapper{% if forloop.last == true and odd == '1' %} {{ odd }} medium-up--push-one-quarter{% endif %}">
+      <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+    </div>
+  </div>
+  
+  
+  
+    <div id="golfForever" class="lower-section light-gray-back section-pad">
+    <div class="page-width">
+        <div class="grid copy-wrap">
+    <div class="grid__item">
+      <h3>{{ section.settings.title3 }}</h3>
+    </div>
+    <div class="grid__item">
+      {{ section.settings.content3 }}      
+    </div>
+  </div>
+      
+        <div class="videos-wrap flex just-center">
+  {% for block in section.blocks %}
+    {% if block.type == 'video3' %}
+    {% capture odd %}{{ forloop.index | modulo: 2 }}{% endcapture %}    
+    <div class="video-wrapper">
+      <iframe src="//player.vimeo.com/video/{{ block.settings.video_url.id }}?byline=0&portrait=0&badge=0" width="850" height="480" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+  {% endfor %}
+  </div>
+    </div>
+  </div>
+  
+  
+</div>
+
+{% schema %}
+  {
+    "name": "Drop5 - Content",
+    "settings": [
+{
+"type": "header",
+"content": "Top Area"
+},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Left Column Heading",
+			"default": "Zach Allen + Perfect Practice have designed a 5-Day System to get you started with your putting mat and get you putting like a PGA Pro."
+		},
+{
+"type": "header",
+"content": "Second Area"
+},
+{
+			"type": "text",
+			"id": "title2",
+			"label": "Section Title",
+			"default": "Laser Putting Glasses Instruction"
+		},
+
+
+
+{
+"type": "header",
+"content": "Lower Area"
+},
+		{
+			"type": "text",
+			"id": "titlel",
+			"label": "Left Column Heading",
+			"default": "The famous Coach Rusty & Perfect Practice have designed a short tutorial video to help get you started with your laser glasses. "
+		},
+{
+"type": "header",
+"content": "Second Area"
+},
+{
+			"type": "textarea",
+			"id": "contentl",
+			"label": "Section Title",
+"default": "<h4>We recommend using your laser glasses in tandem with our Perfect Putting Mat, however they work on the putting green as well. If you don't already have a putting mat you can grab one here.</h4>The four key ideas to focus on when using your laser glasses are outlined below:<ol><li>Ensures the golfer's eyes are directly over the ball. Get instant feedback!</li><li>Teaches the golfer how to properly turn their head to look directly down their aim line</li><li>Ensures the golfer's head stays completely still during the putting stroke</li><li>After impact, teaches the golfer to follow the ball down the line to the hole (as most pros do!)</li></ol><p>Check out the training video here:</p>"
+		},
+
+{
+"type": "header",
+"content": "Third Area"
+},
+		{
+			"type": "text",
+			"id": "title3",
+			"label": "Left Column Heading",
+			"default": "Dr. Jeremy James of GOLFFOREVER teaches you how to relieve golf-related back and neck pain through simple stretching and exercises."
+		},
+
+{
+			"type": "textarea",
+			"id": "content3",
+			"label": "Section Title",
+"default": "<p>Nothing grooves your putting stroke like a good practice session on your Perfect Putting Mat. However, with extended use, you may begin to experience stiffness, soreness, or even pain in your back and/or neck. </p><p>To help relieve (and prevent) putting-related discomfort, Dr. Jeremy James of GOLFFOREVER has provided you with a few quick and simple ways to improve the way your body feels and functions, so you can continue putting without pain. Watch the videos below to learn how to alleviate back and neck pain. </p><p>And if you want to learn more ways to improve your flexibility, mobility, and rotational power for golf, be sure to claim $20 off an annual GOLFFOREVER membership by using the code PUTT20 here.</p>"
+		}
+
+	],
+	"blocks": [
+		{
+			"type": "video",
+			"name": "First Video Area",
+			"settings": [
+				{
+					"type": "video_url",
+					"id": "video_url",
+					"accept": ["vimeo"],
+					"label": "Video URL"
+				}
+			]
+		},
+	{
+			"type": "video2",
+			"name": "Second Video Area",
+			"settings": [
+				{
+					"type": "video_url",
+					"id": "video_url",
+					"accept": ["vimeo"],
+					"label": "Video URL"
+				}
+			]
+		},
+	{
+			"type": "video3",
+			"name": "Third Video Area",
+			"settings": [
+				{
+					"type": "video_url",
+					"id": "video_url",
+					"accept": ["vimeo"],
+					"label": "Video URL"
+				}
+			]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

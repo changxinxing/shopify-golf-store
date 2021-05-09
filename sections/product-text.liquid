@@ -1,0 +1,28 @@
+<div class="page-width">
+  <img src="{{ section.settings.image | img_url: '60x' }}">
+  <p>{{ section.settings.text }}</p>
+</div>
+
+{% schema %}
+  {
+    "name": "Product Text",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "image",
+			"label": "Image"
+		},
+		{
+			"type": "textarea",
+			"id": "text",
+			"label": "Text"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

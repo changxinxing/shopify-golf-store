@@ -1,0 +1,70 @@
+<div class="sizes-wrap">
+  <div class="copy">
+    <div class="copy-wrap">
+    <h2>{{ section.settings.title }}</h2>
+      <ul>
+        {% for block in section.blocks %}
+        <li>
+          {{ block.settings.title }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="image">
+<!--     <img src="{{ section.settings.image | img_url: '1200x900', crop: 'center' }}"> -->
+    <video class="desktop" src="{{ 'fullsize-features.mp4' | file_url }}" autoplay="" loop="" muted="" preload="" playsinline="" data-autoplay="" data-keepplaying=""></video>
+    <video class="mobile" src="{{ 'fullsize-features-mobile.mp4' | file_url }}" autoplay="" loop="" muted="" preload="" playsinline="" data-autoplay="" data-keepplaying=""></video>
+  </div>  
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Features",
+    "settings": [
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Standard Edition Features"
+        },		
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#FFF"
+		}
+	],
+	"blocks": [
+      {
+        "type": "feature",
+        "name": "Feature",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Feature",
+                "default": "Feature Name"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Description"
+            }
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

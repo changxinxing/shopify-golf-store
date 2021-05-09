@@ -1,0 +1,146 @@
+{% include 'dj_collection_snippet' %}
+<!-- <div class="dj_collection_section">
+    {% capture image_layout %}
+    <div class="feature-row__item">
+      {% if section.settings.image != blank %}
+        {% capture img_id %}FeatureRowImage-{{ section.id }}{% endcapture %}
+        {% capture wrapper_id %}FeatureRowImageWrapper-{{ section.id }}{% endcapture %}
+        {%- assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+        {% include 'image-style', image: section.settings.image, height: 545, wrapper_id: wrapper_id, img_id: img_id %}
+        <div id="{{ wrapper_id }}" class="feature-row__image-wrapper js">
+          <div style="padding-top:{{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100}}%;">
+            <img id="{{ img_id }}"
+                 class="feature-row__image lazyload"
+                 src="{{ section.settings.image | img_url: '200x200' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ section.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="{{ section.settings.image.alt | escape }}">
+          </div>
+        </div>
+
+        <noscript>
+          {{ section.settings.image | img_url: '600x600', scale: 2 | img_tag: section.settings.image.alt, 'feature-row__image' }}
+        </noscript>
+      {% else %}
+        {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+      {% endif %}
+    </div>
+  {% endcapture %}
+
+    <div class="dj_img">
+        {{ image_layout }}
+    </div>
+    <div class="dj_content">
+        <h1 class="dj_head">{{section.settings.headline}}</h1>
+        <h2 class="dj_subhead">{{section.settings.subheader}}</h2>
+        <p class="dj_copy">{{section.settings.copy}}</p>
+        <a href = "{{section.settings.button_link}}" class=" btn dj_button">{{section.settings.button_label}}</a>
+    </div>
+</div> -->
+
+{% schema %}
+    {
+      "name": "DJ Collection",
+      "class": "dj-collection-section",
+      "settings": [          
+          {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "text",
+            "id": "subheader",
+            "label": "Subheader"
+        },
+        {
+            "type": "richtext",
+            "id": "copy",
+            "label": "Copy"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+        {
+            "type": "image_picker",
+            "id": "feature_icon_1",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "feature_text_1",
+            "label": "Subheader"
+        },
+        {
+            "type": "image_picker",
+            "id": "feature_icon_2",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "feature_text_2",
+            "label": "Subheader"
+        },
+        {
+            "type": "image_picker",
+            "id": "feature_icon_3",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "feature_text_3",
+            "label": "Subheader"
+        },
+        {
+          "type": "image_picker",
+          "id": "feature_icon_4",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "feature_text_4",
+          "label": "Subheader"
+      },
+          {
+              "type": "text",
+              "id": "button_label",
+              "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          },
+          {
+            "type": "text",
+            "id": "button_label_1",
+            "label": "Button Text"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "Button Link"
+        },
+          {
+            "type": "checkbox",
+            "id": "show_quantity_selector",
+            "label": "Show Price"
+          }
+      ],
+      "presets":[{
+          "name": "DJ Collection",
+          "category": "dj_collection"
+      }]
+    }
+  {% endschema %}
+  
+  {% stylesheet %}
+  {% endstylesheet %}
+  
+  {% javascript %}
+  {% endjavascript %}
+  

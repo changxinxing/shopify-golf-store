@@ -1,0 +1,70 @@
+<div class="page-section-header text-center">
+  <h1>{{ section.settings.title }}</h1>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} .page-section-header {
+    {% if section.settings.bg_image %}
+    background-image: url({{ section.settings.bg_image | img_url: '1200x' }});
+    {% endif %}
+    background-position: center;
+  }
+  #shopify-section-{{ section.id }} h1 {
+    color: {{ section.settings.header_color }};
+  }
+  
+  #shopify-section-{{ section.id }} .page-section-header:after {
+    {% if section.settings.show_overlay %}
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    {% else %}
+    content: none;
+    {% endif %}
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "TOS Header",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Header",
+			"default": "Terms of Service"
+		},
+		{
+			"type": "color",
+			"id": "header_color",
+			"label": "Header Color",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_overlay",
+			"label": "Show Overlay",
+			"default": true
+		},
+		{
+			"type": "range",
+			"id": "overlay_opacity",
+			"label": "Overlay Opacity",
+			"min": 10,
+			"max": 100,
+			"step": 10,
+			"default": 30
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

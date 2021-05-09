@@ -1,0 +1,150 @@
+{% comment %}
+    Renders a product card using "Grid" style
+    Accepts:
+    - max_height: {Number} Maximum height of the product's image (required)
+    - product: {Object} Product Liquid object (required)
+    - show_vendor: {Boolean} Show the product's vendor depending on the section setting (optional)
+
+    Usage:
+    {% include 'product-card-grid', max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+{% endcomment %}
+
+  {%- assign current_variant = product.selected_or_first_available_variant -%}
+
+
+
+<div class="grid-view-item{% unless product.available %} grid-view-item--sold-out{% endunless %} product-card">
+  <a class="grid-view-item__link grid-view-item__image-container" href="{{ product.url | within: collection }}">
+    <span class="visually-hidden">{{ product.title }}</span>
+
+
+  {% capture img_id %}ProductCardImage-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {% capture wrapper_id %}ProductCardImageWrapper-{{ section.id }}-{{ product.id }}{% endcapture %}
+  {%- assign preview_image = product.featured_media.preview_image -%}
+  {%- assign img_url = product.featured_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  {%- assign h_img_url = product.images.last | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+  {% unless preview_image == blank %}
+    {% include 'image-style', image: preview_image, wrapper_id: wrapper_id, img_id: img_id %}
+  {% endunless %}
+
+
+    {% if product.variants.size > 1 %}
+  {% assign currentTags = current_tags | handle %} 
+{% for variant in product.variants %}
+{% assign variantName = variant.title | handle %}
+{% if variantName contains currentTags %}
+  {% assign img_url = variant.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
+ {% break %}
+{% endif %}
+{% endfor %} 
+  {% endif %}
+  <div class="product-card-image">
+   
+    
+        <img  
+              class="grid-view-item__image lazyload"
+              alt="{{ preview_image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ preview_image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>
+        
+              <img  
+              class="grid-view-item__image hover-image lazyload"
+              src="{{ product.images.last | img_url: '50x'}}"
+              alt="{{ preview_image.alt }}"
+              data-src="{{  h_img_url  }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ preview_image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>
+    
+ 
+    <div class="placeholder-background placeholder-background--animation" data-image-placeholder></div>
+  </div>
+
+  <noscript>
+    {% capture image_size %}{{ max_height }}x{{ max_height }}{% endcapture %}
+    <img class="grid-view-item__image" src="{{ preview_image | img_url: image_size, scale: 2 }}" alt="{{ preview_image.alt }}" style="max-width: {{ max_height | times: preview_image.aspect_ratio }}px;">
+  </noscript>
+  <div class="product-card__info">
+    <div class="product-card__meta-top">
+      <div class="h4 grid-view-item__title product-card__title" aria-hidden="true"><a href="{{ product.url | within: collection }}">{{ product.title }}</a></div>
+
+      <div class="product-single__option-mobile">
+      {%- if product.options.size == 1 -%}
+        {% assign variant = product.variants.first %}
+        {%- for option in variant.options -%}
+          {%- if product.options[forloop.index0] == 'Size' -%}{{ option }}{%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      </div>
+      
+            
+      {% comment %}Start automatically added Judge.me widget{% endcomment %}
+        {% render 'judgeme_widgets', widget_type: 'judgeme_preview_badge', concierge_install: true, product: product %}
+      {% comment %}End automatically added Judge.me widget{% endcomment %}
+      
+      <div class="product-single__option">      	
+      {%- if product.options.size == 1 -%}
+        {% assign variant = product.variants.first %}
+        {%- for option in variant.options -%}
+          {%- if product.options[forloop.index0] == 'Size' -%}{{ option }}{%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+      </div>
+
+      {% include 'product-price-listing', product: product, show_vendor: show_vendor %}   
+    </div>
+    
+
+
+  </div>
+          </a>
+      <div class="product-template__container"
+  id="ProductSection-{{ product.id }}"
+  data-section-id="{{ product.id }}"
+  data-section-type="product"
+  data-enable-history-state="true"
+  data-ajax-enabled="{{ settings.enable_ajax }}"
+>
+    
+ {% capture "form_classes" -%}
+            product-form product-form-{{ product.id }}
+            {%- unless section.settings.show_variant_labels %} product-form--hide-variant-labels {% endunless %}
+            {%- if enable_payment_button and product.has_only_default_variant %} product-form--payment-button-no-variants {%- endif -%}
+            {%- if current_variant.available == false %} product-form--variant-sold-out {%- endif -%}
+          {%- endcapture %}
+
+          {% form 'product', product, class:form_classes, novalidate: 'novalidate', data-product-form: '' %}
+      <input type="hidden" name="id" value="{{ product.variants.first.id }}" />
+      <input type="hidden" id="quantity" name="quantity" value="1"/>
+     <button type="submit" name="add"
+                  {% unless current_variant.available %} disabled="disabled" aria-disabled="true"{% endunless %}
+                  aria-label="{% unless current_variant.available %}{{ 'products.product.sold_out' | t }}{% else %}{{ 'products.product.add_to_cart' | t }}{% endunless %}"
+                  class="btn wide product-form__cart-submit{% if enable_payment_button %} btn--secondary-accent{% endif %}"
+                  data-add-to-cart>
+                  <span data-add-to-cart-text>
+                    {% unless current_variant.available %}
+                      {{ 'products.product.sold_out' | t }}
+                    {% else %}
+                      {{ 'products.product.add_to_cart' | t }}
+                    {% endunless %}
+                  </span>
+                  <span class="hide" data-loader>
+                    {% include 'icon-spinner' %}
+                  </span>
+                </button>
+  {% endform %}
+      {% unless product == empty %}
+  <script type="application/json" id="ProductJson-{{ product.id }}">
+    {{ product | json }}
+  </script>
+  <script type="application/json" id="ModelJson-{{ product.id }}">
+    {{ product.media | where: 'media_type', 'model' | json }}
+  </script>
+{% endunless %}
+    </div>
+</div>

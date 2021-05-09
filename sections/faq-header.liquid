@@ -1,0 +1,76 @@
+<div class="page-section-header text-center relative">
+     {%- assign img_url = section.settings.bg_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  <div class="background-image">
+    <img  
+              class="lazyload"
+              alt="{{ preview_image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ preview_image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>
+  </div>
+  <h1>{{ section.settings.title }}</h1>
+</div>
+
+<style>
+
+  #shopify-section-{{ section.id }} h1 {
+    color: {{ section.settings.header_color }};
+  }
+  
+  #shopify-section-{{ section.id }} .page-section-header:after {
+    {% if section.settings.show_overlay %}
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+    {% else %}
+    content: none;
+    {% endif %}
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "FAQ Header",
+    "settings": [
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Header",
+			"default": "FAQ"
+		},
+		{
+			"type": "color",
+			"id": "header_color",
+			"label": "Header Color",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_overlay",
+			"label": "Show Overlay",
+			"default": true
+		},
+		{
+			"type": "range",
+			"id": "overlay_opacity",
+			"label": "Overlay Opacity",
+			"min": 10,
+			"max": 100,
+			"step": 10,
+			"default": 30
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

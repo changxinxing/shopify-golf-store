@@ -1,0 +1,52 @@
+<div class="page-width">
+  <div class="grid copy-wrap">
+    <div class="grid__item">
+      <h3>{{ section.settings.title }}</h3>
+    </div>
+    <div class="grid__item">
+        {{ page.content }}
+      
+      	<blockquote>
+          {% include 'icon-quote' %}
+          <p>{{ section.settings.quote }}</p>
+          <cite>{{ section.settings.cite }}</cite>
+        </blockquote>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "About - Content",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Left Column Heading",
+			"default": "Our goal is to create a quality golf products with fine regard for detail."
+		},
+		{
+			"type": "header",
+			"content": "Quote"
+		},
+		{
+			"type": "text",
+			"id": "quote",
+			"label": "Quote Text",
+			"default": "You're going to love the way you play, we guarantee it!"
+		},
+		{
+			"type": "text",
+			"id": "cite",
+			"label": "Quote Author",
+			"default": "Oren & Ed"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

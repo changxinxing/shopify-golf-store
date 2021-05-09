@@ -1,0 +1,44 @@
+{%- assign img_url_background = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+<div class="dj-page-product-row-container">
+  <div class="dj-page-product-img-container">
+    <img src="{{section.settings.image | img_url: '2500x' }}" class="lazyload">  
+  </div>  
+  
+  <div class="djpage-content-container">
+      <h4>
+      {{ section.settings.headline }}
+      </h4>  
+      <h2>
+      {{ section.settings.subheader }}
+      </h2>
+      <p class="copy">
+      {{ section.settings.copy }}
+      </p>
+    <div class="djpage-product-features-container">
+      <div class="djpage-feature-column">
+        <img src="{{section.settings.feature_icon_1 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ section.settings.feature_text_1 }}</h5>
+      </div>
+      <div class="djpage-feature-column">
+        <img src="{{section.settings.feature_icon_2 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ section.settings.feature_text_2 }}</h5>
+      </div>
+      <div class="djpage-feature-column">
+        <img src="{{section.settings.feature_icon_3 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ section.settings.feature_text_3 }}</h5>
+      </div>
+      <div class="djpage-feature-column">
+        <img src="{{section.settings.feature_icon_4 | img_url: '300x' }}" class="lazyload product-feature-icon-image">  
+      	<h5>{{ section.settings.feature_text_4 }}</h5>
+      </div>
+    </div>
+  	<div class="djpage-button-row">
+      	<div>
+            <a href="{{ section.settings.button_link }}" class="btn djbutton btn--has-icon-after djpage-learnmore-btn">{{ section.settings.button_label }}</a>
+      	</div> 
+    	<div id="section-cta">
+  			<a href="{{ section.settings.button_link_1 }}" class="btn djbutton btn--has-icon-after djpage-learnmore-btn">{{ section.settings.button_label_1 }}</a>
+    	</div>
+  	</div>
+  </div>
+</div>

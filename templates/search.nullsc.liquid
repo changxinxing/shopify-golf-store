@@ -1,0 +1,25 @@
+{% layout none %}
+{% capture kolektion %}
+{% paginate search.results by 250 %}
+{% for collection in collections %}
+{% if collection.products_count > 0 %}
+{% if collection.image %}
+    {
+      "text"    : {{ collection.title | json }},
+      "thumbnail": {{ collection.image.src | collection_img_url: 'thumb' | json }},
+"id":{{ collection.id | json }}
+
+    }
+{% else %}
+    {
+      "text"    : {{ collection.title | json }},
+      "thumbnail": {{ collection.products.first.featured_image.src | product_img_url: 'thumb' | json }},
+"id":{{ collection.id | json }}
+    }
+{% endif %}
+{% unless forloop.last %},{% endunless %}
+{% endif %}
+{% endfor %}
+{% endpaginate %}
+{% endcapture %}
+kolbek([{{ kolektion }}])

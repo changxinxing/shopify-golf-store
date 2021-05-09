@@ -1,0 +1,68 @@
+<div class="page-width">
+  <h3>{{ section.settings.title }}</h3>
+  <div class="drop-5-system relative">
+    
+       {% if section.settings.bg_image %}
+    {%- assign img_url = section.settings.bg_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+  <div class="background-image">
+    <img  
+              class="lazyload"
+              alt="{{ preview_image.alt }}"
+              data-src="{{ img_url }}"
+              data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+              data-aspectratio="{{ preview_image.aspect_ratio }}"
+              data-sizes="auto"
+              data-image>
+  </div>
+  {% endif %}
+    <div class="relative">
+  	{% include 'icon-drop5-vertical' %}
+    <h4>5-Day Putting System</h4>
+    <p>{{ section.settings.text }}</p>
+    <a href="{{ section.settings.button_url }}" class="btn solid">{{ section.settings.button_text }}</a>
+  </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+    "name": "Drop5",
+    "settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Putt like a PGA Pro"
+		},
+		{
+			"type": "image_picker",
+			"id": "bg_image",
+			"label": "Background Image"
+		},
+		{
+			"type": "url",
+			"id": "button_url",
+			"label": "Button Link"
+		},
+		{
+			"type": "text",
+			"id": "button_text",
+			"label": "Button Text",
+			"default": "Start Putting"
+		},
+		{
+			"type": "textarea",
+			"id": "text",
+			"label": "Text"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

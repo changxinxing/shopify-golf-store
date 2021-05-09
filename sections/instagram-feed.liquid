@@ -1,0 +1,100 @@
+<div class="quotes-wrap">
+  <h3>{{ section.settings.title }}</h3>
+  <div class="instagram-slider" id="instagram-slider" data-tns-autoplay="{{ section.settings.autorotate }}" data-tns-autoplay-speed="{{ section.settings.autorotate_speed | times: 1000 }}" data-tns-nav="{{ section.settings.show_arrows }}">
+    {% for block in section.blocks %}
+    	<div class="post">
+          <img src="{{ block.settings.image | img_url: '500x500', crop: 'center' }}">
+        </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  #shopify-section-{{ section.id }} {
+    padding-bottom: 110px;
+    background-color: {{ section.settings.bg_color }};
+  }
+</style>
+
+{% schema %}
+{
+	"name": "Instagram Feed",
+	"class": "section-slider",
+	"settings": [
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Check us out on Instagram"
+		},
+		{
+			"type": "checkbox",
+			"id": "autorotate",
+			"label": "Auto-rotate slides",
+			"default": false
+		},
+		{
+			"type": "range",
+			"id": "autorotate_speed",
+			"label": "Change slides every",
+			"max": 10,
+			"min": 3,
+			"step": 1,
+			"unit": " s",
+			"default": 4
+		}
+	],
+	"blocks": [{
+		"type": "post",
+		"name": "Image",
+		"settings": [
+			{
+				"type": "image_picker",
+				"id": "image",
+				"label": "Image"
+			},
+			{
+				"type": "url",
+				"id": "link_url",
+				"label": "Link"
+			}
+        ]
+	}],
+	"presets": [{
+		"name": "Instagram Feed",
+		"category": "Image",
+		"blocks": [
+			{
+				"type": "post"
+			},
+			{
+				"type": "post"
+			},
+			{
+				"type": "post"
+			},
+			{
+				"type": "post"
+			},
+			{
+				"type": "post"
+			},
+			{
+				"type": "post"
+			}
+		]
+	}]
+}  
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

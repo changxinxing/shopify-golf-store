@@ -1,0 +1,65 @@
+<div class="page-width">
+  <div class="product-recommendations__inner">
+    {%- if section.settings.heading != blank -%}
+      <div class="section-header text-center">
+        <h2>{{ section.settings.heading | escape }}</h2>
+      </div>
+    {%- endif -%}
+
+    {%- assign max_height = 530 -%}
+    {%- assign grid_item_width = 'medium-up--one-half' -%}
+
+    
+    {%- assign product_limit = section.settings.grid | times: section.settings.rows -%}
+
+    <ul class="grid grid--uniform grid--view-items">
+        {% for block in section.blocks %}
+          {%- assign product = all_products[block.settings.product] -%}
+
+          <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+            {% include 'product-card-grid', image: block.settings.image max_height: max_height, product: product, show_vendor: section.settings.show_vendor %}
+          </li>
+        {% else %}
+
+          {% for i in (1..product_limit) %}
+            <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
+              <div class="grid-view-item product-card">
+                <a class="grid-view-item__link grid-view-item__image-container full-width-link" href="#">
+                  <span class="visually-hidden">{{ 'homepage.onboarding.product_title' | t }}</span>
+                </a>
+                <div class="grid-view-item__image-wrapper">
+                  {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+                  {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+                </div>
+                <div class="h4 grid-view-item__title" aria-hidden="true">{{ 'homepage.onboarding.product_title' | t }}</div>
+                {% include 'product-price' %}
+              </div>
+            </li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+  </div>
+</div>
+
+{% schema %}
+{
+	"name": "Product recommendations",
+	"settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading",
+			"default": "You may also like"
+		}
+	],
+	"blocks": [{
+		"type": "product",
+		"name": "Product",		
+		"settings": [{
+			"type": "product",
+			"id": "product",
+			"label": "Product"		
+		}]
+	}]
+}
+{% endschema %}

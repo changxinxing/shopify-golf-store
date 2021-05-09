@@ -1,0 +1,83 @@
+{% for block in section.blocks %}
+
+{%- capture icon -%}icon-{{ block.settings.icons }}{%- endcapture -%}
+<div class="info-item"><span class="primary-color icon">{% include icon %}</span><span>{{ block.settings.title }}</span></div>
+{% endfor %}
+
+<style>
+
+  #shopify-section-{{ section.id }} {
+    background-color: {{ section.settings.bg_color }};
+  }
+  
+  #shopify-section-{{ section.id }} .info-item {
+    color: {{ section.settings.text_color }};
+  }
+  
+</style>
+
+{% schema %}
+  {
+    "name": "Banner",
+    "settings": [
+		{
+			"type": "color",
+			"id": "bg_color",
+			"label": "Background Color",
+			"default": "#F7F7F7"
+		},
+		{
+			"type": "color",
+			"id": "text_color",
+			"label": "Text Color",
+			"default": "#828282"
+		}
+	],
+	"blocks": [
+		{
+          "type": "text",
+          "name": "Info",
+          "settings": [
+              {
+                  "type": "select",
+                  "id": "icons",
+                  "label": "Icon",
+   "options": [
+      { 
+"value": "calendar", 
+"label": "Calendar"
+},
+      { 
+"value": "lock", 
+"label": "Lock"
+},
+      { 
+"value": "shipping", 
+"label": "Shipping"
+},
+      { 
+"value": "accredited", 
+"label": "Accredited"
+},
+{ 
+"value": "productyear", 
+"label": "Product Year"
+}
+   ]
+              },
+              {
+                  "type": "text",
+                  "id": "title",
+                  "label": "Text"
+              }
+          ]
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,69 @@
+<section data-section-id="{{ section.id }}" class="press-mentions section-pad white-back">
+  
+<div class="narrow-width text-center">
+  
+  {% if section.settings.title %}<h2> {{section.settings.title}} </h2>{% endif %}
+    <ul id="pressLogos" class="logo-blocks flex just-center grid align-center">
+       {% for block in section.blocks %}
+      <li class="grid__item one-fifth small--one-third logo-image">
+        {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+          <a {% if block.settings.url != blank %}href="{{ block.settings.url }}" target="_blank"{% endif %}>
+                   <img 
+                 class="lazyload"
+              
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-sizes="auto"
+                alt="{{ block.settings.image.alt }}"></a>
+      </li>
+      	{% endfor %}
+    </ul>
+  </div>
+
+</section>
+
+{% schema %}
+   {
+    "name": "Press Logo Blocks",
+    "settings": [
+{
+        "type": "text",
+        "id": "title",
+        "label": "Section Title",
+        "default": "Featured In."
+      }
+
+],
+
+ "blocks": [
+      {
+        "type": "logos",
+        "name": "Logos",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Choose Logo"
+          },
+{
+        "type": "url",
+        "id": "url",
+        "label": "Link"
+      }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Home Page Press Logos",
+        "category": "BD Custom"
+      }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

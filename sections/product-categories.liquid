@@ -1,0 +1,254 @@
+<div class="full-width">
+    {% if section.settings.title != blank %}
+      <div class="section-header text-center">
+        <h1>{{ section.settings.title | escape }}</h1>
+      </div>
+    {% endif %}
+  
+    {%- assign collection = collections[section.settings.collection] -%}
+  
+    {% case section.settings.grid %}
+      {% when 2 %}
+        {%- assign max_height = 530 -%}
+        {%- assign grid_item_width = 'medium-up--one-half' -%}
+      {% when 3 %}
+        {%- assign max_height = 345 -%}
+        {%- assign grid_item_width = 'medium-up--one-third' -%}
+      {% when 4 %}
+        {%- assign max_height = 250 -%}
+        {%- assign grid_item_width = 'medium-up--one-quarter' -%}
+      {% when 5 %}
+        {%- assign max_height = 195 -%}
+        {%- assign grid_item_width = 'medium-up--one-fifth' -%}
+    {% endcase %}
+  
+    {%- assign category_limit = section.settings.grid | times: section.settings.rows -%}
+  
+    <ul class="grid grid--uniform grid--view-items">
+      {% for block in section.blocks %}  
+          <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }} product-categories">
+            <a href="{{ block.settings.button_link}}">
+            <div class="grid-view-item product-card categoreis">
+              <h3 class = "categpry_name">{{block.settings.category_name}}</h3>
+                {%- assign img_url = block.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+                {% include 'image-style', image: block.settings.image, height: 545, wrapper_id: wrapper_id, img_id: img_id %}
+              <img id="{{ img_id }}"
+                 class="feature-row__image lazyload category_img"
+                 src="{{ block.settings.image | img_url: '1080x1080' }}"
+                 data-src="{{ img_url }}"
+                 data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                 data-aspectratio="{{ block.settings.image.aspect_ratio }}"
+                 data-sizes="auto"
+                 alt="">
+                
+            </div>    
+  			</a>
+          </li>
+      {% endfor %}
+    </ul>
+  
+  </div>
+  
+  
+  
+  {% schema %}
+  {
+    "name": "Product Categories",
+    "class": "product-categories-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": {
+          "da": "Overskrift",
+          "de": "Titel",
+          "en": "Heading",
+          "es": "Título",
+          "fi": "Otsake",
+          "fr": "En-tête",
+          "hi": "शीर्षक",
+          "it": "Heading",
+          "ja": "見出し",
+          "ko": "제목",
+          "nb": "Overskrift",
+          "nl": "Kop",
+          "pt-BR": "Título",
+          "pt-PT": "Título",
+          "sv": "Rubrik",
+          "th": "ส่วนหัว",
+          "zh-CN": "标题",
+          "zh-TW": "標題"
+        },
+        "default": {
+          "da": "Udvalgt kollektion",
+          "de": "Vorgestellte Kategorie",
+          "en": "Product Categories",
+          "es": "Colección destacada",
+          "fi": "Esittelyssä oleva kokoelma",
+          "fr": "Collection en vedette",
+          "hi": "फ़ीचर्ड कलेक्शन",
+          "it": "Collezione in evidenza",
+          "ja": "特集コレクション",
+          "ko": "추천 컬렉션",
+          "nb": "Fremhevet samling",
+          "nl": "Uitgelichte collectie",
+          "pt-BR": "Coleção em destaque",
+          "pt-PT": "Coleção em destaque",
+          "sv": "Utvald kollektion",
+          "th": "คอลเลกชันแนะนำ",
+          "zh-CN": "特色产品系列",
+          "zh-TW": "精選商品系列"
+        }
+      },
+      {
+        "type": "range",
+        "id": "grid",
+        "label": {
+          "da": "Produkter pr. række",
+          "de": "Produkte per Reihe",
+          "en": "Products per row",
+          "es": "Productos por fila",
+          "fi": "Tuotteita per rivi",
+          "fr": "Produits par rangée",
+          "hi": "प्रति पंक्ति उत्पाद",
+          "it": "Prodotti per riga",
+          "ja": "行あたりの商品数",
+          "ko": "열 별 제품",
+          "nb": "Produkter per rad",
+          "nl": "Producten per rij",
+          "pt-BR": "Produtos por linha",
+          "pt-PT": "Produtos por linha",
+          "sv": "Produkter per rad",
+          "th": "สินค้าต่อแถว",
+          "zh-CN": "每行产品数",
+          "zh-TW": "每列產品數"
+        },
+        "min": 2,
+        "max": 5,
+        "step": 1,
+        "default": 3
+      },
+      {
+        "type": "range",
+        "id": "rows",
+        "label": {
+          "da": "Rækker",
+          "de": "Reihen",
+          "en": "Rows",
+          "es": "Filas",
+          "fi": "Rivit",
+          "fr": "Rangées",
+          "hi": "पंक्ति",
+          "it": "Righe",
+          "ja": "行",
+          "ko": "열",
+          "nb": "Rader",
+          "nl": "Rijen",
+          "pt-BR": "Linhas",
+          "pt-PT": "Linhas",
+          "sv": "Rader",
+          "th": "แถว",
+          "zh-CN": "行数",
+          "zh-TW": "列"
+        },
+        "min": 1,
+        "max": 5,
+        "step": 1,
+        "default": 2
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": {
+          "da": "Produkt",
+          "de": "Produkt",
+          "en": "Category",
+          "es": "Producto",
+          "fi": "Tuote",
+          "fr": "Produit",
+          "hi": "उत्पाद",
+          "it": "Prodotto",
+          "ja": "商品",
+          "ko": "제품",
+          "nb": "Produkt",
+          "nl": "Product",
+          "pt-BR": "Produto",
+          "pt-PT": "Produto",
+          "sv": "Produkt",
+          "th": "สินค้า",
+          "zh-CN": "产品",
+          "zh-TW": "產品"
+        },
+        "settings": [
+        {
+            "type":"text",
+            "id":"category_name",
+            "label":"Category Title",
+            "default":"Type the category name"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Product Image"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Button Text"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+          }       
+        ]
+      }	
+    ],
+    "presets": [
+      {
+        "name": {
+          "da": "Udvalgt kollektion",
+          "de": "Vorgestellte Kategorie",
+          "en": "Product Categories",
+          "es": "Colección destacada",
+          "fi": "Esittelyssä oleva kokoelma",
+          "fr": "Collection en vedette",
+          "hi": "फ़ीचर्ड कलेक्शन",
+          "it": "Collezione in evidenza",
+          "ja": "特集コレクション",
+          "ko": "추천 컬렉션",
+          "nb": "Utvalgt samling",
+          "nl": "Uitgelichte collectie",
+          "pt-BR": "Coleção em destaque",
+          "pt-PT": "Coleção em destaque",
+          "sv": "Utvald kollektion",
+          "th": "คอลเลกชันแนะนำ",
+          "zh-CN": "特色产品系列",
+          "zh-TW": "精選商品系列"
+        },
+        "category": {
+          "da": "Kollektion",
+          "de": "Kategorie",
+          "en": "Collection",
+          "es": "Colección",
+          "fi": "Kokoelma",
+          "fr": "Collection",
+          "hi": "कलेक्शन",
+          "it": "Collezione",
+          "ja": "コレクション",
+          "ko": "컬렉션",
+          "nb": "Samling",
+          "nl": "Collectie",
+          "pt-BR": "Coleção",
+          "pt-PT": "Coleção",
+          "sv": "Produktserie",
+          "th": "คอลเลกชัน",
+          "zh-CN": "收藏",
+          "zh-TW": "商品系列"
+        }
+      }
+    ]
+  }
+  {% endschema %}
+  

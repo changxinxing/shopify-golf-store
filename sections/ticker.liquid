@@ -1,0 +1,65 @@
+{% if section.blocks.size > 0 %}
+<div class="ticker-wrap">
+  <div id="ticker" class="ticker">
+    {% for block in section.blocks %}
+    <div class="ticker-item"><span>{% include 'checkmark' %}{{ block.settings.text }}</span></div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+<style>
+  #shopify-section-ticker .ticker-wrap {
+    background-color: {{ section.settings.color_bg }};
+  }
+  
+  #shopify-section-ticker .ticker-wrap .ticker-item {
+    color: {{ section.settings.color_text }};
+  }
+
+  #shopify-section-ticker .ticker-wrap .ticker-item svg {
+    fill: {{ section.settings.color_text }};
+  }
+
+</style>
+
+
+{% schema %}
+  {
+    "name": "Ticker",
+    "settings": [
+    {
+      "type": "color",
+      "id": "color_bg",
+      "label": "Background Color",
+      "default": "#1ED761"
+    },
+    {
+      "type": "color",
+      "id": "color_text",
+      "label": "Text Color",
+      "default": "#ffffff"
+    }
+	],
+	"blocks": [
+	{
+      "type": "text",
+      "name": "Ticker Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "default ticker text"
+        }
+      ]
+    }		
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

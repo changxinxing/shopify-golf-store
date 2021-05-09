@@ -1,0 +1,298 @@
+<video src="{{ section.settings.video_url }}" class="video-reel" autoplay="" loop="" muted="" preload="" playsinline="" data-autoplay="" data-keepplaying="" poster="{{ section.settings.video_poster | img_url: 'x1080' }}"></video>
+
+{% schema %}
+  {
+    "name": "Product Page - Video",
+    "settings": [
+        {
+          "type": "url",
+          "id": "video_url",
+          "label": "Video URL"
+        },
+        {
+          "type": "select",
+          "id": "width",
+          "label": {
+            "da": "Containerbredde",
+            "de": "Breite des Elements",
+            "en": "Container width",
+            "es": "Ancho del contenedor",
+            "fi": "Säiliön leveys",
+            "fr": "Largeur du conteneur",
+            "hi": "कंटेनर की चौड़ाई",
+            "it": "Larghezza contenitore",
+            "ja": "コンテナーの幅",
+            "ko": "컨테이너 폭",
+            "ms": "Lebar bekas",
+            "nb": "Beholderbredde",
+            "nl": "Containerbreedte",
+            "pt-BR": "Largura do recipiente",
+            "pt-PT": "Largura do recipiente",
+            "sv": "Container-bredd",
+            "th": "ความกว้างของความจุ",
+            "zh-CN": "容器宽度",
+            "zh-TW": "容器寬度"
+          },
+          "default": "100%",
+          "options": [
+            {
+              "value": "25%",
+              "label": {
+                "da": "25 %",
+                "de": "25%",
+                "en": "25%",
+                "es": "25%",
+                "fi": "25 %",
+                "fr": "25 %",
+                "hi": "25%",
+                "it": "25%",
+                "ja": "25%",
+                "ko": "25%",
+                "ms": "25%",
+                "nb": "25 %",
+                "nl": "25%",
+                "pt-BR": "25%",
+                "pt-PT": "25%",
+                "sv": "25 %",
+                "th": "25%",
+                "zh-CN": "25％",
+                "zh-TW": "25%"
+              }
+            },
+            {
+              "value": "33%",
+              "label": {
+                "da": "33 %",
+                "de": "33%",
+                "en": "33%",
+                "es": "33%",
+                "fi": "33 %",
+                "fr": "33 %",
+                "hi": "33%",
+                "it": "33%",
+                "ja": "33%",
+                "ko": "33%",
+                "ms": "33%",
+                "nb": "33 %",
+                "nl": "33%",
+                "pt-BR": "33%",
+                "pt-PT": "33%",
+                "sv": "33 %",
+                "th": "33%",
+                "zh-CN": "33%",
+                "zh-TW": "33%"
+              }
+            },
+            {
+              "value": "50%",
+              "label": {
+                "da": "50 %",
+                "de": "50%",
+                "en": "50%",
+                "es": "50%",
+                "fi": "50 %",
+                "fr": "50 %",
+                "hi": "50%",
+                "it": "50%",
+                "ja": "50%",
+                "ko": "50%",
+                "ms": "50%",
+                "nb": "50 %",
+                "nl": "50%",
+                "pt-BR": "50%",
+                "pt-PT": "50%",
+                "sv": "50 %",
+                "th": "50%",
+                "zh-CN": "50%",
+                "zh-TW": "50%"
+              }
+            },
+            {
+              "value": "66%",
+              "label": {
+                "da": "66 %",
+                "de": "66%",
+                "en": "66%",
+                "es": "66%",
+                "fi": "66 %",
+                "fr": "66 %",
+                "hi": "66%",
+                "it": "66%",
+                "ja": "66%",
+                "ko": "66%",
+                "ms": "66%",
+                "nb": "66 %",
+                "nl": "66%",
+                "pt-BR": "66%",
+                "pt-PT": "66%",
+                "sv": "66 %",
+                "th": "66%",
+                "zh-CN": "66%",
+                "zh-TW": "66%"
+              }
+            },
+            {
+              "value": "75%",
+              "label": {
+                "da": "75 %",
+                "de": "75%",
+                "en": "75%",
+                "es": "75%",
+                "fi": "75 %",
+                "fr": "75 %",
+                "hi": "75%",
+                "it": "75%",
+                "ja": "75%",
+                "ko": "75%",
+                "ms": "75%",
+                "nb": "75 %",
+                "nl": "75%",
+                "pt-BR": "75%",
+                "pt-PT": "75%",
+                "sv": "75 %",
+                "th": "75%",
+                "zh-CN": "75%",
+                "zh-TW": "75%"
+              }
+            },
+            {
+              "value": "100%",
+              "label": {
+                "da": "100 %",
+                "de": "100%",
+                "en": "100%",
+                "es": "100%",
+                "fi": "100 %",
+                "fr": "100 %",
+                "hi": "100%",
+                "it": "100%",
+                "ja": "100%",
+                "ko": "100%",
+                "ms": "100%",
+                "nb": "100 %",
+                "nl": "100%",
+                "pt-BR": "100%",
+                "pt-PT": "100%",
+                "sv": "100 %",
+                "th": "100%",
+                "zh-CN": "100%",
+                "zh-TW": "100%"
+              }
+            }
+          ]
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "label": {
+            "da": "Lodret justering",
+            "de": "Vertikale Ausrichtung",
+            "en": "Vertical alignment",
+            "es": "Alineación vertical",
+            "fi": "Pystysuuntainen tasaus",
+            "fr": "Alignement vertical",
+            "hi": "लंबवत पंक्तिबद्धता",
+            "it": "Allineamento verticale",
+            "ja": "垂直アラインメント",
+            "ko": "수직 정렬",
+            "ms": "Penjajaran menegak",
+            "nb": "Vertikal justering",
+            "nl": "Verticaal uitlijnen",
+            "pt-BR": "Alinhamento vertical",
+            "pt-PT": "Alinhamento vertical",
+            "sv": "Vertikal justering",
+            "th": "การจัดวางแนวตั้ง",
+            "zh-CN": "垂直对齐",
+            "zh-TW": "垂直對齊"
+          },
+          "default": "top-middle",
+          "options": [
+            {
+              "value": "top-middle",
+              "label": {
+                "da": "Top",
+                "de": "Oben",
+                "en": "Top",
+                "es": "Superior",
+                "fi": "Ylös",
+                "fr": "Haut",
+                "hi": "सबसे ऊपर",
+                "it": "In alto",
+                "ja": "上",
+                "ko": "위쪽",
+                "ms": "Atas",
+                "nb": "Topp",
+                "nl": "Boven",
+                "pt-BR": "Acima",
+                "pt-PT": "Acima",
+                "sv": "Högst upp",
+                "th": "ด้านบน",
+                "zh-CN": "顶部",
+                "zh-TW": "頂部"
+              }
+            },
+            {
+              "value": "center",
+              "label": {
+                "da": "I midten",
+                "de": "Mitte",
+                "en": "Middle",
+                "es": "Al medio",
+                "fi": "Keskelle",
+                "fr": "Milieu",
+                "hi": "मध्य में",
+                "it": "Centro",
+                "ja": "中央",
+                "ko": "중간",
+                "ms": "Tengah",
+                "nb": "Midten",
+                "nl": "Midden",
+                "pt-BR": "Meio",
+                "pt-PT": "Meio",
+                "sv": "Mitten",
+                "th": "ตรงกลาง",
+                "zh-CN": "中间",
+                "zh-TW": "中央"
+              }
+            },
+            {
+              "value": "bottom-middle",
+              "label": {
+                "da": "Bund",
+                "de": "Unten",
+                "en": "Bottom",
+                "es": "Inferior",
+                "fi": "Alas",
+                "fr": "Bas",
+                "hi": "नीचे का",
+                "it": "In basso",
+                "ja": "下",
+                "ko": "아래쪽",
+                "ms": "Bawah",
+                "nb": "Bunn",
+                "nl": "Onder",
+                "pt-BR": "Abaixo",
+                "pt-PT": "Abaixo",
+                "sv": "Längst ner",
+                "th": "ด้านล่าง",
+                "zh-CN": "底部",
+                "zh-TW": "底部"
+              }
+            }
+          ]
+        },
+        {
+          "type": "image_picker",
+          "id": "video_poster",
+          "label": "Video Poster",
+          "info": "Screengrab of first frame of video while it loads"
+        }
+    ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

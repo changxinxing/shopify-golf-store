@@ -1,0 +1,29 @@
+<div class="page-width">
+  <div class="grid copy-wrap">
+    <div class="grid__item">
+      <h3>{{ section.settings.title }}</h3>
+    </div>
+    <div class="grid__item">
+        {{ page.content }}      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Shipping - Content",
+    "settings": [
+		{
+          "type": "richtext",
+          "id": "title",
+          "label": "Left Column Heading"
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

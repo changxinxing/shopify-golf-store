@@ -1,0 +1,2344 @@
+{
+  "current": {
+    "color_brand": "#1ed761",
+    "color_text": "#3a3a3a",
+    "color_body_text": "#333232",
+    "color_sale_text": "#fa4545",
+    "color_button": "#1ed761",
+    "color_button_text": "#ffffff",
+    "color_small_button_text_border": "#3a3a3a",
+    "color_text_field_text": "#000000",
+    "color_text_field_border": "#cccccc",
+    "color_text_field": "rgba(0,0,0,0)",
+    "color_image_overlay_text": "#ffffff",
+    "color_image_overlay": "#685858",
+    "image_overlay_opacity": 40,
+    "color_borders": "#ebebeb",
+    "color_body_bg": "#ffffff",
+    "type_header_font": "poppins_n5",
+    "type_header_base_size": 26,
+    "type_base_font": "poppins_n4",
+    "type_base_size": 15,
+    "predictive_search_enabled": true,
+    "predictive_search_show_vendor": false,
+    "predictive_search_show_price": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": true,
+    "share_pinterest": true,
+    "social_twitter_link": "https:\/\/twitter.com\/golf_perfect",
+    "social_facebook_link": "https:\/\/www.facebook.com\/practiceperfected\/",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/perfectpracticegolf",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "",
+    "social_vimeo_link": "",
+    "social_tiktok_link": "https:\/\/www.tiktok.com\/@perfectpracticegolf",
+    "favicon": "",
+    "enable_ajax": true,
+    "gift_product": "gift-wrap",
+    "gift_title": "Over Box for Discretion",
+    "gift_description": "Place an over box to cover manufacturing packaging. Keep the contents of your order private.",
+    "ship_message": true,
+    "ship_title": "FREE Shipping & FREE Returns",
+    "ship_reveal": "<p><strong>FREE UPS Ground shipping on all orders within the U.S.<\/strong>\n    <\/p><p><strong>Returns are FREE in the U.S. via a prepaid shipping label.<\/strong><\/p>\n    <p>Returns are accepted within 60 days of purchase for a full refund. Restrictions apply.<\/p>",
+    "checkout_header_image": "",
+    "checkout_logo_image": "shopify:\/\/shop_images\/PPLogoBlack.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#1ed761",
+    "checkout_button_color": "#1ed761",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "show_search": false,
+          "align_logo": "left",
+          "logo": "shopify:\/\/shop_images\/PerfectPractice_LOGO_02.png",
+          "logo_max_width": 125,
+          "main_linklist": "main-menu",
+          "message": true,
+          "home_page_only": false,
+          "message_text": "INTRODUCING THE DUSTIN JOHNSON PRACTICE COLLECTION. JUST RELEASED! LIMITED TIME DISCOUNT.",
+          "color_bg": "#1ed761",
+          "color_text": "#ffffff",
+          "section_title": "#alwaysbeputting",
+          "subheading": "<p>Subscribe to Perfect Practice for monthly updates and great deals<\/p>"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "1587505539553": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "1587505539553"
+        ],
+        "settings": {
+          "show_payment_icons": true,
+          "color_footer_bg": "#000000",
+          "color_footer_text": "#ffffff",
+          "copyright_color": "#7f7f7f",
+          "footer_text": "#alwaysbeputting"
+        }
+      },
+      "ticker": {
+        "type": "ticker",
+        "settings": {
+          "color_bg": "#1ed761",
+          "color_text": "#ffffff"
+        }
+      },
+      "password-header": {
+        "type": "password-header",
+        "settings": {
+          "logo": "",
+          "logo_max_width": 100,
+          "header": "Coming Soon"
+        }
+      },
+      "password-content": {
+        "type": "password-content",
+        "settings": {
+          "newsletter_enable": true,
+          "newsletter_form_heading": "Be the first to know when we launch.",
+          "newsletter_form_subheading": "<p>A short sentence describing what someone will receive by subscribing<\/p>",
+          "newsletter_placeholder": "Email address",
+          "newsletter_button_text": "Notify me"
+        }
+      },
+      "password-footer": {
+        "type": "password-footer",
+        "settings": {
+          "show_share_buttons": true,
+          "social_message": "Spread the word"
+        }
+      },
+      "1586912351353": {
+        "type": "hero-product",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/PP_Poster_Hero.jpg",
+          "chosen_product": "the-perfect-practice-putting-mat",
+          "content_width": 500,
+          "alignment": "top",
+          "hero_layout": "full_width",
+          "hero_size": "large",
+          "text_size": "medium",
+          "title": "The Perfect Putting Mat - Standard Edition",
+          "text": "<p>Guaranteed To Lower Your Scores<\/p>",
+          "button_label": "GET YOURS",
+          "button_link": "shopify:\/\/products\/the-perfect-practice-putting-mat",
+          "button_wide": true
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "hide_low": false,
+          "low_stock_title": "LOW IN STOCK",
+          "low_stock_text": "Inventory is running low & we expect to sell out again! Order now to make sure you don't have to wait for the next shipment.",
+          "branded_text": "Keep your game sharp.",
+          "hide_description": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-from-the-pros": {
+        "type": "product-from-the-pros",
+        "blocks": {
+          "1589547846865": {
+            "type": "quote",
+            "settings": {
+              "quote": "Anyone who is serious about improving their putting needs the Perfect Putting mat.  It’s done wonders for my confidence and become part of my daily practice.",
+              "image": "shopify:\/\/shop_images\/headshots_30925.png",
+              "title": "Dustin Johnson",
+              "job": "Major Champion"
+            }
+          },
+          "1587157372081": {
+            "type": "quote",
+            "settings": {
+              "quote": "It's awesome mate! For the elite and for kids too, my boys love it. It's teaching them the correct alignment...Thanks for the mat and looking forward to making more putts!!",
+              "image": "shopify:\/\/shop_images\/marc-leishman.jpg",
+              "title": "Marc Leishman",
+              "job": "PGA Tour Champion"
+            }
+          },
+          "1594160720150": {
+            "type": "quote",
+            "settings": {
+              "quote": "You make this putt, you can make any putt! (on the Perfect Practice Mat) All day, I'm buying!",
+              "image": "shopify:\/\/shop_images\/mattwolffheadshot.png",
+              "title": "Matt Wolff",
+              "job": "PGA Tour Champion"
+            }
+          },
+          "1587157378068": {
+            "type": "quote",
+            "settings": {
+              "quote": "Thanks Guys!!! Been using it non stop. Love it!!!",
+              "image": "shopify:\/\/shop_images\/jimmy-walker.jpg",
+              "title": "Jimmy Walker",
+              "job": "PGA Tour \/ Major Champion"
+            }
+          },
+          "1587157375848": {
+            "type": "quote",
+            "settings": {
+              "quote": "I love it! Thank you again Perfect Practice",
+              "image": "shopify:\/\/shop_images\/marcleishman.png",
+              "title": "Charles Howell III",
+              "job": "PGA Tour Champion"
+            }
+          },
+          "1587157379122": {
+            "type": "quote",
+            "settings": {
+              "quote": "It's much better than other mats I have used over the years, Great Quality, thanks again!",
+              "image": "shopify:\/\/shop_images\/vijay-singh.jpg",
+              "title": "Vijay Singh",
+              "job": "PGA Tour Legend"
+            }
+          },
+          "1587157380133": {
+            "type": "quote",
+            "settings": {
+              "quote": "Feeling good!!! Thank you Perfect Practice, Go get yours!!",
+              "image": "shopify:\/\/shop_images\/joaquin-niemann.jpg",
+              "title": "Joaquin Niemann",
+              "job": "PGA Tour Champion"
+            }
+          },
+          "1587157381143": {
+            "type": "quote",
+            "settings": {
+              "quote": "I love the Perfect Practice putting mat, great for rainy day practice",
+              "image": "shopify:\/\/shop_images\/lydia-ko.jpg",
+              "title": "Lydia Ko",
+              "job": "LPGA Tour Pro"
+            }
+          },
+          "1588280829659": {
+            "type": "quote",
+            "settings": {
+              "quote": "It’s working great and looking forward to having some fun with it the next few weeks before getting back out there!",
+              "image": "shopify:\/\/shop_images\/talor-gooch.jpg",
+              "title": "Talor Gooch",
+              "job": "PGA Tour Pro"
+            }
+          },
+          "1588373365713": {
+            "type": "quote",
+            "settings": {
+              "quote": "Thank you! Awesome putting mat!",
+              "image": "shopify:\/\/shop_images\/nelly-korda.png",
+              "title": "Nelly Korda",
+              "job": "LPGA Tour Champion"
+            }
+          }
+        },
+        "block_order": [
+          "1589547846865",
+          "1587157372081",
+          "1594160720150",
+          "1587157378068",
+          "1587157375848",
+          "1587157379122",
+          "1587157380133",
+          "1587157381143",
+          "1588280829659",
+          "1588373365713"
+        ],
+        "settings": {
+          "title": "From the Pros",
+          "show_dots": true,
+          "show_arrows": true,
+          "autorotate": true,
+          "autorotate_speed": 4
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "blocks": {
+          "1588804119914": {
+            "type": "product",
+            "settings": {
+              "product": "small-putting-mirror-with-travel-case"
+            }
+          },
+          "1588804224993": {
+            "type": "product",
+            "settings": {
+              "product": "luxury-9-putter-stand-preorder-matches-the-perfect-practice-putting-mat"
+            }
+          },
+          "1588375761361": {
+            "type": "product",
+            "settings": {
+              "product": "perfect-practice-putting-mat-compact-edition"
+            }
+          },
+          "1588376825601": {
+            "type": "product",
+            "settings": {
+              "product": "the-perfect-practice-putting-mat-xl-edition-15-5-feet-pre-order"
+            }
+          }
+        },
+        "block_order": [
+          "1588804119914",
+          "1588804224993",
+          "1588375761361",
+          "1588376825601"
+        ],
+        "settings": {
+          "heading": "Frequently Bought Together"
+        }
+      },
+      "product-compact-features": {
+        "type": "product-compact-features",
+        "blocks": {
+          "1587165699710": {
+            "type": "feature",
+            "settings": {
+              "title": "Dimensions: Length 8' by Width 9\"",
+              "description": ""
+            }
+          },
+          "1587165809906": {
+            "type": "feature",
+            "settings": {
+              "title": "1 Hole Training (reduced size)",
+              "description": ""
+            }
+          },
+          "1587165824979": {
+            "type": "feature",
+            "settings": {
+              "title": "Train Tracks Alignment Lines",
+              "description": ""
+            }
+          },
+          "1587165836835": {
+            "type": "feature",
+            "settings": {
+              "title": "Crystal Velvet TrueRoll Technology",
+              "description": ""
+            }
+          },
+          "1587754182075": {
+            "type": "feature",
+            "settings": {
+              "title": "Auto Ball Return",
+              "description": ""
+            }
+          },
+          "1587754192696": {
+            "type": "feature",
+            "settings": {
+              "title": "Drop in Back Stop",
+              "description": ""
+            }
+          },
+          "1587754203157": {
+            "type": "feature",
+            "settings": {
+              "title": "Natural Wood Finish",
+              "description": ""
+            }
+          },
+          "1587754209211": {
+            "type": "feature",
+            "settings": {
+              "title": "10-14 Stimpmeter speed (dependent on underlying surface)",
+              "description": ""
+            }
+          }
+        },
+        "block_order": [
+          "1587165699710",
+          "1587165809906",
+          "1587165824979",
+          "1587165836835",
+          "1587754182075",
+          "1587754192696",
+          "1587754203157",
+          "1587754209211"
+        ],
+        "settings": {
+          "title": "Compact Edition Features",
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/compact-features.mp4?v=1588293768",
+          "video_url_mobile": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/compact-features-mobile.mp4?v=1588357422",
+          "bg_color": "#fff"
+        }
+      },
+      "product-text": {
+        "type": "product-text",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/flag.png",
+          "text": "Our handcrafted mats are made from the highest quality materials and proudly designed in the U.S.A."
+        }
+      },
+      "product-video": {
+        "type": "product-video",
+        "settings": {
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/compact-product.mp4?v=1588358914",
+          "width": "100%",
+          "alignment": "top-middle",
+          "video_poster": "shopify:\/\/shop_images\/web-poster.png"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_ajax_enable": true,
+          "cart_notes_enable": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "menu": "category-menu",
+          "layout": "grid",
+          "grid": 3,
+          "rows": 2,
+          "show_collection_image": true
+        }
+      },
+      "1587415910586": {
+        "type": "featured-in",
+        "disabled": true,
+        "settings": {
+          "title": "Featured In",
+          "text": "",
+          "image": "shopify:\/\/shop_images\/featured-in.png",
+          "text_size": "medium"
+        }
+      },
+      "1587417601820": {
+        "type": "quotes-custom",
+        "blocks": {
+          "1587417601820-0": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Exactly What I Needed",
+              "quote": "Ordered and received the standard mat with alignment mirror and had it within 4 days. In less than 30 minutes I feel more comfortable over the ball and putting down the line. Excellent training tool.",
+              "date": "05.01.2021",
+              "author": "Eric S.",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "1587417666955": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "I'm actually getting better",
+              "quote": "Honestly thought I would never get better at putting. I have been golfing for 20+ years and nothing has made an impact. After I got my hands on this \"Dustin Johnson Collection\" I am a putting machine! It's legit crazy how many putts I'm making. My friends are amazed how quickly I've improved. Every product serves a purpose. Can't wait to go low this weekend!",
+              "date": "03.25.2021",
+              "author": "Chris B.",
+              "chosen_product": "dustin-johnson-collection"
+            }
+          },
+          "1587417601820-1": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Very Good",
+              "quote": "Solid construction and putting the surface is a good speed -- not too slow and not too fast. Excellent product and a great way to keep your game sharp while you’re away from the course.",
+              "date": "04.29.2021",
+              "author": "B. Thompson",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "1587417669626": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Putting Glasses \"Eye Opening\"",
+              "quote": "The use of the Putting Glasses opened my eyes to the fact that my head was moving all over the place right, left forward, and backward as I set up over my putts and while the clubface made contact. Using the Putting Glasses with the 15-foot Perfect Practice Putting Mat and on the putting green I have trained myself to be more still and more calm standing over the putt and through impact. Then I follow the path of the ball with the laser. A great tool that has definitely helped improve my putting. Highly recommend it.",
+              "date": "12.07.2020",
+              "author": "Robert M.",
+              "chosen_product": "laser-putting-glasses"
+            }
+          },
+          "1587417601820-2": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Perfection",
+              "quote": "Exceeded expectations...I’ve tried less expensive options and this one is the bees knees!",
+              "date": "04.21.2021",
+              "author": "Jackie P.",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "1588187665925": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Awesome! Quick fix!",
+              "quote": "Awesome! Quick fix!\nAfter just 30 minutes of practicing with the TPM sticks I saw an immediate improvement on those pesky 4-6 footers I've always struggled with... now they are in the bag and a mandatory part of my warm up routine.",
+              "date": "04.16.2021",
+              "author": "Cameron B.",
+              "chosen_product": "true-pendulum-motion-tpm"
+            }
+          },
+          "1588187713242": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "About Time!!!",
+              "quote": "I love this product so much! The XL was a great investment! 15’ with the extra tracks makes practicing so much fun! Currently at 50 in a row, so it must be working!",
+              "date": "4.13.2021",
+              "author": "Edwin R.",
+              "chosen_product": "the-perfect-practice-putting-mat-xl-edition-15-5-feet-pre-order"
+            }
+          },
+          "1588628555369": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "RainDrop(ping Putts)",
+              "quote": "This bad boy has been helping me drop more balls than a one-armed juggler! I love it! It is a must carry for all rounds to either practice or pre-round warm-ups. Keep up the good work!",
+              "date": "01.22.2021",
+              "author": "jhos",
+              "chosen_product": "the-raindrop"
+            }
+          },
+          "1588628601979": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Addictive putting aide",
+              "quote": "The best golf practice device I've ever owned. Thoughtful design and well made, I can't walk by without rolling a few putts. I also enjoy the putting and practice tips they have provided since I received the mat. Good stuff all around.",
+              "date": "02.10.2021",
+              "author": "Mark M.",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "97f7e779-1da0-4d8e-ab0f-423953d0dbf9": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Smart Training Aid",
+              "quote": "This is a great aid to help you not break your wrist and keep the pendulum motion. It has helped a lot.",
+              "date": "04.09.2021",
+              "author": "Jack P.",
+              "chosen_product": "true-pendulum-motion-tpm"
+            }
+          },
+          "08d912e3-6213-4b73-b02c-432e44c04fe2": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Ashley’s Review",
+              "quote": "I got the Perfect Putting Mat for my boyfriend and he loves it. He has it in his office and practices while working 😁. Don’t they all?",
+              "date": "03.12.2021",
+              "author": "Ashley P.",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "45f9fd01-bed5-44ca-85e0-1832f93d8bc5": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "They work",
+              "quote": "Okay, so they look goofy on my head. But the laser definitely shows you where your eyes are pointing and how much your head moves. I was surprised as to both. I was able to immediately improve my putting as a result.",
+              "date": "12.01.2020",
+              "author": "Jeffrey F.",
+              "chosen_product": "laser-putting-glasses"
+            }
+          },
+          "08a2c5ae-8f54-4975-9fcb-dd737fce4175": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Builds Good Habits",
+              "quote": "After years of \"streaky\" putting this product is helping me finally become more consistent with my stroke.",
+              "date": "02.10.2021",
+              "author": "Chuck W.",
+              "chosen_product": "the-perfect-practice-putting-mat"
+            }
+          },
+          "dc101884-a642-4736-8a04-9e497920ecb2": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Raindrop",
+              "quote": "This is definitely one of my favorite training aids. It fits perfectly in my bag.",
+              "date": "01.18.2021",
+              "author": "Isabella J.",
+              "chosen_product": "the-raindrop"
+            }
+          },
+          "19d1d6a1-71bd-463f-93ed-ef1d90035b8f": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Perfect Practice with another HOME RUN!",
+              "quote": "I recently tried these laser glasses and man am I impressed. I never realized how much my head moved while putting. I also realize that I never learned how to properly look down my aim line. After a few minutes with these on I take them off, and my body still feels like the laser is there! Now I am keeping my head perfectly still and draining more putts!",
+              "date": "10.14.2020",
+              "author": "Justin",
+              "chosen_product": "laser-putting-glasses"
+            }
+          },
+          "882a1839-b3a6-42ff-ab3b-2060507cde22": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Muscle Memory",
+              "quote": "It really helps develop a true pendulum motion. Gets the big muscles working and learn to do it right.",
+              "date": "04.1.2021",
+              "author": "SCOTT WIPPEL",
+              "chosen_product": "true-pendulum-motion-tpm"
+            }
+          },
+          "4c37ea5b-8111-4e73-a313-29ce3d8d2d30": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Raindrop is awesome",
+              "quote": "I love this tool. It saves a lot of time and hassle compared to the normal lines that are always tangled and tough to find in your bag.",
+              "date": "01.10.2021",
+              "author": "John P.",
+              "chosen_product": "the-raindrop"
+            }
+          },
+          "d0479f60-11b1-48f2-b843-bd4503f1df02": {
+            "type": "quote",
+            "settings": {
+              "stars": 5,
+              "title": "Laser Glasses = Head Connection I Needed",
+              "quote": "These laser glasses have made me a much better putter. They force you to keep your head perfectly still during the stroke. Before using these glasses, I rocked my head back and forth, not realizing I was doing it. I can put a putt on the perfect start line every time!",
+              "date": "10.20.2020",
+              "author": "Eric S.",
+              "chosen_product": "laser-putting-glasses"
+            }
+          }
+        },
+        "block_order": [
+          "1587417601820-0",
+          "1587417666955",
+          "1587417601820-1",
+          "1587417669626",
+          "1587417601820-2",
+          "1588187665925",
+          "1588187713242",
+          "1588628555369",
+          "1588628601979",
+          "97f7e779-1da0-4d8e-ab0f-423953d0dbf9",
+          "08d912e3-6213-4b73-b02c-432e44c04fe2",
+          "45f9fd01-bed5-44ca-85e0-1832f93d8bc5",
+          "08a2c5ae-8f54-4975-9fcb-dd737fce4175",
+          "dc101884-a642-4736-8a04-9e497920ecb2",
+          "19d1d6a1-71bd-463f-93ed-ef1d90035b8f",
+          "882a1839-b3a6-42ff-ab3b-2060507cde22",
+          "4c37ea5b-8111-4e73-a313-29ce3d8d2d30",
+          "d0479f60-11b1-48f2-b843-bd4503f1df02"
+        ],
+        "settings": {
+          "title": "More Than 2,000 5-Star Reviews!",
+          "show_dots": true,
+          "show_arrows": true,
+          "autorotate": true,
+          "autorotate_speed": 4
+        }
+      },
+      "1587419368314": {
+        "type": "instagram-feed",
+        "disabled": true,
+        "blocks": {
+          "1587419368314-0": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-1.png"
+            }
+          },
+          "1587419368314-1": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-2.png"
+            }
+          },
+          "1587419368314-2": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-3.png"
+            }
+          },
+          "1587419368314-3": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-1_7fe6588f-8628-4a63-994e-7645b2010b4c.png"
+            }
+          },
+          "1587419368314-4": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-2_2960c51d-4a56-45a2-907f-feeb40d850ce.png"
+            }
+          },
+          "1587419368314-5": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-3_729db644-d5bc-4d49-a5e5-668545a7a835.png"
+            }
+          },
+          "1588187748442": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-1_7fe6588f-8628-4a63-994e-7645b2010b4c.png"
+            }
+          },
+          "1588187771846": {
+            "type": "post",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ig-2_2960c51d-4a56-45a2-907f-feeb40d850ce.png"
+            }
+          }
+        },
+        "block_order": [
+          "1587419368314-0",
+          "1587419368314-1",
+          "1587419368314-2",
+          "1587419368314-3",
+          "1587419368314-4",
+          "1587419368314-5",
+          "1588187748442",
+          "1588187771846"
+        ],
+        "settings": {
+          "bg_color": "#ffffff",
+          "title": "Check us out on Instagram",
+          "autorotate": false,
+          "autorotate_speed": 4
+        }
+      },
+      "newsletter": {
+        "type": "newsletter",
+        "settings": {
+          "section_title": "First-Time Customer?",
+          "subheading": "<p>Sign Up to Get 10% Off<\/p>",
+          "disclaimer": "<p>We respect your privacy and will never sell your information or spam your inbox<\/p>",
+          "bg_image": "shopify:\/\/shop_images\/email_back_4.jpg",
+          "bg_mobile_image": "shopify:\/\/shop_images\/email_back_4.jpg"
+        }
+      },
+      "product-drop-5": {
+        "type": "product-drop-5",
+        "settings": {
+          "title": "Putt like a PGA Pro",
+          "bg_image": "shopify:\/\/shop_images\/drop5bg.png",
+          "button_url": "shopify:\/\/pages\/perfect-practice-drop-5-system",
+          "button_text": "Start Putting",
+          "text": "Get started with your putting mat and get putting like a PGA Pro."
+        }
+      },
+      "about-header": {
+        "type": "about-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/about-hero.png",
+          "title": "About Us",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 30
+        }
+      },
+      "faq-header": {
+        "type": "faq-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/faq.png",
+          "title": "FAQ",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 30
+        }
+      },
+      "faq-content": {
+        "type": "faq-content",
+        "blocks": {
+          "1587670808192": {
+            "type": "text",
+            "settings": {
+              "title": "Who benefits from the Perfect Practice™ Putting Mats?",
+              "answer": "<p>Everyone can improve their putting! From the weekend hack to<br>the top PGA Professionals.<\/p>\n<p>This mat will be the difference between winning your $20 nassau with your buddies, as well as notable pros making $100,000's more on the money list.<\/p>\n<p>If we all agree that we can improve at putting, then what are you waiting for?!?!?!<\/p>"
+            }
+          },
+          "1587670989520": {
+            "type": "text",
+            "settings": {
+              "title": "What is the Perfect Practice™ Putting Mat?",
+              "answer": "<p>Our putting mats are an at-home or office solution to improving your golf game. These mats are made with a unique Crystal Velvet material allowing the golf ball to roll identical to a perfect green. Also included is alignment \"train-track\" training to ensure a straight-back straight-through putting stroke.<\/p>\n<p>What resulted is the BEST putting improvement mat on the market.<\/p>"
+            }
+          },
+          "1587671740983": {
+            "type": "text",
+            "settings": {
+              "title": "Where should I use my Perfect Practice™ Putting Mat?",
+              "answer": "<p>Ideally...wherever you want! The home, office, gym, basement, kitchen, and pro shop are all examples of where we have seen our mats used! Please make sure your mat is pulled tight to ensure a smoothe transition up the ramp.<\/p>"
+            }
+          },
+          "1587671752082": {
+            "type": "text",
+            "settings": {
+              "title": "Why the Perfect Practice™ Putting Mat?",
+              "answer": "<p>Our belief is that the key to becoming a great putter is knowing you can hit it where you think you are aimed.<\/p>\n<p>\"ALL PUTTS ARE STRAIGHT PUTTS, except gravity gets in the way.\"<\/p>\n<p>After a few minutes of using our mat, you will gain confidence in your ability to hit it where you are aimed. That translates to a lot more made putts on the course and a huge boost in confidence over the ball.<\/p>"
+            }
+          },
+          "1587671793315": {
+            "type": "text",
+            "settings": {
+              "title": "What is the speed of the Perfect Practice™ Putting Mat?",
+              "answer": "<p>The unique Crystal Velvet material featuring Tru-Roll Technology has your ball rolling 10-14 on the stimp depending what is under the mat. Hard floors roll closer to 14 whereas thick carpets tend to roll closer to a 10.<\/p>"
+            }
+          },
+          "1587671803860": {
+            "type": "text",
+            "settings": {
+              "title": "What flooring is needed for the putting mat?",
+              "answer": "<p>Our Perfect Practice putting mats work on all kinds of flooring...carpet, wood, tile and more! The goal is to find a flat spot so the putts do not break from uneven flooring.<\/p>"
+            }
+          },
+          "1587671817005": {
+            "type": "text",
+            "settings": {
+              "title": "Can I use the mat outside?",
+              "answer": "<p>Yes, our mats can be easily moved from one location to another whether its inside or outside. We don't recommend leaving the mat outside as the weather will deteriorate the velvet material.<\/p>"
+            }
+          },
+          "1587671834883": {
+            "type": "text",
+            "settings": {
+              "title": "How much do your mats weigh?",
+              "answer": "<p>Our Perfect Practice&trade; weighs 7.5 pounds and can easily store in its box or just rolled up off to the side.<\/p>"
+            }
+          },
+          "1587671854174": {
+            "type": "text",
+            "settings": {
+              "title": "How long are the putting mats?",
+              "answer": "<p>Our mats extend out over 9.5 feet, with printed markings at 2, 4, 6, and 8 feet.<\/p>"
+            }
+          },
+          "1587671864054": {
+            "type": "text",
+            "settings": {
+              "title": "Can it be used by a left handed golfer?",
+              "answer": "<p>Yes, both mats work great for Right Handed and Left Handed golfers.&nbsp;We now have our Standard Edition available specifically made for lefties!<\/p>"
+            }
+          },
+          "1587671907482": {
+            "type": "text",
+            "settings": {
+              "title": "Can I vacuum this mat?",
+              "answer": "<p>Yes, the Perfect Practice&trade; mats are able to be vacuumed.<\/p>"
+            }
+          },
+          "1597081251559": {
+            "type": "text",
+            "settings": {
+              "title": "I noticed you have hassle-free returns. How do I access this?",
+              "answer": "<p>Please see our return instructions here:&nbsp;<a href=\"https:\/\/www.perfectpractice.golf\/pages\/refunds\">Returns<\/a><\/p>"
+            }
+          },
+          "1597080805830": {
+            "type": "text",
+            "settings": {
+              "title": "My tracking info states my order was delivered, but I haven't received my product(s) - what should I do?",
+              "answer": "<p>While we completely trust and value our carriers, issues with deliveries can occur every now and then. We recommend check with at all entrances or with neighbors to see if your order was accidentally delivered to the incorrect address. You can also contact the carrier directly to verify that they in fact did deliver the package.&nbsp;<\/p>\n<p><strong>UPS<\/strong>: 1-888-742-5877<\/p>\n<p><strong>USPS<\/strong>: 1-800-275-8777<\/p>"
+            }
+          },
+          "1587671936897": {
+            "type": "text",
+            "settings": {
+              "title": "Please note",
+              "answer": "<p>We worked with our production facility to think through product design and our primary package, to make sure that it serves the needs of transportation all the way to your door so that we don't have redundant packaging added during the process. This is eliminates an \"overbox\" and excess material waste.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1587670808192",
+          "1587670989520",
+          "1587671740983",
+          "1587671752082",
+          "1587671793315",
+          "1587671803860",
+          "1587671817005",
+          "1587671834883",
+          "1587671854174",
+          "1587671864054",
+          "1587671907482",
+          "1597081251559",
+          "1597080805830",
+          "1587671936897"
+        ],
+        "settings": {
+          "title": "Our goal is to create a quality golf products with fine regard for detail."
+        }
+      },
+      "drop5-header": {
+        "type": "drop5-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/grass1_2x_898863a5-757f-41d3-83cd-cf81aedf0474.png",
+          "title": "Drop5 - 5 Day Putting System",
+          "header_color": "#ffffff",
+          "show_overlay": false,
+          "overlay_opacity": 30
+        }
+      },
+      "drop5-content": {
+        "type": "drop5-content",
+        "blocks": {
+          "1587676798598": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375724049"
+            }
+          },
+          "1587677086459": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375723993"
+            }
+          },
+          "1587677344635": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375724002"
+            }
+          },
+          "1587677362651": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375724011"
+            }
+          },
+          "1587677442309": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375724028"
+            }
+          },
+          "1587677366710": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375724041"
+            }
+          },
+          "1587677470790": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/375723984"
+            }
+          },
+          "1602676740522": {
+            "type": "video2",
+            "settings": {
+              "video_url": "https:\/\/vimeo.com\/469823042"
+            }
+          },
+          "1604260455496": {
+            "type": "video3",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/465369123"
+            }
+          },
+          "1604260485535": {
+            "type": "video3",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/465369681"
+            }
+          },
+          "1604260555859": {
+            "type": "video3",
+            "settings": {
+              "video_url": "https:\/\/player.vimeo.com\/video\/465370288"
+            }
+          }
+        },
+        "block_order": [
+          "1587676798598",
+          "1587677086459",
+          "1587677344635",
+          "1587677362651",
+          "1587677442309",
+          "1587677366710",
+          "1587677470790",
+          "1602676740522",
+          "1604260455496",
+          "1604260485535",
+          "1604260555859"
+        ],
+        "settings": {
+          "title": "Zach Allen + Perfect Practice have designed a 5-Day System to get you started with your putting mat and get you putting like a PGA Pro.",
+          "title2": "Laser Putting Glasses Instruction",
+          "titlel": "The famous Coach Rusty & Perfect Practice have designed a short tutorial video to help get you started with your laser glasses.",
+          "contentl": "<h4>We recommend using your laser glasses in tandem with our Perfect Putting Mat, however they work on the putting green as well. If you don't already have a putting mat you can grab one here.<\/h4><p>The four key ideas to focus on when using your laser glasses are outlined below:<\/p><p><\/p><ol>\n<li>Ensures the golfer's eyes are directly over the ball. Get instant feedback!<\/li>\n<li>Teaches the golfer how to properly turn their head to look directly down their aim line<\/li>\n<li>Ensures the golfer's head stays completely still during the putting stroke<\/li>\n<li>After impact, teaches the golfer to follow the ball down the line to the hole (as most pros do!)<\/li>\n<\/ol><p><\/p><p>Check out the training video here:<\/p>",
+          "title3": "Dr. Jeremy James of GOLFFOREVER teaches you how to relieve golf-related back and neck pain through simple stretching and exercises.",
+          "content3": "<p>Nothing grooves your putting stroke like a good practice session on your Perfect Putting Mat. However, with extended use, you may begin to experience stiffness, soreness, or even pain in your back and\/or neck. <\/p><p>To help relieve (and prevent) putting-related discomfort, Dr. Jeremy James of GOLFFOREVER has provided you with a few quick and simple ways to improve the way your body feels and functions, so you can continue putting without pain. Watch the videos below to learn how to alleviate back and neck pain. <\/p><p>And if you want to learn more ways to improve your flexibility, mobility, and rotational power for golf, be sure to claim $20 off an annual GOLFFOREVER membership by using the code PUTT20 here.<\/p>"
+        }
+      },
+      "refunds-header": {
+        "type": "refunds-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/refunds.png",
+          "title": "Refunds",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 50
+        }
+      },
+      "refunds-content": {
+        "type": "refunds-content",
+        "settings": {
+          "title": "<p>At Perfect Practice we want you to be completely satisfied with your purchase.<\/p>\n<p><\/p>\n<p>This refund policy provides a guide for you, our customer, but if you ever have a specific question, please contact us, and we'll get back to you as quickly as possible.<\/p>"
+        }
+      },
+      "shipping-header": {
+        "type": "shipping-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/shipping_f7c5061a-3389-47ef-9404-26a395e7b98a.png",
+          "title": "Shipping",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 50
+        }
+      },
+      "shipping-content": {
+        "type": "shipping-content",
+        "settings": {
+          "title": "<p>We ship world wide!<\/p>\n<p>Free UPS Ground shipping on all orders in the U.S. Products will be shipped next business day&nbsp; after order is placed!<\/p>"
+        }
+      },
+      "tos-header": {
+        "type": "tos-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/tos_e0517cfb-ff08-4d8a-96d6-67ab99cdb296.png",
+          "title": "Terms of Service",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 50
+        }
+      },
+      "tos-content": {
+        "type": "tos-content",
+        "settings": {
+          "title": "<p>OHK Sports Product+liability disclaimer<\/p>"
+        }
+      },
+      "contact-header": {
+        "type": "contact-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/grass2_2x_4db2ff58-1cbf-470f-8ab1-3f1d303485bd.png",
+          "title": "Contact Us",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 40
+        }
+      },
+      "contact-form": {
+        "type": "contact-form",
+        "settings": {
+          "heading": "Our mats look great in retail locations and pro shops.",
+          "show_phone": false
+        }
+      },
+      "banner": {
+        "type": "banner",
+        "blocks": {
+          "1587726074565": {
+            "type": "text",
+            "settings": {
+              "icons": "calendar",
+              "title": "60 Day Money Back Guarantee"
+            }
+          },
+          "1587726224502": {
+            "type": "text",
+            "settings": {
+              "icons": "shipping",
+              "title": "Free Shipping + Free Returns"
+            }
+          },
+          "1587727296149": {
+            "type": "text",
+            "settings": {
+              "icons": "accredited",
+              "title": "Trusted by 100+ Pros"
+            }
+          },
+          "1587727298434": {
+            "type": "text",
+            "settings": {
+              "icons": "productyear",
+              "title": "2020 Indoor Golf Product Of The Year"
+            }
+          }
+        },
+        "block_order": [
+          "1587726074565",
+          "1587726224502",
+          "1587727296149",
+          "1587727298434"
+        ],
+        "settings": {
+          "bg_color": "#f7f7f7",
+          "text_color": "#828282"
+        }
+      },
+      "product-sizes": {
+        "type": "product-sizes",
+        "blocks": {
+          "1587729118609": {
+            "type": "text",
+            "settings": {
+              "title": "Compact",
+              "features": "<ul>\n<li>Length 8' by Width 9\"<\/li>\n<li>1 hole training (reduced size)<\/li>\n<li>Crystal Velvet TrueRoll Technology<\/li>\n<\/ul>"
+            }
+          },
+          "1587729294616": {
+            "type": "text",
+            "settings": {
+              "title": "Standard",
+              "features": "<ul>\n<li>Length 9' 6\" by Width 15\"<\/li>\n<li>2 Hole Training (regulation and reduced size)<\/li>\n<li>Crystal Velvet TrueRoll Technology<\/li>\n<\/ul>"
+            }
+          },
+          "1587729371500": {
+            "type": "text",
+            "settings": {
+              "title": "XL",
+              "features": "<ul>\n<li>Length 15' 6\" by Width 15\"<\/li>\n<li>2 Hole Training (regulation and reduced size)<\/li>\n<li>Crystal Velvet TrueRoll Technology<\/li>\n<\/ul>"
+            }
+          }
+        },
+        "block_order": [
+          "1587729118609",
+          "1587729294616",
+          "1587729371500"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/product-image-6.png",
+          "bg_color": "#ffffff",
+          "title": "Putting Mat Sizes"
+        }
+      },
+      "about-content": {
+        "type": "about-content",
+        "settings": {
+          "title": "Our goal is to create quality golf products with a fine regard for detail.",
+          "quote": "You're going to love the way you play, we guarantee it!",
+          "cite": "Oren & Ed"
+        }
+      },
+      "product-video2": {
+        "type": "product-video2",
+        "settings": {
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/compact-boomerang.mp4?v=1588359583",
+          "width": "100%",
+          "alignment": "top-middle",
+          "video_poster": ""
+        }
+      },
+      "product-xl-features": {
+        "type": "product-xl-features",
+        "blocks": {
+          "1588360154578": {
+            "type": "feature",
+            "settings": {
+              "title": "Dimensions: Length 15' 6\" by Width 15\"",
+              "description": ""
+            }
+          },
+          "1588360186896": {
+            "type": "feature",
+            "settings": {
+              "title": "2 Hole Training (regulation and reduced size)",
+              "description": ""
+            }
+          },
+          "1588360202762": {
+            "type": "feature",
+            "settings": {
+              "title": "Train Tracks Alignment Lines",
+              "description": ""
+            }
+          },
+          "1588360210150": {
+            "type": "feature",
+            "settings": {
+              "title": "Crystal Velvet TrueRoll Technology",
+              "description": ""
+            }
+          },
+          "1588360218532": {
+            "type": "feature",
+            "settings": {
+              "title": "Auto Ball Return",
+              "description": ""
+            }
+          },
+          "1588360225720": {
+            "type": "feature",
+            "settings": {
+              "title": "Drop in Back Stop",
+              "description": ""
+            }
+          },
+          "1588360235432": {
+            "type": "feature",
+            "settings": {
+              "title": "Natural Wood Finish",
+              "description": ""
+            }
+          },
+          "1588360244402": {
+            "type": "feature",
+            "settings": {
+              "title": "10-14 Stimpmeter speed (dependent on underlying surface)",
+              "description": ""
+            }
+          }
+        },
+        "block_order": [
+          "1588360154578",
+          "1588360186896",
+          "1588360202762",
+          "1588360210150",
+          "1588360218532",
+          "1588360225720",
+          "1588360235432",
+          "1588360244402"
+        ],
+        "settings": {
+          "title": "XL Edition Features",
+          "bg_color": "#fff"
+        }
+      },
+      "product-fullsize-features": {
+        "type": "product-fullsize-features",
+        "blocks": {
+          "1588360648460": {
+            "type": "feature",
+            "settings": {
+              "title": "Dimensions: Length 9' 6\" by Width 15\"",
+              "description": ""
+            }
+          },
+          "1588360655384": {
+            "type": "feature",
+            "settings": {
+              "title": "2 Hole Training (regulation and reduced size)",
+              "description": ""
+            }
+          },
+          "1588360662365": {
+            "type": "feature",
+            "settings": {
+              "title": "Train Tracks Alignment Lines",
+              "description": ""
+            }
+          },
+          "1588360669828": {
+            "type": "feature",
+            "settings": {
+              "title": "Crystal Velvet TrueRoll Technology",
+              "description": ""
+            }
+          },
+          "1588360672631": {
+            "type": "feature",
+            "settings": {
+              "title": "Auto Ball Return",
+              "description": ""
+            }
+          },
+          "1588360677245": {
+            "type": "feature",
+            "settings": {
+              "title": "Drop in Back Stop",
+              "description": ""
+            }
+          },
+          "1588360681996": {
+            "type": "feature",
+            "settings": {
+              "title": "Natural Wood Finish",
+              "description": ""
+            }
+          },
+          "1588360692881": {
+            "type": "feature",
+            "settings": {
+              "title": "10-14 Stimpmeter speed (dependent on underlying surface)",
+              "description": ""
+            }
+          }
+        },
+        "block_order": [
+          "1588360648460",
+          "1588360655384",
+          "1588360662365",
+          "1588360669828",
+          "1588360672631",
+          "1588360677245",
+          "1588360681996",
+          "1588360692881"
+        ],
+        "settings": {
+          "title": "Standard Edition Features",
+          "bg_color": "#ffffff"
+        }
+      },
+      "1588379524433": {
+        "type": "instafeed",
+        "disabled": true,
+        "settings": {
+          "heading_font": "helvetica_n4",
+          "heading_size": 20,
+          "feed_width": 100,
+          "html_area": "<!-- -->"
+        }
+      },
+      "product-video3": {
+        "type": "product-video3",
+        "settings": {
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/fullsize-play.mp4?v=1588627657",
+          "width": "100%",
+          "alignment": "top-middle",
+          "video_poster": "shopify:\/\/shop_images\/fullsize-play-poster.png"
+        }
+      },
+      "product-video4": {
+        "type": "product-video4",
+        "settings": {
+          "video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0363\/1513\/6135\/files\/drone-loop.mp4?v=1588627935",
+          "width": "100%",
+          "alignment": "top-middle",
+          "video_poster": "shopify:\/\/shop_images\/drone-loop-poster.png"
+        }
+      },
+      "product-template-mat": {
+        "type": "product-template-mat",
+        "settings": {
+          "hide_low": false,
+          "low_stock_title": "BACK IN STOCK",
+          "low_stock_text": "Order now, we will sell out again as inventory is running low. Get the hottest product in golf before it's too late.",
+          "branded_text": "The official putting mat of Dustin Johnson.",
+          "hide_description": false,
+          "enable_image_zoom": false,
+          "enable_video_looping": false
+        }
+      },
+      "product-template-xl": {
+        "type": "product-template-xl",
+        "settings": {
+          "hide_low": false,
+          "low_stock_title": "Low in Stock. Will sell out FAST!",
+          "low_stock_text": "IN STOCK. All orders will ship in 1-3 business days. Don't delay and risk missing out on the hottest product in golf!",
+          "branded_text": "The official putting mat of Dustin Johnson.",
+          "hide_description": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "product-template-compact": {
+        "type": "product-template-compact",
+        "settings": {
+          "hide_low": false,
+          "low_stock_title": "Low in Stock. Will sell out FAST!",
+          "low_stock_text": "IN STOCK. All orders will ship in 1-3 business days. Don't delay and risk missing out on the hottest product in golf!",
+          "branded_text": "The official putting mat of Dustin Johnson.",
+          "hide_description": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "page-affiliate": {
+        "type": "page-affiliate",
+        "blocks": {
+          "1591371716086": {
+            "type": "hero",
+            "settings": {
+              "overlay": true,
+              "hero_height": "hero-short",
+              "section_background_color": "primary-color-back",
+              "image": "shopify:\/\/shop_images\/refunds.png",
+              "box_vert_alignment": "box-align-center",
+              "box_alignment": "box-left",
+              "text_alignment": "text-left",
+              "background_size": "one-whole",
+              "box_content_width": "three-fifths",
+              "title_width": "one-whole",
+              "content_width": "one-whole",
+              "cta_width": "one-whole",
+              "content_orientation": "stacked",
+              "background_color": "transparent-back",
+              "text_color": "white",
+              "pre_title": "Profit from our experience",
+              "title": "Earn a 15% commission for every successful referral",
+              "title_size": "largest",
+              "text": "",
+              "cta": "",
+              "button_text": "Get Started",
+              "button_link": "https:\/\/www-ohksports.goaffpro.com\/create-account",
+              "button_style": "standard",
+              "cta2": "",
+              "button_text2": "Shop Now",
+              "button_link2": "",
+              "button_style2": "standard",
+              "mobile_background_color": "transparent-back",
+              "m_overlay": false,
+              "mobile_position": true,
+              "m_image": "",
+              "m_vert_alignment": "align-center",
+              "m_text_alignment": "just-center"
+            }
+          },
+          "1591376293693": {
+            "type": "image_with_text",
+            "settings": {
+              "section_padding": "section-pad",
+              "background_color": "transparent-back",
+              "page_container": "page-width",
+              "image_padding": false,
+              "image": "shopify:\/\/shop_images\/ADIN9827.jpg",
+              "image_caption": "",
+              "caption_color": "initial",
+              "sticky_image": false,
+              "image_side": "left-image",
+              "width": "one-half",
+              "content_background_color": "transparent-back",
+              "text_color": "initial",
+              "text_alignment": "text-left",
+              "text_vert_alignment": "just-center",
+              "pre_title": "",
+              "title": "How does it work?",
+              "sub_title": "",
+              "text": "<ol class=\"custom-numbers\">\n    <li data-aos=\"fade-left\" data-aos-delay=\"50\">\n        <h3>Join<\/h3>\n        <p>It's free and easy to join.\n            Get up and running today.<\/p>\n    <\/li>\n    <li data-aos=\"fade-left\" data-aos-delay=\"250\">\n        <h3>Advertise<\/h3>\n        <p>Choose from our products to advertise to your customers.<\/p>\n     \n        <p>Whether you are a large network, content site, social media influencer or blogger, we have simple linking\n            tools to meet your advertising needs and help you monetize<\/p>\n    <\/li>\n\n    <li data-aos=\"fade-left\" data-aos-delay=\"500\">\n        <h3>Earn<\/h3>\n        <p>Get up to 15% in commissions on successful referrals. <\/p>\n\n        <p>Earn commissions from all qualifying purchases, not just the products you advertised. Plus, our competitive\n            conversion rates help you maximize your earnings.<\/p>\n        <p>\n        <\/p>\n    <\/li>\n\n\n<\/ol>",
+              "cta": "Join Now",
+              "cta_link": "",
+              "button_style": "standard"
+            }
+          },
+          "1591378500234": {
+            "type": "text_block",
+            "settings": {
+              "section_padding": "section-pad",
+              "background_color": "secondary-color-back",
+              "page_container": "wide-width",
+              "content_width": "one-half",
+              "content_background_color": "primary-color-back",
+              "text_color": "initial",
+              "text_alignment": "text-center",
+              "pre_title": "",
+              "title": "<div data-aos=\"fade-up\">Ready to Get Started?<\/div>",
+              "sub_title": "",
+              "content": "",
+              "cta": "Join Today",
+              "cta_link": "https:\/\/www-ohksports.goaffpro.com\/create-account",
+              "button_style": "standard"
+            }
+          },
+          "1591379315123": {
+            "type": "text_block",
+            "settings": {
+              "section_padding": "section-pad",
+              "background_color": "transparent-back",
+              "page_container": "page-width",
+              "content_width": "three-quarters",
+              "content_background_color": "transparent-back",
+              "text_color": "initial",
+              "text_alignment": "text-left",
+              "pre_title": "Got Questions?",
+              "title": "FAQs",
+              "sub_title": "",
+              "content": "<div class=\"faq-item\">\n<button class=\"faq-question\">\nHow does the program work?\n<\/button>\n<div class=\"faq-answer\">\n    Promote the Perfect Practice website via tracking links and\/or discount codes to your community and make a percent of each sale.\n<\/div>\n<\/div>\n\n\n<div class=\"faq-item\">\n    <button class=\"faq-question\">\nHow much will I earn?\n<\/button>\n<div class=\"faq-answer\">\n    You will make a set commission of 15% on gross sales referred through your tracking link or discount code for the life of the customer. \n<\/div>\n<\/div>\n<div class=\"faq-item\">\n    <button class=\"faq-question\">\nWill I get a discount code?\n<\/button>\n<div class=\"faq-answer\">\n    You will have the option of promoting a discount code. Coupon websites are not allowed. \n<\/div>\n<\/div>\n<div class=\"faq-item\">\n    <button class=\"faq-question\">\nDoes it cost anything to be an affiliate?\n<\/button>\n<div class=\"faq-answer\">\n    No, participation is free. However, acceptance into the program is not guaranteed. \n<\/div>\n<\/div>\n<div class=\"faq-item\">\n    <button class=\"faq-question\">\nWhat is your payment process?<\/button>\n<div class=\"faq-answer\">\n    We pay out once a month by PayPal. \n<\/div>\n<\/div>",
+              "cta": "",
+              "cta_link": "",
+              "button_style": "standard"
+            }
+          }
+        },
+        "block_order": [
+          "1591371716086",
+          "1591376293693",
+          "1591378500234",
+          "1591379315123"
+        ],
+        "settings": {}
+      },
+      "page-wholesale": {
+        "type": "page-wholesale",
+        "blocks": {
+          "1591456478410": {
+            "type": "hero",
+            "settings": {
+              "overlay": true,
+              "hero_height": "hero-short",
+              "section_background_color": "transparent-back",
+              "image": "shopify:\/\/shop_images\/green-leaf-trees-on-grass-field-914682.jpg",
+              "box_vert_alignment": "box-align-top",
+              "box_alignment": "box-center",
+              "text_alignment": "text-center",
+              "background_size": "one-whole",
+              "box_content_width": "three-fifths",
+              "title_width": "one-whole",
+              "content_width": "one-whole",
+              "cta_width": "one-whole",
+              "content_orientation": "inline",
+              "background_color": "transparent-back",
+              "text_color": "white",
+              "pre_title": "",
+              "title": "Wholesale Registration",
+              "title_size": "largest",
+              "text": "Please enter your information below to be contacted by one of Perfect Practice's wholesale account representatives.",
+              "cta": "",
+              "button_text": "Register Online",
+              "button_link": "#register",
+              "button_style": "standard",
+              "cta2": "",
+              "button_text2": "Register Online",
+              "button_link2": "",
+              "button_style2": "standard",
+              "mobile_background_color": "transparent-back",
+              "m_overlay": false,
+              "m_image": "",
+              "m_vert_alignment": "align-center",
+              "m_text_alignment": "just-center"
+            }
+          },
+          "1591457788971": {
+            "type": "registration",
+            "settings": {
+              "enable_registration": true,
+              "title": "Fill out the form below to get started.",
+              "content": "We will review your information and get back to you. Wholesale minimums start at 6 mats."
+            }
+          },
+          "1591463419901": {
+            "type": "text_block",
+            "settings": {
+              "section_padding": "section-pad",
+              "background_color": "transparent-back",
+              "page_container": "page-width",
+              "content_width": "one-whole",
+              "content_background_color": "transparent-back",
+              "text_color": "initial",
+              "text_alignment": "text-left",
+              "pre_title": "",
+              "title": "We're here to help",
+              "sub_title": "",
+              "content": "By partnering with Perfect Practice your customers can enjoy our game changing putting mats and more. Join the hundreds of pro shops and retailers who are already achieving great sales success. If you are having difficulties, please email info@perfectpractice.golf.",
+              "cta": "Contact Us",
+              "cta_link": "shopify:\/\/pages\/contact-us",
+              "button_style": "standard"
+            }
+          }
+        },
+        "block_order": [
+          "1591456478410",
+          "1591457788971",
+          "1591463419901"
+        ],
+        "settings": {}
+      },
+      "product-custom-template": {
+        "type": "product-custom-template",
+        "settings": {
+          "hide_low": false,
+          "low_stock_title": "How It Works",
+          "low_stock_text": "1) Purchase your custom Perfect Putting Mat here. 2) Once you submit your artwork, our team will create and send a mock-up for your approval. 3) Once artwork is approved, production begins. 4) Production time is 3-4 weeks. 5) Your order ships.",
+          "branded_text": "The perfect corporate or clubhouse option.",
+          "hide_description": false,
+          "enable_image_zoom": true,
+          "enable_video_looping": false
+        }
+      },
+      "1591636880270": {
+        "type": "homepage-logos",
+        "blocks": {
+          "1609249696409": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/forbes-logo-black-transparent.png",
+              "url": "https:\/\/www.forbes.com\/sites\/mikedojc\/2020\/12\/07\/how-a-high-school-four-putt-planted-the-seed-for-one-of-golfs-hottest-training-aids\/?sh=75190daf58e3"
+            }
+          },
+          "1591637146221": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/DJ_logo.png",
+              "url": "https:\/\/www.globenewswire.com\/news-release\/2020\/05\/15\/2034272\/0\/en\/Dustin-Johnson-and-Perfect-Practice-Team-Up-to-Stay-Under-Par-on-the-Green.html"
+            }
+          },
+          "1591639753686": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/golf-magazine-logo.jpg",
+              "url": "https:\/\/golf.com\/gear\/golf-accessories\/one-training-aid-took-over-golf-world-quarantine\/"
+            }
+          },
+          "1591636889079": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/golf-digest-logo_8b74432d-5c24-4526-88ec-fea9f6c442dd.jpg",
+              "url": "https:\/\/www.golfdigest.com\/story\/at-home-golf-tips-how-to-effectively-practice-your-putting-stroke-indoors"
+            }
+          },
+          "1591637123990": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/ny-post-logo_0c5ac133-d1eb-4a79-a45e-b0600ef85aae.jpg",
+              "url": "https:\/\/nypost.com\/2020\/04\/06\/paige-spiranac-practices-golf-shot-with-cleavage-friendly-trick\/"
+            }
+          },
+          "1591637087439": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/new_golf_channel_logo_304.jpg",
+              "url": "https:\/\/vimeo.com\/389560637"
+            }
+          },
+          "1591637075707": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/golfwrx-logo_1200x630_c514870d-56fb-4bda-84dd-2c1c2c18695e.jpg",
+              "url": "https:\/\/tinyurl.com\/y8repmvh"
+            }
+          },
+          "1591637046989": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/barstoollogo_5a8fc455-414e-4a87-901d-61dab7cfa38e.png",
+              "url": "https:\/\/www.barstoolsports.com\/blog\/2194973\/paulina-gretzky-is-the-greatest-putter-in-the-world"
+            }
+          },
+          "1591637056436": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/golfweek_ea47d235-1378-490b-bbd9-d6b83e1afc6a.png",
+              "url": "https:\/\/golfweek.usatoday.com\/2020\/03\/26\/coronavirus-indoor-putting-practice-mat-social-media\/"
+            }
+          },
+          "1591637036542": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/1493592634_forumheader.png.f664f2bceafc9b23fdb4aad298f29aba.png",
+              "url": "https:\/\/mygolfspy.com\/the-best-putting-mats-for-2020\/"
+            }
+          },
+          "1591637136831": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/practical-golf-jon-sherman_c8a43e15-683b-4743-b231-a4c894d82bdf.jpg",
+              "url": "https:\/\/practical-golf.com\/perfect-practice-putting-mat-review\/"
+            }
+          },
+          "1591640360349": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/48ec1efd6843befffaa0c5663e6f4637.png",
+              "url": "https:\/\/thechive.com\/2020\/03\/09\/next-level-sht-86\/"
+            }
+          },
+          "1591637019848": {
+            "type": "logos",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/fairways-logo-500x200_ee00d00d-eac3-4fb3-9542-68fda4332cca.png"
+            }
+          }
+        },
+        "block_order": [
+          "1609249696409",
+          "1591637146221",
+          "1591639753686",
+          "1591636889079",
+          "1591637123990",
+          "1591637087439",
+          "1591637075707",
+          "1591637046989",
+          "1591637056436",
+          "1591637036542",
+          "1591637136831",
+          "1591640360349",
+          "1591637019848"
+        ],
+        "settings": {
+          "title": "Featured In"
+        }
+      },
+      "page-returns": {
+        "type": "page-returns",
+        "blocks": {
+          "1593462161439": {
+            "type": "hero",
+            "settings": {
+              "overlay": true,
+              "hero_height": "hero-short",
+              "section_background_color": "transparent-back",
+              "image": "shopify:\/\/shop_images\/refunds.png",
+              "box_vert_alignment": "box-align-center",
+              "box_alignment": "box-center",
+              "text_alignment": "text-center",
+              "background_size": "one-whole",
+              "box_content_width": "two-thirds",
+              "title_width": "one-whole",
+              "content_width": "one-whole",
+              "cta_width": "one-whole",
+              "content_orientation": "inline",
+              "background_color": "transparent-back",
+              "text_color": "white",
+              "pre_title": "",
+              "title": "Returns",
+              "title_size": "largest",
+              "text": "",
+              "cta": "",
+              "button_text": "Shop Now",
+              "button_link": "",
+              "button_style": "standard",
+              "cta2": "",
+              "button_text2": "Shop Now",
+              "button_link2": "",
+              "button_style2": "standard",
+              "mobile_background_color": "transparent-back",
+              "m_overlay": false,
+              "m_image": "",
+              "m_vert_alignment": "align-center",
+              "m_text_alignment": "just-center"
+            }
+          },
+          "1593463679170": {
+            "type": "text_block",
+            "settings": {
+              "section_padding": "section-pad",
+              "background_color": "transparent-back",
+              "page_container": "wide-width",
+              "content_width": "two-thirds",
+              "content_background_color": "transparent-back",
+              "text_color": "initial",
+              "text_alignment": "text-left",
+              "pre_title": "",
+              "title": "",
+              "sub_title": "",
+              "content": "<div class=\"returns-items\">\n    <div class=\"toggle-item\">\n        <button class=\"toggle-trigger\">How To Send In Your Returns:<\/button>\n        <div class=\"toggle-content\">\n    \n    \n    <a class=\"return-button\" href=\"https:\/\/track.shipstation.com\/f\/r\/i\/hpF3zcH5oiv53o7xsUjtwgQr%2Fh9oEtxAwLNsAgr40R4%3D\" target=\"_blank\" rel=\"noopener noreferrer\">\n    \n            <h3 class=\"text-center\">Returns are FREE*<\/h3>\n            <div class=\"return-image\">\n        <img src=\"https:\/\/cdn.shopify.com\/s\/files\/1\/2642\/5702\/files\/shipping-box_100x.png?v=1593463262\">\n    <\/div>\n             <p>Click here to get your prepaid shipping label.<\/p>\n             <\/a>\n    \n            <p>All domestic orders will include a <strong>FREE<\/strong> prepaid return mailing label. Please do NOT return damaged\/defective items. To ship an item back to Perfect Practice please:<\/p>\n    \n            <ul class=\"return__block--details-list\">\n                <li>Pack your item(s) and affix the prepaid mailing label to the top of the\n                    package.<\/li>\n                <li>If you are including items from multiple orders please write down the\n                    order numbers on a sheet of paper and include them in the package.<\/li>\n                <li>Mail your package using one of the following methods:\n    <ol class=\"return__block--details-sublist\">\n                    <li>Drop your package at a UPS location. The label is prepaid and\n                        requires nothing else on your end.<\/li>\n                    <li>Alternatively, you can leave the package off at a location that has\n                        a daily UPS pick up.<\/li>\n                <\/ol>\n    <\/li>\n                <\/ul>\n    \n            \n        <\/div>\n    <\/div>\n    <div class=\"toggle-item\">\n        <button class=\"toggle-trigger\">Policy<\/button>\n        <div class=\"toggle-content\">\n            <p>Because you have enough to worry about right now...<\/p>\n            <p>Our policy lasts 60 days. If 60 days have gone by since you received your item, unfortunately we can’t offer\n                you a refund.<\/p>\n            <p>Please feel free to reach out to our customer service team (info@perfectpractice.golf) should\n                you have any concerns around getting your return product back to us, we will be happy to help.<\/p>\n            <p>*For U.S. customers, a prepaid return shipping label will be provided at no\n                charge to return your merchandise (free shipping both ways).<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"toggle-item\">\n        <button class=\"toggle-trigger\">Conditions<\/button>\n        <div class=\"toggle-content\">\n            <p>To be eligible for a return, your item must be unused and in the same condition that you received it. It must\n                also be in the original packaging.<\/p>\n            <p>Returns take us 2-3 business days to process upon reaching our facility. Once your return is processed\n                and your refund is issued, you will receive a refund on your original form of payment and a confirmation\n                email. Refunds can take several business days to reflect on your credit card account. This varies\n                depending on your financial institution.<\/p>\n        <\/div>\n    <\/div>\n    <div class=\"toggle-item\">\n    \n            <button class=\"toggle-trigger\">Damaged \/ Defective Items<\/button>\n                <div class=\"toggle-content\">\n            <p>If you receive an item that is damaged or defective, please contact customer service immediately. Do NOT initiate a return. We will send you a free replacement pending picture proof of damage\/defect. The defective unit can be discarded or donated.<\/p>\n        <\/div>\n    <\/div>\n\n    <div class=\"toggle-item\">\n    \n        <button class=\"toggle-trigger\">\nLate or missing refunds <\/button>\n<div class=\"toggle-content\">\n\n<p>If you haven’t received a refund yet, first check your bank account again. Then contact your credit card company, it may take some time before your refund is officially posted. Next contact your bank. There is often some processing time before a refund is posted. If you’ve done all of this and you still have not received your refund yet, please contact us at info@perfectpractice.golf<\/p>\n<\/div>\n<\/div>\n\n<div class=\"toggle-item\">\n    \n    <button class=\"toggle-trigger\">\nInternational Returns<\/button>\n<div class=\"toggle-content\">\n\n<p>Please email info@perfectpractice.golf to initiate your return.<\/p>\n<\/div>\n<\/div>\n    <\/div>",
+              "cta": "",
+              "cta_link": "",
+              "button_style": "standard"
+            }
+          }
+        },
+        "block_order": [
+          "1593462161439",
+          "1593463679170"
+        ],
+        "settings": {}
+      },
+      "djflag-header": {
+        "type": "djflag-header",
+        "settings": {
+          "bg_image": "shopify:\/\/shop_images\/DJFlag_website_plain.jpg",
+          "title": "Enter To Win a Signed Masters Flag",
+          "header_color": "#ffffff",
+          "show_overlay": true,
+          "overlay_opacity": 30
+        }
+      },
+      "djflag-content": {
+        "type": "djflag-content",
+        "settings": {
+          "imageOne": "shopify:\/\/shop_images\/MastersFlag_DJ_1.jpg",
+          "quote": "The reason I’ve been so successful this year is because I’ve putted very consistently. A lot of that has to do with practicing a little bit more. When I’m at home, I have my Perfect Putting Mat™ so I can hit some putts on it. I’ve always got one with me on the road, too.",
+          "cite": "Dustin Johnson, World No. 1 and 2020 PGA Tour Player of the Year"
+        }
+      },
+      "custom-content": {
+        "type": "custom-content",
+        "blocks": {
+          "1611161991754": {
+            "type": "text",
+            "settings": {
+              "title": "Enter to win a Masters flag signed by 2020 Champion Dustin Johnson",
+              "text": "<p>This is the perfect addition to any office or man cave and a little something to bring back memories of the best tournament of the year.  It looks great hanging over a <a href=\"\/products\/the-perfect-practice-putting-mat\" title=\"Perfect Putting Mat™ - Standard Edition\">Perfect Putting Mat<\/a>™, too!<\/p>",
+              "width": "100%",
+              "alignment": "center",
+              "align_text": "center"
+            }
+          }
+        },
+        "block_order": [
+          "1611161991754"
+        ],
+        "settings": {
+          "title": ""
+        }
+      },
+      "giveaway-signup": {
+        "type": "giveaway-signup",
+        "settings": {
+          "section_title": "Enter Your Email Address",
+          "subheading": ""
+        }
+      },
+      "image-bar": {
+        "type": "image-bar",
+        "blocks": {
+          "1611166825088": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/MastersFlag_DJ_1.jpg",
+              "alignment": "center",
+              "link": "",
+              "cta_label": ""
+            }
+          }
+        },
+        "block_order": [
+          "1611166825088"
+        ],
+        "settings": {
+          "section_height": "large"
+        }
+      },
+      "giveaway-terms": {
+        "type": "giveaway-terms",
+        "settings": {}
+      },
+      "product-video-collection": {
+        "type": "product-video-collection",
+        "settings": {}
+      },
+      "djpage": {
+        "type": "djpage",
+        "blocks": {
+          "0120054c-5a45-4cc7-8cdc-1041c07013e5": {
+            "type": "dj-page-header",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/DJFaceCutout_1200.png",
+              "title": "Practice Like A Major Champion",
+              "header-copy-1": "Dustin Johnson had a secret weapon heading into the 2020 Masters. Before and after his rounds, he was using Perfect Practice training aids that helped him make more putts under pressure.",
+              "header-copy-2": "The Dustin Johnson Practice Collection includes the training aids DJ and more than 100 other tour pros use every day: The Perfect Practice Mat, The Raindrop, TPM, and Laser Putting Glasses.\n\nThese core products are guaranteed to improve your technique and consistency immediately.  The more you use them, the more putts you’ll make.",
+              "header_color": "#ffffff",
+              "show_overlay": true,
+              "overlay_opacity": 30,
+              "linktext": "Click Here"
+            }
+          },
+          "51c3dbb5-d978-461f-a4c3-0a3ea64dc78c": {
+            "type": "dj-product-row",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/puttingmat_hero.jpg",
+              "product-row-title": "The Perfect Putting Mat",
+              "product-row-subtitle": "At Home",
+              "product-row-copy": "Dustin Johnson spends 95% of his time practicing putts from inside 10 feet, and he uses his Perfect Putting Mat to help him practice those putts anytime, anywhere.\n\nThe Perfect Putting Mat has a tour-inspired design that helps golfers improve every aspect of their putting. With its train-track alignment aids and two hole sizes (regulation and reduced), there’s never been a faster or easier way to start making more putts.",
+              "product-row-quote": "\"When I’m at home, I’ve always got my putting mat. And when I’m on the road, I always take one with me. It keeps me consistent.”",
+              "quote_background_video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/2642\/5702\/files\/PuttingMat_BackgroundVideo.mp4?v=1616012865",
+              "quote_author_name": "Dustin Johnson, World #1",
+              "link": "shopify:\/\/products\/the-perfect-practice-putting-mat",
+              "linktext": "Learn More",
+              "product_variant_id": "31441773527109",
+              "show_video": true,
+              "feature_icon_1": "shopify:\/\/shop_images\/PP_Icons__i-1.png",
+              "feature_text_1": "Two Hole Sizes",
+              "feature_icon_2": "shopify:\/\/shop_images\/PP_Icons__i-2.png",
+              "feature_text_2": "Train Track Alignment",
+              "feature_icon_3": "shopify:\/\/shop_images\/PP_Icons__i-3_9bd184fe-7dee-4dd6-9d49-3c591bcc0003.png",
+              "feature_text_3": "Auto Ball Return"
+            }
+          },
+          "a15e2ba7-c6a0-40c6-a248-145d45d9f098": {
+            "type": "dj-product-row",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/DJ_Raindrop_Outside_1.jpg",
+              "product-row-title": "The Raindrop",
+              "product-row-subtitle": "On the Course",
+              "product-row-copy": "Putting strings have helped golfers improve their putting for a long time. So why don’t more golfers use them? Because they’ve always been a pain to setup and store. Not anymore. \n\nThe Raindrop was developed with GOLF Top-100 Instructor and Puting Guru Matt Killen to be easy and convenient to use. With its retractable design, golfers can set up The Raindrop in a few seconds and store it in the bag without worrying about it tangling or damaging other items.",
+              "product-row-quote": "“Amateur golfers and even professionals struggle to start breaking putts on the right line. The Raindrop makes it easy to see the correct starting line. You’ll be amazed at how many more putts you’ll make if you practice with The Raindrop.”",
+              "quote_background_video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/2642\/5702\/files\/Laser_BackgroundVideo.mp4?v=1616443771",
+              "quote_author_name": "-- Matt Killen, GOLF Top-100 Instructor and Putting Guru",
+              "link": "shopify:\/\/products\/the-raindrop",
+              "linktext": "Learn More",
+              "product_variant_id": "31912245624901",
+              "show_video": false,
+              "quote_author_img": "shopify:\/\/shop_images\/killen.jpg",
+              "feature_icon_1": "shopify:\/\/shop_images\/PP_Icons__i-7_ac9f0dd8-b94d-4143-97e3-6caf7cc14283.png",
+              "feature_text_1": "Retractable String",
+              "feature_icon_2": "shopify:\/\/shop_images\/PP_Icons__i-8_5da915a0-8633-4d20-a68d-1e816457a136.png",
+              "feature_text_2": "Up to 20 Feet",
+              "feature_icon_3": "shopify:\/\/shop_images\/PP_Icons__i-9.png",
+              "feature_text_3": "Neoprene Carry Case"
+            }
+          },
+          "5ae65095-d92c-47da-87f2-1d14060ec03a": {
+            "type": "dj-product-row",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/LaserGlasses_DjHero.jpg",
+              "product-row-title": "Laser Putting Glasses",
+              "product-row-subtitle": "INDOOR\/OUTDOOR",
+              "product-row-copy": "To putt well, golfers need to practice their eye position. In the past, that meant asking a coach to watch you putt. Not with the Laser Putting Glasses. They make it easy for all golfers to see where their eyes are positioned before, during, and after the stroke. \n\nHave a coach already? So does Dustin Johnson, and he still uses the Laser Putting Glasses. They give him immediate feedback on where his eyes are at address, if his head moves during the stroke, and if his head is properly rotating down the line after the ball leaves his putter.",
+              "product-row-quote": "“The Laser Putting Glasses make sure I’m not falling into any bad habits, and that’s a big deal. Yes, they look kind of crazy, but they’re the best at what they do.”",
+              "quote_background_video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/2642\/5702\/files\/Laser_BackgroundVideo.mp4?v=1616443771",
+              "quote_author_name": "-- Dustin Johnson, 2-Time Major Champion",
+              "link": "shopify:\/\/products\/laser-putting-glasses",
+              "linktext": "Learn More",
+              "product_variant_id": "31890271273029",
+              "show_video": true,
+              "feature_icon_1": "shopify:\/\/shop_images\/PP_Icons__i-10.png",
+              "feature_text_1": "Indoor or Outdoor",
+              "feature_icon_2": "shopify:\/\/shop_images\/PP_Icons__i-11.png",
+              "feature_text_2": "Fits All Faces",
+              "feature_icon_3": "shopify:\/\/shop_images\/PP_Icons__i-15.png",
+              "feature_text_3": "USB Charging"
+            }
+          },
+          "fc383a2f-93ac-4ad9-9cca-3564373b88e4": {
+            "type": "dj-product-row",
+            "settings": {
+              "bg_image": "shopify:\/\/shop_images\/TPM_DJ-Hero_1.jpg",
+              "product-row-title": "TPM (True Pendulum Motion)",
+              "product-row-subtitle": "Practice Anywhere",
+              "product-row-copy": "The True Pendulum Motion (TPM) makes it possible to feel a perfect putting stroke every time. As Dustin Johnson says, “You can’t really hit it offline with the TPM. It forces you into the perfect position and makes you take a perfect stroke.”  \n\nTPM is easy to set up and works with any putter or grip style. It also collapses for easy storage so you can use it anywhere.",
+              "product-row-quote": "“I’ve taught with almost every putting training aid out there. The TPM is by far the best and simplest.”",
+              "quote_background_video_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/2642\/5702\/files\/Laser_BackgroundVideo.mp4?v=1616443771",
+              "quote_author_name": "-- Zach Allen, Southern California PGA Teacher of The Year, Golf Digest Best Young Teacher",
+              "link": "shopify:\/\/products\/true-pendulum-motion-tpm",
+              "linktext": "Learn More",
+              "product_variant_id": "32047758442565",
+              "show_video": false,
+              "quote_author_img": "shopify:\/\/shop_images\/zachallen.jpg",
+              "feature_icon_1": "shopify:\/\/shop_images\/PP_Icons__i-4.png",
+              "feature_text_1": "Works With Any Putter",
+              "feature_icon_2": "shopify:\/\/shop_images\/PP_Icons__i-5.png",
+              "feature_text_2": "Works With Any Grip",
+              "feature_icon_3": "shopify:\/\/shop_images\/PP_Icons__i-6.png",
+              "feature_text_3": "Adjustable Length"
+            }
+          }
+        },
+        "block_order": [
+          "0120054c-5a45-4cc7-8cdc-1041c07013e5",
+          "51c3dbb5-d978-461f-a4c3-0a3ea64dc78c",
+          "a15e2ba7-c6a0-40c6-a248-145d45d9f098",
+          "5ae65095-d92c-47da-87f2-1d14060ec03a",
+          "fc383a2f-93ac-4ad9-9cca-3564373b88e4"
+        ],
+        "settings": {}
+      },
+      "product-features-collection": {
+        "type": "product-features-collection",
+        "settings": {}
+      },
+      "product-included-collection": {
+        "type": "product-included-collection",
+        "settings": {}
+      },
+      "1618585857d3859a66": {
+        "type": "explainer-section",
+        "settings": {
+          "title": "Why Golfers Should Embrace Training Aids",
+          "answer": "<p>Golf is hard. Finding time to practice is even harder. <\/p><p>Perfect Practice training aids are thoughtfully designed to inspire golfers to practice more... and practice better. They&#x27;re guaranteed to help you lower your scores without changing anything else.<\/p>",
+          "background_color": "#ffffff"
+        }
+      },
+      "1618585883ff12df8f": {
+        "type": "best-sellers",
+        "blocks": {
+          "ef357c25-3dc7-42df-b63e-ce077de4abd0": {
+            "type": "product",
+            "settings": {
+              "product": "the-perfect-practice-putting-mat",
+              "brief_description": "Type a brief description"
+            }
+          },
+          "8a90c7e4-79de-44ed-b1a0-305447050a8a": {
+            "type": "product",
+            "settings": {
+              "product": "the-raindrop",
+              "brief_description": "Type a brief description"
+            }
+          },
+          "d9393f24-3403-4575-b05e-a92d4fd1e361": {
+            "type": "product",
+            "settings": {
+              "product": "the-perfect-practice-putting-mat-xl-edition-15-5-feet-pre-order",
+              "brief_description": "Type a brief description"
+            }
+          },
+          "1b973c1a-b963-4e2f-bc7c-9d0f8efabfad": {
+            "type": "product",
+            "settings": {
+              "product": "true-pendulum-motion-tpm",
+              "brief_description": "Type a brief description"
+            }
+          }
+        },
+        "block_order": [
+          "ef357c25-3dc7-42df-b63e-ce077de4abd0",
+          "8a90c7e4-79de-44ed-b1a0-305447050a8a",
+          "d9393f24-3403-4575-b05e-a92d4fd1e361",
+          "1b973c1a-b963-4e2f-bc7c-9d0f8efabfad"
+        ],
+        "settings": {
+          "title": "Best Sellers",
+          "sub_title": "Our best-selling and most requested training aides.",
+          "grid": 4,
+          "rows": 1,
+          "show_vendor": false
+        }
+      },
+      "1618586050fa66bf4b": {
+        "type": "product-categories",
+        "blocks": {
+          "e0e6c188-9be0-4df9-ae38-be8500d69827": {
+            "type": "text",
+            "settings": {
+              "category_name": "Putting Mats",
+              "image": "shopify:\/\/shop_images\/Cat_Square_render.jpg",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/putting-mats"
+            }
+          },
+          "ad58f20e-7eae-4977-807f-88de858188b9": {
+            "type": "text",
+            "settings": {
+              "category_name": "Putting Aids",
+              "image": "shopify:\/\/shop_images\/Raindrop_Laser_Grey_ECommerce_Square.jpg",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/putting-aids"
+            }
+          },
+          "ed65d741-51ff-4152-a57b-7820786363b1": {
+            "type": "text",
+            "settings": {
+              "category_name": "Putter Stands",
+              "image": "shopify:\/\/shop_images\/Stands_Cat.jpg",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/putter-stands"
+            }
+          },
+          "93cb2ec3-d78c-44b1-a365-4629623721ae": {
+            "type": "text",
+            "settings": {
+              "category_name": "Accessories",
+              "image": "shopify:\/\/shop_images\/Bag_Cat.jpg",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/accessories"
+            }
+          },
+          "40d01633-4159-449e-b7b5-f5093e4fb5ac": {
+            "type": "text",
+            "settings": {
+              "category_name": "Bundles",
+              "image": "shopify:\/\/shop_images\/DjBundle_Square_Updated_Cats_2.jpg",
+              "button_label": "Shop Now",
+              "button_link": "shopify:\/\/collections\/bundles"
+            }
+          },
+          "7643441e-efc5-4360-87d8-ddb365de65c2": {
+            "type": "text",
+            "settings": {
+              "category_name": "All Categories",
+              "image": "shopify:\/\/shop_images\/ShowAll.jpg",
+              "button_label": "Show All",
+              "button_link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "e0e6c188-9be0-4df9-ae38-be8500d69827",
+          "ad58f20e-7eae-4977-807f-88de858188b9",
+          "ed65d741-51ff-4152-a57b-7820786363b1",
+          "93cb2ec3-d78c-44b1-a365-4629623721ae",
+          "40d01633-4159-449e-b7b5-f5093e4fb5ac",
+          "7643441e-efc5-4360-87d8-ddb365de65c2"
+        ],
+        "settings": {
+          "title": "Product Categories",
+          "grid": 3,
+          "rows": 2
+        }
+      },
+      "1618586750e7fc60d4": {
+        "type": "faq-content",
+        "blocks": {
+          "3abd8ad8-8110-4491-806e-0f1b21d063cf": {
+            "type": "text",
+            "settings": {
+              "title": "Who benefits from Perfect Practice Putting Mats?",
+              "answer": "<p>Everyone! Our premium putting pats help every golfer practice more and practice better. For Tour Pros like Dustin Johnson, making one extra putt per tournament can be worth hundreds of thousands of dollars!<\/p><p>For everyone else, who can put a price on taking a $20 Nassau off your buddies? Our putting mats will help you leave the course with a smile (or maybe even a trophy).<\/p>"
+            }
+          },
+          "666ab277-6b76-4c61-a239-ae990c122564": {
+            "type": "text",
+            "settings": {
+              "title": "Where should I use my Perfect Practice Putting Mat?",
+              "answer": "<p>Indoors or outdoors... anywhere you have a flat surface such as your living room, office, gym, basement, kitchen, or pro shop. Please make sure your mat is puled tight to ensure a smooth transition up the ramp. And if you&#x27;re using it outside, bring it indoors when you&#x27;re finished.<\/p><p>If you mat happens to get dirty, simply vacuum it as you would any carpet.<\/p>"
+            }
+          },
+          "d211ac63-8448-4c84-b011-bbd7498b03fa": {
+            "type": "text",
+            "settings": {
+              "title": "Why the Perfect Practice Putting Mat?",
+              "answer": "<p>After a few minutes of using our mat, you will gain confidence in your ability to hit your putts where you are aimed. That translates to a lot more made putts on the course and a huge boost in confidence over the ball.<\/p>"
+            }
+          },
+          "b470cac6-b9d3-4b2a-b024-d04642af2590": {
+            "type": "text",
+            "settings": {
+              "title": "What is the speed of the Perfect Practice Putting Mat?",
+              "answer": "<p>We spent a lot of time perfecting our Crystal Velvet material with Tru-Roll Technology, which will roll out at 10-14 on the stamp meter depending what is under the mat. Hard floors roll closer to 14 whereas thick carpets tend to roll closer to 10.<\/p>"
+            }
+          },
+          "d0d29159-1d6d-403e-9882-02ce692d23f1": {
+            "type": "text",
+            "settings": {
+              "title": "How much do your mats weigh?",
+              "answer": "<p>Our Perfect Practice Putting Mat (Standard Edition) weigh 7.5 pounds and can be discreetly stored anywhere.<\/p>"
+            }
+          },
+          "6a9d41ef-bc9f-4e56-b9e0-f69a1fcc9a49": {
+            "type": "text",
+            "settings": {
+              "title": "How long are the putting mats?",
+              "answer": "<p>The Perfect Putting Mat (Standard Edition) extends 9.5 feet with printed markings at 2, 4, 6, and 8 feet. We also have a shorter mat (Compact Edition) and a longer mat (XL Edition).<\/p>"
+            }
+          },
+          "80aae1b4-60fc-4d12-8199-dcaa7fc2e027": {
+            "type": "text",
+            "settings": {
+              "title": "Can lefties use your putting mats?",
+              "answer": "<p>Yes, both mats work great for righties and lefties. We also have a mat made specifically for lefties<\/p>"
+            }
+          },
+          "cf1e0bba-c6e1-4f54-bd02-e060a13d6c2f": {
+            "type": "text",
+            "settings": {
+              "title": "I noticed you have hassle-free returns. How do I access this?",
+              "answer": "<p>Please see our return instructions here: <a href=\"\/pages\/returns\" title=\"Returns\">Returns<\/a><\/p>"
+            }
+          },
+          "afdd295e-b6e7-4940-b3b2-71a88d18480c": {
+            "type": "text",
+            "settings": {
+              "title": "My tracking info states my order was delivered, but I haven't received my product(s). What should I do?",
+              "answer": "<p>We trust and value our carriers, but issues with deliveries can occur every now and then. We recommend checking at all entrances or with neighbors to see if your order was accidentally delivered to the incorrect address.<\/p><p>You can also contact the carrier directly to verify that they in fact did deliver the package.<\/p><p>UPS: 1-888-742-5877<\/p><p>USPS: 1-800-275-877<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "3abd8ad8-8110-4491-806e-0f1b21d063cf",
+          "666ab277-6b76-4c61-a239-ae990c122564",
+          "d211ac63-8448-4c84-b011-bbd7498b03fa",
+          "b470cac6-b9d3-4b2a-b024-d04642af2590",
+          "d0d29159-1d6d-403e-9882-02ce692d23f1",
+          "6a9d41ef-bc9f-4e56-b9e0-f69a1fcc9a49",
+          "80aae1b4-60fc-4d12-8199-dcaa7fc2e027",
+          "cf1e0bba-c6e1-4f54-bd02-e060a13d6c2f",
+          "afdd295e-b6e7-4940-b3b2-71a88d18480c"
+        ],
+        "settings": {
+          "title": "Frequently Asked Questions"
+        }
+      },
+      "1618604612107a98e2": {
+        "type": "feature-row",
+        "disabled": true,
+        "settings": {
+          "image": "shopify:\/\/shop_images\/LowerScores.jpg",
+          "layout": "left",
+          "title": "Start Shooting Lower Scores Today",
+          "text": "<p>Perfect Practice Training Aids are guaranteed to immediately lower your scores<\/p>",
+          "button_label": "Show Now",
+          "btn_background_color": "#1ed761",
+          "button_link": "shopify:\/\/products\/the-perfect-practice-putting-mat",
+          "row_background_color": "rgba(0,0,0,0)"
+        }
+      },
+      "1618670203c791287e": {
+        "type": "dj_collection",
+        "settings": {
+          "headline": "Collection",
+          "subheader": "Dustin Johnson Collection",
+          "copy": "<p>Dustin Johnson spends 95% of his time practicing putts from inside 10 feet, and he uses his Perfect Putting Mat to help him practice those putts anytime, anywhere.<\/p><p>The Perfect Putting Mat has a tour-inspired design that helps golfers improve every aspect of their putting. With its train-track alignment aids and two hole sizes (regulation and reduced), there&#x27;s never been a faster or easier way to start making more putts.<\/p>",
+          "image": "shopify:\/\/shop_images\/Bundle_Hero_Final_Box.jpg",
+          "feature_icon_1": "shopify:\/\/shop_images\/PP_Icons__i-1.png",
+          "feature_text_1": "PUTTING MAT",
+          "feature_icon_2": "shopify:\/\/shop_images\/PP_Icons__i-15.png",
+          "feature_text_2": "LASER GLASSES",
+          "feature_icon_3": "shopify:\/\/shop_images\/PP_Icons__i-7_ac9f0dd8-b94d-4143-97e3-6caf7cc14283.png",
+          "feature_text_3": "RAINDROP",
+          "feature_icon_4": "shopify:\/\/shop_images\/PP_Icons__i-6.png",
+          "feature_text_4": "TPM",
+          "button_label": "Shop Now",
+          "button_link": "shopify:\/\/products\/dustin-johnson-collection",
+          "button_label_1": "Learn More",
+          "show_quantity_selector": false
+        }
+      },
+      "1618734715a79813ac": {
+        "type": "testimonials",
+        "blocks": {
+          "6c43f6ac-ac64-49f7-8249-12c72bb8115e": {
+            "type": "text",
+            "settings": {
+              "player_name": "Dustin Johnson",
+              "player_title": "World #1",
+              "description": "\"Anyone who is serious about improving their putting needs the Perfect Putting mat.  It’s done wonders for my confidence and become part of my daily practice.\"",
+              "image": "shopify:\/\/shop_images\/DJ_TPM-Mat_1.jpg"
+            }
+          },
+          "0e8ed36f-5f87-43c5-9c25-1747f1629908": {
+            "type": "text",
+            "settings": {
+              "player_name": "Matt Wolff",
+              "player_title": "PGA Tour Champion",
+              "description": "\"You make this putt, you can make any putt! (on the Perfect Practice Mat) All day, I'm buying!\"",
+              "image": "shopify:\/\/shop_images\/m_wolf_32.jpg"
+            }
+          },
+          "ad13e62a-e175-4648-b57d-66509c6959bc": {
+            "type": "text",
+            "settings": {
+              "player_name": "Sir Nick Faldo",
+              "player_title": "6-Time Major Champion",
+              "description": "\"The Perfect Putting Mat is the first thing  you  should buy if you want to make more putts.\"",
+              "image": "shopify:\/\/shop_images\/faldo.jpg"
+            }
+          },
+          "9299260d-2009-475d-96a5-bbd164364324": {
+            "type": "text",
+            "settings": {
+              "player_name": "Lydia Ko",
+              "player_title": "LPGA Tour Champion",
+              "description": "\"I love the Perfect Practice putting mat, great for rainy day practice.\"",
+              "image": "shopify:\/\/shop_images\/ko.jpg"
+            }
+          },
+          "7b2ac2e5-92c6-4f2a-b6f0-6e7ef4d40618": {
+            "type": "text",
+            "settings": {
+              "player_name": "Vijay Singh",
+              "player_title": "PGA Tour Legend",
+              "description": "\"It's much better than other mats I have used over the years. Great Quality. Thanks again!\"",
+              "image": "shopify:\/\/shop_images\/singh.jpg"
+            }
+          },
+          "15998706-b410-4722-8683-e3dc44d248cb": {
+            "type": "text",
+            "settings": {
+              "player_name": "Jimmy Walker",
+              "player_title": "Major Champion",
+              "description": "\"Thanks Guys!!! Been using it non-stop. Love it!!!\"",
+              "image": "shopify:\/\/shop_images\/j_walker_32.jpg"
+            }
+          },
+          "a3cf56da-39d6-4145-bdde-f5dabe954fc7": {
+            "type": "text",
+            "settings": {
+              "player_name": "Joaquin Niemann",
+              "player_title": "PGA Tour Champion",
+              "description": "\"Feeling good!!! Thank you Perfect Practice, Go get yours!!\"",
+              "image": "shopify:\/\/shop_images\/neimann.jpg"
+            }
+          },
+          "f211f7ca-e4ee-4e46-b14c-5def42e1cadd": {
+            "type": "text",
+            "settings": {
+              "player_name": "Nelly Korda",
+              "player_title": "LPGA Tour Champion",
+              "description": "\"Thank you! Awesome putting mat!\"",
+              "image": "shopify:\/\/shop_images\/korda.jpg"
+            }
+          },
+          "fc87e9c7-40ff-42e9-8b30-31d68ff9ba02": {
+            "type": "text",
+            "settings": {
+              "player_name": "Talor Gooch",
+              "player_title": "PGA Tour Pro",
+              "description": "\"It’s working great and looking forward to having some fun with it the next few weeks before getting back out there!\"",
+              "image": "shopify:\/\/shop_images\/gooch.jpg"
+            }
+          },
+          "aa52cb6b-5499-4b69-a860-a338ca1c62ae": {
+            "type": "text",
+            "settings": {
+              "player_name": "Matt Killen",
+              "player_title": "GOLF TOP-100 Instruction, PGA Tour Putting Coach",
+              "description": "\"The Raindrop is my favorite new product. I use it with all my players because it works better than anything else.\"",
+              "image": "shopify:\/\/shop_images\/killen_5c282f6d-323a-4069-b640-2b830655036d.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "6c43f6ac-ac64-49f7-8249-12c72bb8115e",
+          "0e8ed36f-5f87-43c5-9c25-1747f1629908",
+          "ad13e62a-e175-4648-b57d-66509c6959bc",
+          "9299260d-2009-475d-96a5-bbd164364324",
+          "7b2ac2e5-92c6-4f2a-b6f0-6e7ef4d40618",
+          "15998706-b410-4722-8683-e3dc44d248cb",
+          "a3cf56da-39d6-4145-bdde-f5dabe954fc7",
+          "f211f7ca-e4ee-4e46-b14c-5def42e1cadd",
+          "fc87e9c7-40ff-42e9-8b30-31d68ff9ba02",
+          "aa52cb6b-5499-4b69-a860-a338ca1c62ae"
+        ],
+        "settings": {
+          "title": "Testimonials"
+        }
+      },
+      "16187708623e1b24c7": {
+        "type": "featured-product",
+        "disabled": true,
+        "settings": {
+          "featured_product": "laser-putting-glasses",
+          "headline": "DJ Collection",
+          "subheader": "Subheader",
+          "copy": "<p>This is Copyright text<\/p>",
+          "image": "shopify:\/\/shop_images\/Bundle_Hero_Final_Box.jpg",
+          "button_label": "Shop Now",
+          "button_link": "shopify:\/\/products\/perfect-putting-mat-discount-bundle",
+          "show_price": true
+        }
+      },
+      "1618843683e691c6a2": {
+        "type": "guarantee",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/60Day_Guarantee.png",
+          "code": "<p>60-Day Money Back Guarantee<\/p>\n<p>Free Shipping + Free Returns<\/p>\n<p>Trusted By 100+ Pros<\/p>\n<p>2020 Indoor Golf Product Of The Year<\/p>",
+          "background_color": "#1ed761"
+        }
+      }
+    },
+    "content_for_index": [
+      "1586912351353",
+      "1618585857d3859a66",
+      "1618585883ff12df8f",
+      "1591636880270",
+      "1618586050fa66bf4b",
+      "1587417601820",
+      "1587415910586",
+      "1588379524433",
+      "1587419368314",
+      "1618734715a79813ac",
+      "1618670203c791287e",
+      "1618843683e691c6a2",
+      "1618604612107a98e2",
+      "1618586750e7fc60d4",
+      "16187708623e1b24c7"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+<section class="double-content-block {{block.settings.background_color}} {{ block.settings.section_padding }} ">
+  
+
+
+    <div class=" {{ block.settings.page_container }} ">
+       
+      <div class="flex grid {{ block.settings.vert_alignment}}">
+      
+    <div class="{{block.settings.s1_width}} flex-grow small--one-whole grid__item {{block.settings.s1_background_color}}">
+     
+		<div class="inner section-pad">
+       {% if block.settings.s1_title != blank %} <h2 class="largest-text">{{ block.settings.s1_title }}</h2>  {% endif %}
+      {% if block.settings.s1_content != blank %}  <div class="content medium-text">{{ block.settings.s1_content}}</div>  {% endif %}
+             
+      </div>	
+           
+    </div>
+      
+
+        <div class="{{block.settings.s2_width}} flex-grow small--one-whole grid__item {{block.settings.s2_background_color}}">
+            
+			<div class="inner section-pad">
+       {% if block.settings.s2_title != blank %} <h2 class="largest-text">{{ block.settings.s2_title }}</h2>  {% endif %}
+      {% if block.settings.s2_content != blank %}  <div class="content medium-text">{{ block.settings.s2_content}}</div>  {% endif %}
+               </div>
+    </div>
+      </div>
+ 
+
+  </div>
+</section>

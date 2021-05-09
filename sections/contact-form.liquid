@@ -1,0 +1,102 @@
+<div class="page-width contact-content-wrap">
+  <div class="grid">
+    
+	<div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">           
+      <div class="page-content rte">
+          <h2>{{ section.settings.heading }}</h2>
+          {% if page.content.size > 0 %}
+            {{ page.content }}
+          {% endif %}
+        
+          <div class="copy">
+            <p>Distributor+wholesale inquiries</p>
+            <small>*Wholesale minimums start at 6 mats</small>
+            <address>Perfect Practice<br>
+            2200 Butts Rd Suit 200<br>
+            Boca Raton, FL 33431<br>
+            <a href="mailto:info@perfectpractice.golf" target="_blank" title="Email Us" rel="noopener noreferrer">info@perfectpractice.golf</a>
+            </address>
+          </div>               
+      </div>      
+    </div>
+    
+    <div class="grid__item medium-up--five-sixths medium-up--push-one-twelfth">
+           
+      <div class="contact-form form-vertical">
+        {%- assign formId = 'ContactForm' -%}
+        {% form 'contact', id: formId %}
+          {% include 'form-status', form: form, form_id: formId %}
+
+          <div class="grid grid--half-gutters">
+            <div class="grid__item medium-up--one-half">
+              <label for="{{ formId }}-name" class="visually-hidden">{{ 'contact.form.name' | t }}</label>
+              <input placeholder="{{ 'contact.form.name' | t }}" type="text" id="{{ formId }}-name" name="contact[{{ 'contact.form.name' | t }}]" value="{% if form[name] %}{{ form[name] }}{% elsif customer %}{{ customer.name }}{% endif %}">
+            </div>
+            <div class="grid__item medium-up--one-half">
+              <label for="{{ formId }}-email" class="visually-hidden">{{ 'contact.form.email' | t }} <span aria-hidden="true">*</span></label>
+              <input
+                type="email"
+                id="{{ formId }}-email"
+                name="contact[email]"
+                autocorrect="off"
+                autocapitalize="off"
+                placeholder="{{ 'contact.form.email' | t }}"
+                value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+                aria-required="true"
+                {%- if form.errors contains 'email' -%}
+                  class="input--error"
+                  aria-invalid="true"
+                  aria-describedby="{{ formId }}-email-error"
+                {%- endif -%}
+                >
+              {%- if form.errors contains 'email' -%}
+                <span id="{{ formId}}-email-error" class="input-error-message">
+                  <span class="visually-hidden">{{ 'general.accessibility.error' | t }} </span>
+                  {% include 'icon-error' %}
+                  <span>{{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}.</span>
+                </span>
+              {%- endif -%}
+            </div>
+          </div>
+          {% if section.settings.show_phone %}
+          <label for="{{ formId }}-phone" class="visually-hidden">{{ 'contact.form.phone' | t }}</label>
+          <input placeholder="{{ 'contact.form.phone' | t }}" type="tel" id="{{ formId }}-phone" name="contact[{{ 'contact.form.phone' | t }}]" pattern="[0-9\-]*" value="{% if form[phone] %}{{ form[phone] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
+          {% endif %}
+
+          <label for="{{ formId }}-message" class="visually-hidden">{{ 'contact.form.message' | t }}</label>
+          <textarea placeholder="{{ 'contact.form.message' | t }}" rows="10" id="{{ formId }}-message" name="contact[{{ 'contact.form.message' | t }}]">{% if form.body %}{{ form.body }}{% endif %}</textarea>
+
+          <input type="submit" class="btn" value="{{ 'contact.form.submit' | t }}">
+
+        {% endform %}
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "Contact Form",
+    "settings": [
+		{
+			"type": "text",
+			"id": "heading",
+			"label": "Heading"
+		},
+		{
+			"type": "checkbox",
+			"id": "show_phone",
+			"label": "Show Phone Number",
+			"default": false
+		}
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

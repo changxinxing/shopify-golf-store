@@ -1,0 +1,1698 @@
+{% for block in section.blocks %}
+
+{% comment %} *************************************** HERO BLOCK ********************************* {% endcomment %}
+  {% case block.type  %}
+{% when 'hero' %}
+	{% include 'block-hero' %}
+   {% when 'double_content' %}
+{% include 'block-double-content' %}
+   {% when 'image_with_text' %}
+{% include 'block-image-with-text' %}
+  {% when 'text_block' %}
+{% include 'block-text-blocks' %}
+{% endcase %}
+{% endfor %}
+
+
+
+{% schema %}
+{
+    "name": "Page Settings",
+    "settings": [],
+    "blocks": [{
+            "type": "hero",
+            "name": "Hero",
+            "settings": [
+
+{
+"type": "header",
+"content": "Section Settings"
+},
+{
+                    "type": "checkbox",
+                    "id": "overlay",
+                    "default": false,
+                    "label": "Enable Overlay"
+                },
+                
+                {
+                    "type": "select",
+                    "id": "hero_height",
+                    "label": "Slide Height",
+                    "default": "hero-tall",
+                    "options": [{
+                            "value": "hero-tall",
+                            "label": "Tall"
+                        },
+                        {
+                            "value": "hero-medium",
+                            "label": "Medium"
+                        },
+                        {
+                            "value": "hero-short",
+                            "label": "Short"
+                        },
+ {
+                            "value": "hero-auto",
+                            "label": "Auto"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "section_background_color",
+                    "label": "Section Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+                        {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+                        {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+
+{
+"type": "header",
+"content": "Content Settings"
+},
+                {
+                    "type": "select",
+                    "id": "box_vert_alignment",
+                    "label": "Box Vertical Alignment",
+                    "default": "box-align-center",
+                    "options": [{
+                            "value": "box-align-top",
+                            "label": "Top"
+                        },
+                        {
+                            "value": "box-align-center",
+                            "label": "Middle"
+                        },
+                        {
+                            "value": "box-align-bottom",
+                            "label": "Bottom"
+                        }
+                    ]
+                },
+
+
+                {
+                    "type": "select",
+                    "id": "box_alignment",
+                    "label": "Box Position",
+                    "default": "box-center",
+                    "options": [{
+                            "value": "box-left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "box-center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "box-right",
+                            "label": "Right"
+                        }
+                    ]
+                },
+
+
+                {
+                    "type": "select",
+                    "id": "text_alignment",
+                    "label": "Text Alignment",
+                    "default": "text-center",
+                    "options": [{
+                            "value": "text-left",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "text-center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "text-right",
+                            "label": "Right"
+                        }
+                    ]
+                },
+
+
+                {
+                    "type": "select",
+                    "id": "background_size",
+                    "label": "Background Size",
+                    "default": "one-whole",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        }
+                    ]
+                },
+{
+                    "type": "select",
+                    "id": "box_content_width",
+                    "label": "Box Content Width",
+                    "default": "one-half",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "one-fifth",
+                            "label": "One Fifth"
+                        },
+                        {
+                            "value": "two-fifths",
+                            "label": "Two Fifths"
+                        },
+                        {
+                            "value": "three-fifths",
+                            "label": "Three Fifths"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        }
+]
+},
+{
+"type": "header",
+"content": "Optional Content Widths"
+},
+{
+                    "type": "select",
+                    "id": "title_width",
+                    "label": "Title Width",
+                    "default": "one-whole",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "one-fifth",
+                            "label": "One Fifth"
+                        },
+                        {
+                            "value": "two-fifths",
+                            "label": "Two Fifths"
+                        },
+                        {
+                            "value": "three-fifths",
+                            "label": "Three Fifths"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        }
+]
+},
+
+
+{
+                    "type": "select",
+                    "id": "content_width",
+                    "label": "Content Width",
+                    "default": "one-whole",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "one-fifth",
+                            "label": "One Fifth"
+                        },
+                        {
+                            "value": "two-fifths",
+                            "label": "Two Fifths"
+                        },
+                        {
+                            "value": "three-fifths",
+                            "label": "Three Fifths"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        }
+]
+},
+{
+                    "type": "select",
+                    "id": "cta_width",
+                    "label": "CTA Width",
+                    "default": "one-whole",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "one-fifth",
+                            "label": "One Fifth"
+                        },
+                        {
+                            "value": "two-fifths",
+                            "label": "Two Fifths"
+                        },
+                        {
+                            "value": "three-fifths",
+                            "label": "Three Fifths"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        }
+]
+},
+
+
+
+                {
+                    "type": "select",
+                    "id": "content_orientation",
+                    "label": "Content Orientation",
+                    "default": "inline",
+                    "options": [{
+                            "value": "inline",
+                            "label": "Inline"
+                        },
+                        {
+                            "value": "stacked",
+                            "label": "Stacked"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "select",
+                    "id": "background_color",
+                    "label": "Content Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+                        {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+                        {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "text_color",
+                    "label": "Text Color",
+                    "default": "white",
+                    "options": [{
+                            "value": "initial",
+                            "label": "Initial"
+                        },
+                        {
+                            "value": "primary-color",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary-color",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary-color",
+                            "label": "Tertiary Color"
+                        },
+
+                        {
+                            "value": "white",
+                            "label": "White"
+                        },
+                        {
+                            "value": "gray",
+                            "label": "Glack"
+                        },
+                        {
+                            "value": "black",
+                            "label": "Black"
+                        }
+
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "pre_title",
+                    "label": "Pre Heading"
+
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Heading"
+
+                },
+                {
+                    "type": "select",
+                    "id": "title_size",
+                    "label": "Title Size",
+                    "default": "largest",
+                    "options": [{
+                            "value": "hero",
+                            "label": "Hero Title (use once per page)"
+                        },
+                        {
+                            "value": "largest",
+                            "label": "Section Title"
+                        }
+                    ]
+                },
+                {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "Text"
+                },
+                {
+                    "type": "text",
+                    "id": "cta",
+                    "label": "CTA Text"
+
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "Shop Now"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link",
+                    "label": "CTA Link"
+                },
+                {
+                    "type": "select",
+                    "id": "button_style",
+                    "label": "Button Style",
+                    "default": "standard",
+                    "options": [
+
+                        {
+                            "value": "standard",
+                            "label": "Standard"
+                        },
+                        {
+                            "value": "outline",
+                            "label": "Outline"
+                        }
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "cta2",
+                    "label": "CTA Text"
+
+                },
+                {
+                    "type": "text",
+                    "id": "button_text2",
+                    "label": "Button Text",
+                    "default": "Shop Now"
+                },
+                {
+                    "type": "url",
+                    "id": "button_link2",
+                    "label": "CTA Link"
+                },
+                {
+                    "type": "select",
+                    "id": "button_style2",
+                    "label": "Button Style",
+                    "default": "standard",
+                    "options": [
+
+                        {
+                            "value": "standard",
+                            "label": "Standard"
+                        },
+                        {
+                            "value": "outline",
+                            "label": "Outline"
+                        }
+                    ]
+                },
+
+                {
+                    "type": "header",
+                    "content": "Mobile Settings"
+                },
+
+                {
+                    "type": "select",
+                    "id": "mobile_background_color",
+                    "label": "Content Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+                        {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+                        {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+                {
+                    "type": "checkbox",
+                    "id": "m_overlay",
+                    "default": false,
+                    "label": "Enable Overlay"
+                },
+
+                {
+                    "type": "image_picker",
+                    "id": "m_image",
+                    "label": "Image For Mobile"
+                },
+                {
+                    "type": "select",
+                    "id": "m_vert_alignment",
+                    "label": "Text Vertical alignment",
+                    "default": "align-center",
+                    "options": [{
+                            "value": "align-top",
+                            "label": "Top"
+                        },
+                        {
+                            "value": "align-center",
+                            "label": "Middle"
+                        },
+                        {
+                            "value": "align-bottom",
+                            "label": "Bottom"
+                        }
+                    ]
+                },
+
+
+                {
+                    "type": "select",
+                    "id": "m_text_alignment",
+                    "label": "Text alignment",
+                    "default": "just-center",
+                    "options": [{
+                            "value": "flex-start",
+                            "label": "Left"
+                        },
+                        {
+                            "value": "just-center",
+                            "label": "Center"
+                        },
+                        {
+                            "value": "just-right",
+                            "label": "Right"
+                        }
+                    ]
+                }
+                
+                
+            ]
+        },
+        {
+            "type": "double_content",
+            "name": "Double Content Block",
+            "settings": [
+
+{
+            "type": "select",
+            "id": "page_container",
+            "label": "Section Container",
+            "default": "wide-width",
+            "options": [
+              {
+                "value": "wide-width",
+                "label": "Wide Width"
+              },
+
+              {
+                "value": "page-width",
+                "label": "Page Container"
+              },
+  			{
+                "value": "one-whole",
+                "label": "No Container"
+              }
+            ]
+          },
+          {
+   "type": "select",
+   "id": "section_padding",
+	"default": "section-pad",
+   "options": [
+      { "value": "section-top-pad", "label": "Pad Top"},
+      { "value": "section-bottom-pad", "label": "Pad Bottom"},
+      { "value": "section-pad", "label": "Pad Both"},
+      { "value": "none", "label": "No Padding"}
+   ],
+   "label": "Section Padding"
+},
+    {
+                    "type": "select",
+                    "id": "background_color",
+                    "label": "Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+]
+},
+    {
+                    "type": "select",
+                    "id": "vert_alignment",
+                    "label": "Text Vertical alignment",
+                    "default": "align-center",
+                    "options": [{
+                            "value": "align-top",
+                            "label": "Top"
+                        },
+                        {
+                            "value": "align-center",
+                            "label": "Middle"
+                        },
+                        {
+                            "value": "align-bottom",
+                            "label": "Bottom"
+                        }
+                    ]
+                },
+                
+                {
+                    "type": "header",
+                    "content": "Side 1"
+                },
+                {
+                    "type": "select",
+                    "id": "s1_background_color",
+                    "label": "Side 1 Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+                {
+                    "type": "select",
+                    "id": "s1_width",
+                    "label": "Width",
+                    "default": "one-half",
+                    "options": [{
+                            "value": "one-whole",
+                            "label": "One Whole"
+                        },
+                        {
+                            "value": "one-fifth",
+                            "label": "One Fifth"
+                        },
+                        {
+                            "value": "two-fifths",
+                            "label": "Two Fifths"
+                        },
+                        {
+                            "value": "three-fifths",
+                            "label": "Three Fifths"
+                        },
+                        {
+                            "value": "one-third",
+                            "label": "One Third"
+                        },
+                        {
+                            "value": "two-thirds",
+                            "label": "Two Thirds"
+                        },
+                        {
+                            "value": "one-half",
+                            "label": "One Half"
+                        }
+
+                    ]
+                },
+                {
+                    "type": "text",
+                    "id": "s1_title",
+                    "label": "Heading"
+
+                },
+                {
+                    "type": "textarea",
+                    "id": "s1_content",
+                    "label": "Content"
+
+                },
+ 
+        {
+            "type": "header",
+            "content": "Side 2"
+        },
+        {
+            "type": "select",
+            "id": "s2_background_color",
+            "label": "Side 2 Background Color",
+            "default": "transparent-back",
+            "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+            ]
+        },
+        {
+            "type": "select",
+            "id": "s2_width",
+            "label": "Width",
+            "default": "one-half",
+            "options": [{
+                    "value": "one-whole",
+                    "label": "One Whole"
+                },
+                {
+                    "value": "one-fifth",
+                    "label": "One Fifth"
+                },
+                {
+                    "value": "two-fifths",
+                    "label": "Two Fifths"
+                },
+                {
+                    "value": "three-fifths",
+                    "label": "Three Fifths"
+                },
+                {
+                    "value": "one-third",
+                    "label": "One Third"
+                },
+                {
+                    "value": "two-thirds",
+                    "label": "Two Thirds"
+                },
+                {
+                    "value": "one-half",
+                    "label": "One Half"
+                }
+
+            ]
+        },
+        {
+            "type": "text",
+            "id": "s2_title",
+            "label": "Heading"
+
+        },
+        {
+            "type": "textarea",
+            "id": "s2_content",
+            "label": "Content"
+
+        }
+    ]
+},
+ {
+
+"type": "image_with_text",
+    "name": "Image with Text",
+    "settings": [
+{
+                    "type": "header",
+                    "content": "Section Settings"
+                },
+                
+{
+   "type": "select",
+   "id": "section_padding",
+	"default": "section-pad",
+   "options": [
+      { "value": "section-top-pad", "label": "Pad Top"},
+      { "value": "section-bottom-pad", "label": "Pad Bottom"},
+      { "value": "section-pad", "label": "Pad Both"},
+      { "value": "none", "label": "No Padding"}
+   ],
+   "label": "Section Padding"
+},
+{
+                    "type": "select",
+                    "id": "background_color",
+                    "label": "Section Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+
+
+{
+            "type": "select",
+            "id": "page_container",
+            "label": "Section Container",
+            "default": "wide-width",
+            "options": [
+              {
+                "value": "wide-width",
+                "label": "Wide Width"
+              },
+
+              {
+                "value": "page-width",
+                "label": "Page Container"
+              },
+  			{
+                "value": "one-whole",
+                "label": "No Container"
+              }
+            ]
+          },
+
+
+  
+        
+   {
+                    "type": "header",
+                    "content": "Image Settings"
+                },
+        {
+            "type": "checkbox",
+            "id": "image_padding",
+            "default": false,
+            "label": "Pad Image"
+        },
+           {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      		},
+ {
+        "type": "text",
+        "id": "image_caption",
+        "label": "Image Caption"
+      },
+{
+                  "type": "select",
+                  "id": "caption_color",
+                  "label": "Caption Color",
+                  "default": "initial",
+                  "options": [{
+                          "value": "initial",
+                          "label": "Initial"
+                      },
+                      {
+                          "value": "primary-color",
+                          "label": "Primary Color"
+                      },
+                      {
+                          "value": "secondary-color",
+                          "label": "Secondary Color"
+                      },
+                      {
+                          "value": "tertiary-color",
+                          "label": "Tertiary Color"
+                      },
+     {
+                          "value": "primary-color light",
+                          "label": "Primary Color Light"
+                      },
+                      {
+                          "value": "secondary-color light",
+                          "label": "Secondary Color Light"
+                      },
+                      {
+                          "value": "tertiary-color light",
+                          "label": "Tertiary Color Light"
+                      },
+                  
+                      {
+                          "value": "white",
+                          "label": "White"
+                      },
+           {
+                          "value": "gray",
+                          "label": "Glack"
+                      },
+                      {
+                          "value": "black",
+                          "label": "Black"
+                      }
+                      
+                  ]
+              },
+{
+   "type": "checkbox",
+   "id": "sticky_image",
+   "default": false,
+   "label": "Sticky Image"
+},
+ {
+        "type": "select",
+        "id": "image_side",
+        "label": "Image Side",
+        "default": "left-image",
+        "options": [
+          {
+            "value": "left-image",
+            "label": "Left"
+          },
+         
+          {
+            "value": "right-image",
+            "label": "Right"
+          }
+        ]
+      },
+ {
+            "type": "select",
+            "id": "width",
+            "label": "Image width",
+            "default": "one-half",
+            "options": [
+              {
+                "value": "one-quarter",
+                "label": "One Quarter"
+              },
+
+              {
+                "value": "one-third",
+                "label": "One Third"
+              },
+  			{
+                "value": "two-fifths",
+                "label": "Two Fifths"
+              },
+              {
+                "value": "one-half",
+                "label": "One Half"
+              },
+              {
+                "value": "three-fifths",
+                "label": "Three Fifths"
+              },
+ {
+                "value": "two-thirds",
+                "label": "Two Thirds"
+              },
+              {
+                "value": "three-quarters",
+                "label": "Three Quarters"
+              },
+              {
+                "value": "one-whole",
+                "label": "One Whole"
+              }
+            ]
+          },
+
+   {
+                    "type": "header",
+                    "content": "Content Settings"
+                },
+{
+                    "type": "select",
+                    "id": "content_background_color",
+                    "label": "Content Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                                                {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+{
+                    "type": "select",
+                    "id": "text_color",
+                    "label": "Text Color",
+                    "default": "initial",
+                    "options": [{
+                            "value": "initial",
+                            "label": "Initial"
+                        },
+                        {
+                            "value": "primary",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary",
+                            "label": "Tertiary Color"
+                        },
+                        {
+                            "value": "white",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                        
+                    ]
+                },
+{
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "text-center",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ]
+      },
+{
+        "type": "select",
+        "id": "text_vert_alignment",
+        "label": "Text Vertical Alignment",
+        "default": "just-center",
+        "options": [
+          {
+            "value": "just-start",
+            "label": "Top"
+          },
+          {
+            "value": "just-center",
+            "label": "Center"
+          },
+          {
+            "value": "just-end",
+            "label": "Bottom"
+          }
+        ]
+      },
+ {
+        "type": "text",
+        "id": "pre_title",
+        "label": "Pre Heading"
+      },
+ {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+ {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+
+      {
+        "type": "textarea",
+        "id": "text",
+        "label": "Text"
+      },
+
+       {
+                  "type": "text",
+                  "id": "cta",
+                  "label": "Button Text"
+                 
+              },
+{
+                  "type": "url",
+                  "id": "cta_link",
+                  "label": "Button Link"
+                 
+              },
+{
+                  "type": "select",
+                  "id": "button_style",
+                  "label": "Button Style",
+                  "default": "standard",
+                  "options": [
+
+                      {
+                          "value": "standard",
+                          "label": "Standard"
+                      },
+                      {
+                          "value": "outline",
+                          "label": "Outline"
+                      }
+                  ]
+              }
+]
+},
+
+ {
+
+"type": "text_block",
+    "name": "Text Block",
+    "settings": [
+{
+                    "type": "header",
+                    "content": "Section Settings"
+                },
+                
+{
+   "type": "select",
+   "id": "section_padding",
+	"default": "section-pad",
+   "options": [
+      { "value": "section-top-pad", "label": "Pad Top"},
+      { "value": "section-bottom-pad", "label": "Pad Bottom"},
+      { "value": "section-pad", "label": "Pad Both"},
+      { "value": "none", "label": "No Padding"}
+   ],
+   "label": "Section Padding"
+},
+{
+                    "type": "select",
+                    "id": "background_color",
+                    "label": "Section Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                        {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+
+
+{
+            "type": "select",
+            "id": "page_container",
+            "label": "Section Container",
+            "default": "wide-width",
+            "options": [
+              {
+                "value": "wide-width",
+                "label": "Wide Width"
+              },
+
+              {
+                "value": "page-width",
+                "label": "Page Container"
+              },
+  			{
+                "value": "one-whole",
+                "label": "No Container"
+              }
+            ]
+          },
+
+
+  
+ 
+ {
+            "type": "select",
+            "id": "content_width",
+            "label": "Content width",
+            "default": "one-half",
+            "options": [
+              {
+                "value": "one-quarter",
+                "label": "One Quarter"
+              },
+
+              {
+                "value": "one-third",
+                "label": "One Third"
+              },
+  			{
+                "value": "two-fifths",
+                "label": "Two Fifths"
+              },
+              {
+                "value": "one-half",
+                "label": "One Half"
+              },
+              {
+                "value": "three-fifths",
+                "label": "Three Fifths"
+              },
+ {
+                "value": "two-thirds",
+                "label": "Two Thirds"
+              },
+              {
+                "value": "three-quarters",
+                "label": "Three Quarters"
+              },
+              {
+                "value": "one-whole",
+                "label": "One Whole"
+              }
+            ]
+          },
+
+   {
+                    "type": "header",
+                    "content": "Content Settings"
+                },
+{
+                    "type": "select",
+                    "id": "content_background_color",
+                    "label": "Content Background Color",
+                    "default": "transparent-back",
+                    "options": [{
+                            "value": "transparent-back",
+                            "label": "None"
+                        },
+                                                {
+                            "value": "primary-color-back",
+                            "label": "Primary Color"
+                        },
+      {
+                            "value": "primary-color-back light",
+                            "label": "Primary Color Light"
+                        },
+                        {
+                            "value": "secondary-color-back",
+                            "label": "Secondary Color"
+                        },
+   {
+                            "value": "secondary-color-back light",
+                            "label": "Secondary Color Light"
+                        },
+                        {
+                            "value": "tertiary-color-back",
+                            "label": "Tertiary Color"
+                        },
+  {
+                            "value": "tertiary-color-back light",
+                            "label": "Tertiary Color Light"
+                        },
+                        {
+                            "value": "white-back",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black-back",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray-back",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                    ]
+                },
+{
+                    "type": "select",
+                    "id": "text_color",
+                    "label": "Text Color",
+                    "default": "initial",
+                    "options": [{
+                            "value": "initial",
+                            "label": "Initial"
+                        },
+                        {
+                            "value": "primary",
+                            "label": "Primary Color"
+                        },
+                        {
+                            "value": "secondary",
+                            "label": "Secondary Color"
+                        },
+                        {
+                            "value": "tertiary",
+                            "label": "Tertiary Color"
+                        },
+                        {
+                            "value": "white",
+                            "label": "White"
+                        },
+                        {
+                            "value": "black",
+                            "label": "Black"
+                        },
+ {
+                            "value": "gray",
+                            "label": "Gray"
+                        },
+ {
+                            "value": "light-gray",
+                            "label": "Light-gray"
+                        }
+                        
+                    ]
+                },
+{
+        "type": "select",
+        "id": "text_alignment",
+        "label": "Text alignment",
+        "default": "text-center",
+        "options": [
+          {
+            "value": "text-left",
+            "label": "Left"
+          },
+          {
+            "value": "text-center",
+            "label": "Center"
+          },
+          {
+            "value": "text-right",
+            "label": "Right"
+          }
+        ]
+      },
+ {
+        "type": "text",
+        "id": "pre_title",
+        "label": "Pre Heading"
+      },
+ {
+        "type": "text",
+        "id": "title",
+        "label": "Heading"
+      },
+ {
+        "type": "text",
+        "id": "sub_title",
+        "label": "Sub Heading"
+      },
+
+      {
+        "type": "textarea",
+        "id": "content",
+        "label": "Content"
+      },
+
+       {
+                  "type": "text",
+                  "id": "cta",
+                  "label": "Button Text"
+                 
+              },
+{
+                  "type": "url",
+                  "id": "cta_link",
+                  "label": "Button Link"
+                 
+              },
+{
+                  "type": "select",
+                  "id": "button_style",
+                  "label": "Button Style",
+                  "default": "standard",
+                  "options": [
+
+                      {
+                          "value": "standard",
+                          "label": "Standard"
+                      },
+                      {
+                          "value": "outline",
+                          "label": "Outline"
+                      }
+                  ]
+              }
+]
+}
+
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
